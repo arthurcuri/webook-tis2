@@ -77,7 +77,7 @@ _Apresente uma descrição textual de como os sistemas atuais resolvem o problem
 
 ### 3.2. Descrição geral da proposta
 
-// Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias
+// Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. 
 A proposta do nosso projeto consiste em auxiliar bibliotecas físicas e presenciais com os metodos de pagamento da locação de livros, datas de devolução, calculo de multas em caso de atraso do prazo de devolução e localização de um livro especifico em determinado setor da biblioteca, facilitando o trabalho do bibliotecario e melhorando o atendimento ao cliente, alem de facilitar calcular o valor de multas através do cadastro do cliente e dos livros no nosso software.
 
 ### 3.3. Modelagem dos processos
