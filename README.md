@@ -1,19 +1,19 @@
-# Nome do projeto
+# Webook
 
 Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Pedro Henrique Pimenta Vaz
+* Pedro Henrique de Almeida Araujo
+* Eduardo Palhares Reale Pereira
+* Arthur Curi Kramberger
 * Nome completo do aluno 5
 
 ## Professor
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Eveline Alonso Veloso
+* Juliana Amaral Baroni de Carvalho
 
 ## Instruções de utilização
 
