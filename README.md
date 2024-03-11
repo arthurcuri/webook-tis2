@@ -1,6 +1,6 @@
 # Webook
 
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+No caso específico desse projeto, o objetivo deste trabalho  é desenvolver um sistema para automação de processos para bibliotecas no geral.   Automatizando serviços como fazer o inventário dos livros para controle geral, fazer a conta do preço do aluguel dos livros e facilitar a administração de livros novos.
 
 ## Integrantes
 
