@@ -8,7 +8,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 * Pedro Henrique de Almeida Araujo
 * Eduardo Palhares Reale Pereira
 * Arthur Curi Kramberger
-* Nome completo do aluno 5
+* Hugo Macedo de Carvalho
 
 ## Professor
 
