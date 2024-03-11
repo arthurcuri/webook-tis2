@@ -69,7 +69,9 @@ _Apresente aqui os perfis dos usuários-chave do sistema. Diversas são as infor
 
 ### 3.1. Análise da situação atual
 
-Atualmente, normalmente os procedimentos manuais e/ou sistemas tradicionais de gestão de bibliotecas são usados para lidar com o problema das filas e dos atrasos na devolução de livros em bibliotecas. Aqui está uma descrição textual de como esses sistemas normalmente funcionam:
+Nas bibliotecas atuais o controle manual de empréstimos é algo que ocupa bastante tempo dos bibliotecários/bibliotecárias tanto na hora do processo de realizar o empréstimo feito pelo estudante, quanto no controle de quantos e quais livros estão disponíveis ou não para o leitor em uma determinada data. Tradicionalmente em um processo de empréstimo geral, após o cliente apresentar sua documentação necessária, seja ela uma carteirinha de estudante ou identidade, ele escolhe o livro que irá levar e assina um termo deixando registrado o momento que o livro foi retirado da biblioteca e por quem foi retirado. Após isso, o mesmo recebe uma espécie de comprovante com as informações necessárias para devolução na data estipulada e multa em caso de atraso. Muitas bibliotecas, devido ao grande volume de clientes que frequentam e fazem o uso dos livros, acabam se perdendo e dificultando esse processo que poderia ser automatizado e gerenciado de forma mais rápida e prática, todavia com escassez de ferramentas ou sistemas que proporcionam essas vantagens. 
+
+Além disso, normalmente os procedimentos manuais e/ou sistemas tradicionais de gestão de bibliotecas lidam com o problema das filas e dos atrasos na devolução de livros em bibliotecas. Aqui está como esses sistemas normalmente funcionam:
 
 Empréstimo de livros: Quando um cliente quer alugar um livro, ele vai até a biblioteca tradicional, encontra o livro desejado e se dirige ao balcão de empréstimo. No local, o funcionário da biblioteca verifica se o livro está disponível, insere os detalhes do empréstimo (incluindo nome do usuário, número de identificação, título do livro e data de devolução) em um sistema de registro manual ou informatizado e entrega o livro ao usuário.
 
