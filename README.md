@@ -9,6 +9,7 @@ No caso específico desse projeto, o objetivo deste trabalho  é desenvolver um 
 * Eduardo Palhares Reale Pereira
 * Arthur Curi Kramberger
 * Hugo Macedo de Carvalho
+* João Pedro Guimarães Ribeiro
 
 ## Professor
 
