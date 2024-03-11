@@ -1,27 +1,29 @@
-# WEBOOK
+# WeBook
 
 
-**Nome completo do Aluno 1, email do aluno 1**
+**Arthur Curi Kramberger, ackramberger@sga.pucminas.br**
 
-**Nome completo do Aluno 2, email do aluno 2**
+**Eduardo Palhares Reale Pereira, eduardo.palhares@sga.pucminas.br**
 
-**Nome completo do Aluno 3, email do aluno 3**
+**Hugo Macedo de Carvalho, hmcarvalho@sga.pucminas.br**
 
-**Nome completo do Aluno 4, email do aluno 4**
+**João Pedro Guimarães Ribeiro, joao.ribeiro.1485762@sga.pucminas.br**
 
-**Nome completo do Aluno 5, email do aluno 5**
+**Pedro Henrique de Almeida Araujo, pedroaraujo2906@hotmail.com**
+
+**Pedro Henrique Pimenta Vaz, pedro.vaz@sga.pucminas.br**
 
 ---
 
 Professores:
 
-** Eveline Alonso Veloso **
+**Eveline Alonso Veloso**
 
-** Juliana Amaral Baroni de Carvalho **
+**Juliana Amaral Baroni de Carvalho**
 
 ---
 
-_Curso de Engenharia de Software
+_Curso de Engenharia de Software_
 
 _Instituto de Informática e Ciências Exatas – Pontifícia Universidade Católica de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
 
@@ -35,58 +37,65 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 ## 1. Introdução
 
-Explore um mundo de conhecimento e entretenimento sem sair do conforto da sua casa. Bem-vindo ao nosso site de aluguel de livros, sua biblioteca online pessoal, onde a leitura se torna uma experiência de fácil acesso, mais barata e simples.
+_Explore um mundo de conhecimento e entretenimento sem sair do conforto da sua casa. Bem-vindo ao nosso site de aluguel de livros, sua biblioteca online pessoal, onde a leitura se torna uma experiência de fácil acesso, mais barata e simples._
 
 ### 1.1 Contextualização
 
-As bibliotecas assumem um papel fundamental na sociedade moderna, servindo como centros de informação, conhecimento e cultura. Elas transcendem a mera função de armazenamento de livros, atuando como espaços de pesquisa, aprendizado e desenvolvimento social. No contexto da era digital, as bibliotecas se reinventam, incorporando novas tecnologias e ampliando seus serviços para atender às demandas de uma sociedade cada vez mais conectada. De acordo com essa pesquisa realizada pela Associação Paulista de Bibliotecas e Leitura, cerca de 34 milhões de pessoas frequentam bibliotecas no País, sendo a maioria pertencente à classe C (49%), seguida da B, com 26% e D/E, com 21%. Os estudantes são 60% dos frequentadores. A principal motivação para ir à biblioteca é ler livros para pesquisar ou estudar (51%) e, em seguida, ler por prazer (33%).
-Fonte: https://www.spleituras.org.br/noticia/cerca-de-34-milhes-de-pessoas-frequentam-bibliotecas-no-brasil-diz-pesquisa
+_As bibliotecas assumem um papel fundamental na sociedade moderna, servindo como centros de informação, conhecimento e cultura. Elas transcendem a mera função de armazenamento de livros, atuando como espaços de pesquisa, aprendizado e desenvolvimento social. No contexto da era digital, as bibliotecas se reinventam, incorporando novas tecnologias e ampliando seus serviços para atender às demandas de uma sociedade cada vez mais conectada. De acordo com essa pesquisa realizada pela Associação Paulista de Bibliotecas e Leitura, cerca de 34 milhões de pessoas frequentam bibliotecas no País, sendo a maioria pertencente à classe C (49%), seguida da B, com 26% e D/E, com 21%. Os estudantes são 60% dos frequentadores. A principal motivação para ir à biblioteca é ler livros para pesquisar ou estudar (51%) e, em seguida, ler por prazer (33%).
+Fonte: https://www.spleituras.org.br/noticia/cerca-de-34-milhes-de-pessoas-frequentam-bibliotecas-no-brasil-diz-pesquisa_
 
 ### 1.2 Problema
 
-Problemas de bibliotecas sem sistemas de automação começam com a locação de seus livros, que, quando são alugados, podem ser roubados, ou não foram devolvidos ainda. Além de auxiliar e avisar o bibliotecário quando o livro será devolvido caso ele esteja alugado, ele ainda calcula o valor do aluguel para o cliente independente de quanto tempo o cliente quer alugar o livro.
+_Problemas de bibliotecas sem sistemas de automação começam com a locação de seus livros, que, quando são alugados, podem ser roubados, ou não foram devolvidos ainda. Além de auxiliar e avisar o bibliotecário quando o livro será devolvido caso ele esteja alugado, ele ainda calcula o valor do aluguel para o cliente independente de quanto tempo o cliente quer alugar o livro._
 
 ### 1.3 Objetivo geral
 
-No caso específico desse projeto, o objetivo deste trabalho  é desenvolver um sistema para automação de processos para bibliotecas no geral.   Automatizando serviços como fazer o inventário dos livros para controle geral, fazer a conta do preço do aluguel dos livros e facilitar a administração de livros novos.
-
+_No caso específico desse projeto, o objetivo deste trabalho  é desenvolver um sistema para automação de processos para bibliotecas no geral. Automatizando serviços como fazer o inventário dos livros para controle geral, fazer a conta do preço do aluguel dos livros e facilitar a administração de livros novos._
 
 #### 1.3.1 Objetivos específicos
 
-_Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
-concentrar sua prática investigativa, ou como você irá aprofundar seu trabalho._
+_Objetivos específicos:
+  Empréstimo;_
+  
+  _Devolução;_
+  
+  _Gerenciamento de usuário;_
+  
+  _Gerenciamento de livro;_
+  
 
 ### 1.4 Justificativas
 
-_Mostre também as **justificativas** para o 
-desenvolvimento do seu trabalho e, caso deseje, destaque alguma contribuição do trabalho._
+_Auxiliar bibliotecas físicas com o gerenciamento e organização dos livros.
+Auxiliar bibliotecas físicas e onlines (como o kindle) por exemplo com métodos de pagamento e cálculo de preços.
+O processo se justifica pois muitas bibliotecas físicas sofrem com o controle e administração de empréstimo e devolução de livros._
 
 ## 2. Participantes do processo
 
-_Apresente aqui os perfis dos usuários-chave do sistema. Diversas são as informações que podem ser relevantes para a definição dos perfis dos usuários, tais como idade, gênero, aspectos culturais, nível de educação, entre outros. A pesquisa de mercado pode ser uma ferramenta poderosa para se identificar e caracterizar os perfis de usuários. Apresente claramente o papel a ser desempenhado por cada usuário._
+_Apenas dois participantes no processo, seriam eles:_
+
+  _Usuario;_
+   
+   _Bibliotecario;_
 
 ## 3. Modelagem do processo de negócio
 
 ### 3.1. Análise da situação atual
 
-Nas bibliotecas atuais o controle manual de empréstimos é algo que ocupa bastante tempo dos bibliotecários/bibliotecárias tanto na hora do processo de realizar o empréstimo feito pelo estudante, quanto no controle de quantos e quais livros estão disponíveis ou não para o leitor em uma determinada data. Tradicionalmente em um processo de empréstimo geral, após o cliente apresentar sua documentação necessária, seja ela uma carteirinha de estudante ou identidade, ele escolhe o livro que irá levar e assina um termo deixando registrado o momento que o livro foi retirado da biblioteca e por quem foi retirado. Após isso, o mesmo recebe uma espécie de comprovante com as informações necessárias para devolução na data estipulada e multa em caso de atraso. Muitas bibliotecas, devido ao grande volume de clientes que frequentam e fazem o uso dos livros, acabam se perdendo e dificultando esse processo que poderia ser automatizado e gerenciado de forma mais rápida e prática, todavia com escassez de ferramentas ou sistemas que proporcionam essas vantagens. 
+_Normalmente os procedimentos manuais e/ou sistemas tradicionais de gestão de bibliotecas são usados para lidar com o problema das filas e dos atrasos na devolução de livros em bibliotecas. Aqui está uma descrição textual de como esses sistemas normalmente funcionam:_
 
-Além disso, normalmente os procedimentos manuais e/ou sistemas tradicionais de gestão de bibliotecas lidam com o problema das filas e dos atrasos na devolução de livros em bibliotecas. Aqui está como esses sistemas normalmente funcionam:
+_**Devolução de livros:** Dentro do prazo estabelecido para a devolução, o utilizador volta à biblioteca com o livro em sua posse. Mais uma vez, ele vai até ao balcão de atendimento, onde o funcionário verifica a condição do livro e registra a devolução no sistema. Caso haja atraso na devolução, o funcionário irá calcular a multa conforme as políticas da biblioteca._
 
-Empréstimo de livros: Quando um cliente quer alugar um livro, ele vai até a biblioteca tradicional, encontra o livro desejado e se dirige ao balcão de empréstimo. No local, o funcionário da biblioteca verifica se o livro está disponível, insere os detalhes do empréstimo (incluindo nome do usuário, número de identificação, título do livro e data de devolução) em um sistema de registro manual ou informatizado e entrega o livro ao usuário.
+_**Gestão de filas:** O tempo de espera nas filas pode mudar conforme a quantidade de usuários na biblioteca, o atendimento eficaz e outros fatores. Durante os horários de pico, a biblioteca pode designar mais funcionários para o balcão ou implementar sistemas de reserva online de livros para reduzir a espera._
 
-Devolução de livros: Dentro do prazo estabelecido para a devolução, o utilizador volta à biblioteca com o livro em sua posse. Mais uma vez, ele vai até ao balcão de atendimento, onde o funcionário verifica a condição do livro e registra a devolução no sistema. Caso haja atraso na devolução, o funcionário irá calcular a multa conforme as políticas da biblioteca.
+_**Cobrança de multas:** Normalmente, as multas por atraso na devolução são cobradas quando o livro é devolvido ou em um momento subsequente quando o usuário retorna à biblioteca. A multa é calculada de acordo com o atraso e as políticas da biblioteca._
 
-Gestão de filas: O tempo de espera nas filas pode mudar conforme a quantidade de usuários na biblioteca, o atendimento eficaz e outros fatores. Durante os horários de pico, a biblioteca pode designar mais funcionários para o balcão ou implementar sistemas de reserva online de livros para reduzir a espera.
-
-Cobrança de multas: Normalmente, as multas por atraso na devolução são cobradas quando o livro é devolvido ou em um momento subsequente quando o usuário retorna à biblioteca. A multa é calculada de acordo com o atraso e as políticas da biblioteca.
-
+_Nas bibliotecas atuais, o controle manual de empréstimos consome considerável tempo dos bibliotecários, tanto durante o processo de empréstimo realizado pelos estudantes quanto na gestão da disponibilidade dos livros para os leitores em datas específicas. Tradicionalmente, no procedimento geral de empréstimo, o cliente, após apresentar sua documentação, escolhe o livro desejado e assina um termo, registrando o momento da retirada e o responsável. Após essa etapa, o cliente recebe um comprovante contendo informações essenciais para a devolução na data estipulada, incluindo possíveis multas por atraso. Infelizmente, muitas bibliotecas enfrentam desafios decorrentes do elevado volume de clientes, resultando em dificuldades e atrasos nesse processo que poderia ser agilizado e gerenciado de maneira mais eficiente.
+Diante dessas dificuldades, as bibliotecas em todo o Brasil confrontam desafios significativos relacionados a roubos e danos aos livros emprestados aos leitores. Em resposta a esse cenário, nosso projeto propõe a minimização desses problemas por meio de um sistema de gerenciamento de multas. O objetivo central é calcular com precisão as multas dos clientes, visando evitar prejuízos financeiros para as bibliotecas. Nossa plataforma será utilizada para calcular o valor correspondente a livros perdidos e efetuar o pagamento correspondente. Em casos de danos, faremos uma avaliação da gravidade do estrago, incorporando o custo do reparo ao valor do aluguel do livro. Com essa abordagem integrada, almejamos não apenas otimizar a eficiência do processo de empréstimo, mas também proporcionar uma gestão mais ágil e eficaz dos recursos bibliotecários em todo o país._
 
 ### 3.2. Descrição geral da proposta
 
-// Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. 
-
-A proposta do nosso projeto consiste em auxiliar bibliotecas físicas e presenciais com os metodos de pagamento da locação de livros, datas de devolução, calculo de multas em caso de atraso do prazo de devolução e localização de um livro especifico em determinado setor da biblioteca, facilitando o trabalho do bibliotecario e melhorando o atendimento ao cliente, alem de facilitar calcular o valor de multas através do cadastro do cliente e dos livros no nosso software.
+_A proposta do nosso projeto consiste em auxiliar bibliotecas físicas e presenciais com os metodos de pagamento da locação de livros, datas de devolução, calculo de multas em caso de atraso do prazo de devolução e localização de um livro especifico em determinado setor da biblioteca, facilitando o trabalho do bibliotecario e melhorando o atendimento ao cliente, alem de facilitar calcular o valor de multas através do cadastro do cliente e dos livros no nosso software._
 
 ### 3.3. Modelagem dos processos
 
