@@ -69,7 +69,16 @@ _Apresente aqui os perfis dos usuários-chave do sistema. Diversas são as infor
 
 ### 3.1. Análise da situação atual
 
-_Apresente uma descrição textual de como os sistemas atuais resolvem o problema que se propõe a resolver.  Caso sua proposta seja inovadora e não existam processos claramente definidos, **apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente**, mesmo que não se utilize tecnologia computacional._
+Atualmente, normalmente os procedimentos manuais e/ou sistemas tradicionais de gestão de bibliotecas são usados para lidar com o problema das filas e dos atrasos na devolução de livros em bibliotecas. Aqui está uma descrição textual de como esses sistemas normalmente funcionam:
+
+Empréstimo de livros: Quando um cliente quer alugar um livro, ele vai até a biblioteca tradicional, encontra o livro desejado e se dirige ao balcão de empréstimo. No local, o funcionário da biblioteca verifica se o livro está disponível, insere os detalhes do empréstimo (incluindo nome do usuário, número de identificação, título do livro e data de devolução) em um sistema de registro manual ou informatizado e entrega o livro ao usuário.
+
+Devolução de livros: Dentro do prazo estabelecido para a devolução, o utilizador volta à biblioteca com o livro em sua posse. Mais uma vez, ele vai até ao balcão de atendimento, onde o funcionário verifica a condição do livro e registra a devolução no sistema. Caso haja atraso na devolução, o funcionário irá calcular a multa conforme as políticas da biblioteca.
+
+Gestão de filas: O tempo de espera nas filas pode mudar conforme a quantidade de usuários na biblioteca, o atendimento eficaz e outros fatores. Durante os horários de pico, a biblioteca pode designar mais funcionários para o balcão ou implementar sistemas de reserva online de livros para reduzir a espera.
+
+Cobrança de multas: Normalmente, as multas por atraso na devolução são cobradas quando o livro é devolvido ou em um momento subsequente quando o usuário retorna à biblioteca. A multa é calculada de acordo com o atraso e as políticas da biblioteca.
+
 
 ### 3.2. Descrição geral da proposta
 
