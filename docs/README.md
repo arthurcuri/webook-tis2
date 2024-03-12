@@ -126,6 +126,7 @@ Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos n
 # REFERÊNCIAS
 
 **[1.1]** - SPLEITURAS, Organização Social de Cultura; Angelo Xavier. Cerca de 34 milhões de pessoas frequentam bibliotecas no Brasil, diz pesquisa. POSTADO EM 11 DE SETEMBRO DE 2020. ed. Rua Faustolo, 576 • Água Branca • 05041-000 • São Paulo.
+
 Fonte: https://www.spleituras.org.br/noticia/cerca-de-34-milhes-de-pessoas-frequentam-bibliotecas-no-brasil-diz-pesquisa
 
 Acesso em: 29 fev. 2024.
