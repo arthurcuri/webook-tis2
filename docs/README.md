@@ -43,7 +43,7 @@ Explore um mundo de conhecimento e entretenimento sem sair do conforto da sua ca
 
 As bibliotecas assumem um papel fundamental na sociedade moderna, servindo como centros de informação, conhecimento e cultura. Elas transcendem a mera função de armazenamento de livros, atuando como espaços de pesquisa, aprendizado e desenvolvimento social. No contexto da era digital, as bibliotecas se reinventam, incorporando novas tecnologias e ampliando seus serviços para atender às demandas de uma sociedade cada vez mais conectada. De acordo com essa pesquisa realizada pela Associação Paulista de Bibliotecas e Leitura, cerca de 34 milhões de pessoas frequentam bibliotecas no País, sendo a maioria pertencente à classe C (49%), seguida da B, com 26% e D/E, com 21%. Os estudantes são 60% dos frequentadores. A principal motivação para ir à biblioteca é ler livros para pesquisar ou estudar (51%) e, em seguida, ler por prazer (33%).
 
-Fonte: https://www.spleituras.org.br/noticia/cerca-de-34-milhes-de-pessoas-frequentam-bibliotecas-no-brasil-diz-pesquisa_
+
 
 ### 1.2 Problema
 
@@ -96,7 +96,7 @@ Diante dessas dificuldades, as bibliotecas em todo o Brasil confrontam desafios 
 
 ### 3.2. Descrição geral da proposta
 
-A proposta do nosso projeto consiste em auxiliar bibliotecas físicas e presenciais com os metodos de pagamento da locação de livros, datas de devolução, calculo de multas em caso de atraso do prazo de devolução e localização de um livro especifico em determinado setor da biblioteca, facilitando o trabalho do bibliotecario e melhorando o atendimento ao cliente, alem de facilitar calcular o valor de multas através do cadastro do cliente e dos livros no nosso software.
+    Hoje em dia, bibliotecas físicas no Brasil, encaram muitos problemas em seus processos padrões, tais como: processo de locação de livros; filas para pagamento de multas; localização de livros especificos dentro da biblioteca. O nosso projeto propõe soluções desses problemas especificos atraves do software. Os problemas poderão ser solucionados atraves de uma plataforma que possuirá o cadastro de todos os usuarios que frequentam a biblioteca, além do cadastro de livros e cálculos do valor de multas e alugueis. Além disso, possibilitará ao bibliotecario utilizar o seu tempo em outros serviços dentro da biblioteca e disponibilizará um melhor serviço ao cliente.
 
 ### 3.3. Modelagem dos processos
 
@@ -141,6 +141,7 @@ Verifique no link abaixo como devem ser as referências no padrão ABNT:
 http://portal.pucminas.br/imagedb/documento/DOC_DSC_NOME_ARQUI20160217102425.pdf
 
 **[1.1]** - ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001.
+Fonte: https://www.spleituras.org.br/noticia/cerca-de-34-milhes-de-pessoas-frequentam-bibliotecas-no-brasil-diz-pesquisa
 
 **[1.2]** - COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8.
 
