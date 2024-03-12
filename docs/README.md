@@ -125,23 +125,17 @@ Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos n
 
 # REFERÊNCIAS
 
-Como um projeto de software não requer revisão bibliográfica, a inclusão das referências não é obrigatória. No entanto, caso você deseje incluir referências relacionadas às tecnologias, padrões, ou metodologias que serão usadas no seu trabalho, relacione-as de acordo com a ABNT.
-
-Verifique no link abaixo como devem ser as referências no padrão ABNT:
-
-http://portal.pucminas.br/imagedb/documento/DOC_DSC_NOME_ARQUI20160217102425.pdf
-
-**[1.1]** - SPLEITURAS, Organização Social de Cultura; Angelo Xavier. **Cerca de 34 milhões de pessoas frequentam bibliotecas no Brasil, diz pesquisa**. POSTADO EM 11 DE SETEMBRO DE 2020. ed. Rua Faustolo, 576 • Água Branca • 05041-000 • São Paulo.
+**[1.1]** - SPLEITURAS, Organização Social de Cultura; Angelo Xavier. Cerca de 34 milhões de pessoas frequentam bibliotecas no Brasil, diz pesquisa. POSTADO EM 11 DE SETEMBRO DE 2020. ed. Rua Faustolo, 576 • Água Branca • 05041-000 • São Paulo.
 Fonte: https://www.spleituras.org.br/noticia/cerca-de-34-milhes-de-pessoas-frequentam-bibliotecas-no-brasil-diz-pesquisa
 Acesso em: 29 fev. 2024.
 
-**[1.2]** - COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8.
+**[1.2]** - 
 
-**[1.3]** - CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996.
+**[1.3]** - 
 
-**[1.4]** - SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514.
+**[1.4]** - 
 
-**[1.5]** - RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016.
+**[1.5]** -
 
 
 
