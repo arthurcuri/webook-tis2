@@ -9,7 +9,7 @@
 
 **João Pedro Guimarães Ribeiro, joao.ribeiro.1485762@sga.pucminas.br**
 
-**Pedro Henrique de Almeida Araujo, pedroaraujo2906@hotmail.com**
+**Pedro Henrique de Almeida Araujo, pedro.araujo.1444425@sga.pucminas.br**
 
 **Pedro Henrique Pimenta Vaz, pedro.vaz@sga.pucminas.br**
 
