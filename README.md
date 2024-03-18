@@ -4,12 +4,12 @@ No caso específico desse projeto, o objetivo deste trabalho  é desenvolver um 
 
 ## Integrantes
 
-* Pedro Henrique Pimenta Vaz
-* Pedro Henrique de Almeida Araujo
-* Eduardo Palhares Reale Pereira
 * Arthur Curi Kramberger
+* Eduardo Palhares Reale Pereira
 * Hugo Macedo de Carvalho
 * João Pedro Guimarães Ribeiro
+* Pedro Henrique de Almeida Araujo
+* Pedro Henrique Pimenta Vaz
 
 ## Professor
 
