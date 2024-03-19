@@ -1,4 +1,4 @@
-### 3.3.1 Processo 1 – Processo de Empréstimo
+### 3.3.1 Processo 1 – PROCESSO DE EMPRÉSTIMO
 
 _Apresente aqui o nome e as oportunidades de melhoria para o processo 1. 
 Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN._
