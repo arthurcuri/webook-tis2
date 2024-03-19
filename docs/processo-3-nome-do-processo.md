@@ -3,7 +3,7 @@
 _Apresente aqui o nome e as oportunidades de melhoria para o processo 3. 
 Em seguida, apresente o modelo do processo 3, descrito no padrão BPMN._
 
-![Exemplo de um Modelo BPMN do PROCESSO 3](images/process.png "Modelo BPMN do Processo 3.")
+![Exemplo de um Modelo BPMN do PROCESSO 3](docs/images/process.png)
 
 
 #### Detalhamento das atividades
