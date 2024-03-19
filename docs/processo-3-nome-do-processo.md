@@ -1,9 +1,9 @@
-### 3.3.3 Processo 3 – PROCESSO DE GERENCIAMENTO DE LIVROS
+### 3.3.3 Processo 3 – Processo Gerenciamento de Livros
 
 _Apresente aqui o nome e as oportunidades de melhoria para o processo 3. 
 Em seguida, apresente o modelo do processo 3, descrito no padrão BPMN._
 
-![Exemplo de um Modelo BPMN do PROCESSO 3](docs/images/process.png)
+![Processo Gerenciamento de Livros](images/processoGL.png "Modelo BPMN do Processo 3.")
 
 
 #### Detalhamento das atividades
