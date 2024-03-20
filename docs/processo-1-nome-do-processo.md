@@ -3,7 +3,7 @@
 _Apresente aqui o nome e as oportunidades de melhoria para o processo 1. 
 Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN._
 
-![Processo Empréstimo](images/processoEmprestimo2.png "Modelo BPMN do Processo 1.")
+![Processo Empréstimo](images/processoEmprestimo2.jpeg "Modelo BPMN do Processo 1.")
 
 
 #### Detalhamento das atividades
