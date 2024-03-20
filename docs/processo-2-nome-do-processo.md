@@ -3,7 +3,7 @@
 _Apresente aqui o nome e as oportunidades de melhoria para o processo 2. 
 Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN._
 
-![Processo Devolução](images/processoDevolucao.png "Modelo BPMN do Processo 2.")
+![Processo Devolução](images/processoDevolucao2.jpeg "Modelo BPMN do Processo 2.")
 
 
 
