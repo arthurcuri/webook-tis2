@@ -1,8 +1,5 @@
 ### 3.3.2 Processo 2 – Processo Devolução
 
-_Apresente aqui o nome e as oportunidades de melhoria para o processo 2. 
-Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN._
-
 ![Processo Devolução](images/processoDevolucao2.jpeg "Modelo BPMN do Processo 2.")
 
 
