@@ -1,6 +1,6 @@
 ### 3.3.4 Processo 4 – Processo Gerenciamento de Usuário
 
-![Processo Gerenciamento de Usuário](images/processoGU3.jpeg "Modelo BPMN do Processo 4.")
+![Processo Gerenciamento de Usuário](images/processoGU2.jpeg "Modelo BPMN do Processo 4.")
 
 
 #### Detalhamento das atividades
