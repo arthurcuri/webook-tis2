@@ -1,8 +1,5 @@
 ### 3.3.4 Processo 4 – Processo Gerenciamento de Usuário
 
-_Apresente aqui o nome e as oportunidades de melhoria para o processo 4. 
-Em seguida, apresente o modelo do processo 4, descrito no padrão BPMN._
-
 ![Processo Gerenciamento de Usuário](images/processoGU2.jpeg "Modelo BPMN do Processo 4.")
 
 
