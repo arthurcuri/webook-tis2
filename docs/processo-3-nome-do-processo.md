@@ -21,53 +21,54 @@ O usuário então é redirecionado para uma tela com um capo para seleção úni
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
+| Não tem         | Não tem          | Não tem        | Não tem           |
 
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
+| ---                  | ---                            | ---               |
 | Botão adicionar      | Início processo de cadastro de livro     | Default           |
 | Botão remover        | Início Do processo alteração             | Default           |
 | Botão alterar        | Inicio Processo de remoção               | Default           |
 | Botão voltar         | Retorna para tela anterior               | Default           |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
 
 
 **Preencher informações  do livro (nome, seçao, autor)**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
 | Nome Livro      | Caixa de Texto   | Sem Restrição  | ---               |
 | Seção Livro     | Caixa de Texto   | Apenas Letras  | ---               |
 | Nome Autor      | Caixa de Texto   | Apenas Letras  | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão cadastro       | Fim do processo                | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
 
 **Escolher qual livro deseja remover**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| Livros Cadastrados | Seleção múltipla | Sem restrição  | Nome Livro Cadastrado |
-| [Nome do campo] | [tipo de dados]  |                |                   |
+| ---             | ---              | ---            | ---               |
+| Livros Cadastrados | Seleção múltipla | Sem restrição  | Nome Livro Cadastrado |       |                   |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão remover        | Fim do processo                | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
 
 **Escolher qual livro deseja informar**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
 | Livros Cadastrados | Caixa de Texto   | Sem Restrição  | Nome Livro Cadastrado |
 | Nome Livro         | Caixa de Texto   | Sem Restrição  | ---               |
 | Seção Livro        | Caixa de Texto   | Apenas Letras  | ---               |
 | Nome Autor         | Caixa de Texto   | Apenas Letras  | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
 
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão alterar        | Fim do processo                | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
 
 
