@@ -5,60 +5,70 @@
 
 #### Detalhamento das atividades
 
-_Descreva aqui cada uma das propriedades das atividades do processo 4. 
-Devem estar relacionadas com o modelo de processo apresentado anteriormente._
+Iniciar gerenciamento de livros
+O usuário irá acessar a tela de gerenciamento de livro, nela haverá 4 botões uma que irá levar para a tela de adicionar uma livro, um que leve para a tela de remoção de livros, um que irá levar para a página de alteração e um botão para voltar
 
-_Os tipos de dados a serem utilizados são:_
+Preencher informações  do livro (nome, seçao, autor)
+O usuário então é redirecionado para a tela de cadastro de livro nela haverá 3 campos de texto: um para inserir o Nome do livro, outro para a seção do livro e outro para o nome do Autor. Também haverá um botão para voltar e outro para cadastrar.
 
-_* **Área de texto** - campo texto de múltiplas linhas_
+Escolher qual livro deseja remover
+O usuário então é redirecionado para uma tela com um campo de seleção múltipla com todos os livros cadastrados ele então poderá selecionar um ou mais para serem removidos. Nela haverá um campo com seleção múltipla contendo todos os livros cadastrados. Também haverá um botão para voltar e outro para remover.
 
-_* **Caixa de texto** - campo texto de uma linha_
+Escolher qual livro deseja informar
+O usuário então é redirecionado para uma tela com um capo para seleção única contendo todos os livros cadastrados, ao selecionar um livro 3 novos campos de área de texto irão aparecer sendo eles o Nome, a Seção e o Autor do livros selecionado com os valores que foram cadastrados ele então poderá alterar os campos. Também haverá um botão para voltar e outro para alterar.
 
-_* **Número** - campo numérico_
-
-_* **Data** - campo do tipo data (dd-mm-aaaa)_
-
-_* **Hora** - campo do tipo hora (hh:mm:ss)_
-
-_* **Data e Hora** - campo do tipo data e hora (dd-mm-aaaa, hh:mm:ss)_
-
-_* **Imagem** - campo contendo uma imagem_
-
-_* **Seleção única** - campo com várias opções de valores que são mutuamente exclusivas (tradicional radio button ou combobox)_
-
-_* **Seleção múltipla** - campo com várias opções que podem ser selecionadas mutuamente (tradicional checkbox ou listbox)_
-
-_* **Arquivo** - campo de upload de documento_
-
-_* **Link** - campo que armazena uma URL_
-
-_* **Tabela** - campo formado por uma matriz de valores_
-
-**Nome da atividade 1**
+**Iniciar gerenciamento de livros**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-| ***Exemplo:***  |                  |                |                   |
-| login           | Caixa de Texto   | formato de e-mail |                |
-| senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
+
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
-| ---                  | ---                            | ---               |
+| Botão adicionar      | Início processo de cadastro de livro     | Default           |
+| Botão remover        | Início Do processo alteração             | Default           |
+| Botão alterar        | Inicio Processo de remoção               | Default           |
+| Botão voltar         | Retorna para tela anterior               | Default           |
 | [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-| ***Exemplo:***       |                                |                   |
-| entrar               | Fim do Processo 1              | default           |
-| cadastrar            | Início do proceso de cadastro  |                   |
 
 
-**Nome da atividade 2**
+**Preencher informações  do livro (nome, seçao, autor)**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
+| Nome Livro      | Caixa de Texto   | Sem Restrição  | ---               |
+| Seção Livro     | Caixa de Texto   | Apenas Letras  | ---               |
+| Nome Autor      | Caixa de Texto   | Apenas Letras  | ---               |
 | [Nome do campo] | [tipo de dados]  |                |                   |
-|                 |                  |                |                   |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão cadastro       | Fim do processo                | ---               |
 | [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-|                      |                                |                   |
+
+**Escolher qual livro deseja remover**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| Livros Cadastrados | Seleção múltipla | Sem restrição  | Nome Livro Cadastrado |
+| [Nome do campo] | [tipo de dados]  |                |                   |
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão remover        | Fim do processo                | ---               |
+| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
+
+**Escolher qual livro deseja informar**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| Livros Cadastrados | Caixa de Texto   | Sem Restrição  | Nome Livro Cadastrado |
+| Nome Livro         | Caixa de Texto   | Sem Restrição  | ---               |
+| Seção Livro        | Caixa de Texto   | Apenas Letras  | ---               |
+| Nome Autor         | Caixa de Texto   | Apenas Letras  | ---               |
+| [Nome do campo] | [tipo de dados]  |                |                   |
+
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão alterar        | Fim do processo                | ---               |
+| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
+
+
+
