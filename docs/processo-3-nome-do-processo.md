@@ -5,13 +5,6 @@
 
 #### Detalhamento das atividades
 
-### 3.3.4 Processo 4 – Processo Gerenciamento de Usuário
-
-![Processo Gerenciamento de Usuário](images/processoGU2.png "Modelo BPMN do Processo 4.")
-
-
-#### Detalhamento das atividades
-
 Iniciar gerenciamento de livros
 O usuário irá acessar a tela de gerenciamento de livro, nela haverá 4 botões uma que irá levar para a tela de adicionar uma livro, um que leve para a tela de remoção de livros, um que irá levar para a página de alteração e um botão para voltar
 
