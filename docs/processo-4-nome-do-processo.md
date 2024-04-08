@@ -34,21 +34,19 @@ _* **Link** - campo que armazena uma URL_
 
 _* **Tabela** - campo formado por uma matriz de valores_
 
-**Nome da atividade 1**
+**Iniciar Gerenciamento de Usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-| ***Exemplo:***  |                  |                |                   |
-| login           | Caixa de Texto   | formato de e-mail |                |
-| senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
+| Não tem         | Não tem          | Não tem        | Não tem           |
+
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-| ***Exemplo:***       |                                |                   |
-| entrar               | Fim do Processo 1              | default           |
-| cadastrar            | Início do proceso de cadastro  |                   |
+| Botão adicionar      | Início processo de cadastro de livro     | Default           |
+| Botão remover        | Início Do processo alteração             | Default           |
+| Botão alterar        | Inicio Processo de remoção               | Default           |
+| Botão voltar         | Retorna para tela anterior               | Default           |
 
 
 **Nome da atividade 2**
