@@ -43,7 +43,7 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| Botão adicionar      | Início processo de cadastro de livro     | Default           |
+| Botão adicionar      | Início processo de cadastro de usuario    | Default           |
 | Botão remover        | Início Do processo alteração             | Default           |
 | Botão alterar        | Inicio Processo de remoção               | Default           |
 | Botão voltar         | Retorna para tela anterior               | Default           |
