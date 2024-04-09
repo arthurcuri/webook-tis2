@@ -46,7 +46,7 @@ ________________________________________________________________________________
 | ---             | ---              | ---            | ---               |
 | Nome            | Caixa de Texto   | Apenas Letras  | ---               |
 | Data de nascimento| Caixa de Texto | Apenas Numeros | ---               |
-| CPF             |   Caixa de Texto | Apenas Numeros | ---               |
+| CPF             |   Numero         | 12 Numeros | ---               |
 | Maior idade     | Seleção Unica    | Sem Restrição  | ---               |
 | Foto documento identidade | Arquivo          | Sem Restrição  | ---               |
 
@@ -65,7 +65,7 @@ ________________________________________________________________________________
 | ---             | ---              | ---            | ---               |
 | Nome            | Caixa de Texto   | Apenas Letras  | ---               |
 | Data de nascimento| Data           | Apenas Numeros | ---               |
-| CPF             |   Caixa de Texto | Apenas Numeros | ---               |
+| CPF             |   Numero | 12 Numeros | ---               |
 | Maior idade     | Seleção Unica    | Sem Restrição  | ---               |
 | Foto documento identidade| Arquivo          | Sem Restrição  | ---               |
 
