@@ -34,7 +34,7 @@ _* **Link** - campo que armazena uma URL_
 
 _* **Tabela** - campo formado por uma matriz de valores_
 
-**Iniciar Gerenciamento de Usuários**
+**Iniciar gerenciamento de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -43,20 +43,69 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| Botão adicionar      | Início processo de cadastro de usuario    | Default           |
-| Botão remover        | Início Do processo alteração             | Default           |
-| Botão alterar        | Inicio Processo de remoção               | Default           |
+| Botão adicionar      | Início processo de cadastro de usuario   | Default           |
+| Botão remover        | Início do processo alteração de usuario  | Default           |
+| Botão alterar        | Inicio processo de remoção de usuario    | Default           |
 | Botão voltar         | Retorna para tela anterior               | Default           |
 
 
-**Nome da atividade 2**
+**Enviar dados de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-|                 |                  |                |                   |
+| Nome            | Caixa de Texto   | Apenas Letras  | ---               |
+| Data de nascimento| Caixa de Texto | Apenas Numeros | ---               |
+| CPF             |   Caixa de Texto | Apenas Numeros | ---               |
+| Maior idade     | Seleção Unica    | Sem Restrição  | ---               |
+| Foto RG         | Arquivo          | Sem Restrição  | ---               |
+
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-|                      |                                |                   |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão adicionar      | Fim do processo                | Default           |
+
+**Verificar informações**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
+| Nome            | Caixa de Texto   | Apenas Letras  | ---               |
+| Data de nascimento| Caixa de Texto | Apenas Numeros | ---               |
+| CPF             |   Caixa de Texto | Apenas Numeros | ---               |
+| Maior idade     | Seleção Unica    | Sem Restrição  | ---               |
+| Foto RG         | Arquivo          | Sem Restrição  | ---               |
+
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão remover        | Fim do processo                | Default           |
+
+**Editar dados de usuários**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
+| Nome            | Caixa de Texto   | Apenas Letras  | Nome do usuário cadastrado|
+| Data de nascimento| Caixa de Texto | Apenas Numeros | ---               |
+| CPF             |   Caixa de Texto | Apenas Numeros | ---               |
+
+
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão editar         | Fim do processo                | Default           |
+
+**Remover dados de usuários**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
+| Usuários cadastrados| Seleção múltipla| Sem restrição | Nome do usuário cadastrado |
+| Data de nascimento| Caixa de Texto | Apenas Numeros | ---               |
+
+
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão remover        | Fim do processo                | Default           |
