@@ -17,7 +17,7 @@ O bibliotecário então é redirecionado para uma tela com um campo de seleção
 **Escolher qual livro deseja informar -**
 O bibliotecário então é redirecionado para uma tela com um capo para seleção única contendo todos os livros cadastrados, ao selecionar um livro 3 novos campos de área de texto irão aparecer sendo eles o Nome, a Seção e o Autor do livros selecionado com os valores que foram cadastrados ele então poderá alterar os campos. Também haverá um botão para voltar e outro para alterar.
 
-**Iniciar gerenciamento de livros**
+**Tela de iniciar gerenciamento de livros**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -31,8 +31,9 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | Botão remover        | Inicio Processo de remoção               | Default           |
 | Botão voltar         | Retorna para tela anterior               | Default           |
 
+___________________________________________________________________________________________________________________________________
 
-**Preencher informações  do livro (nome, seçao, autor)**
+**Tela de preencher informações  do livro (nome, seçao, autor)**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -45,7 +46,9 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão cadastro       | Fim do processo                | ---               |
 
-**Escolher qual livro deseja remover**
+___________________________________________________________________________________________________________________________________
+
+**Tela de escolher qual livro deseja remover**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -56,7 +59,9 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão remover        | Fim do processo                | ---               |
 
-**Escolher qual livro deseja editar**
+___________________________________________________________________________________________________________________________________
+
+**Tela de escolher qual livro deseja editar**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
