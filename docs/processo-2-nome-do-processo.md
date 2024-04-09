@@ -65,7 +65,7 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Não tem | [tipo de dados]  |                |                   |
+| Não tem | Não tem  |         Não tem      |             Não tem      |
 |                 |                  |                |                   |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
