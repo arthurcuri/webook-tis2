@@ -58,7 +58,7 @@ _* **Tabela** - campo formado por uma matriz de valores_
 |  Botão Pagar da taxa extra | Leva à tela de pagamento de taxa extra  | (default) |
 | Botão de Pagar multa de atraso     |        Leva à tela de pagamento de multa                        |           (default)        |
 | Botão de Pagar empréstimo do livro           |         Leva à tela de pagar empréstimo do livro      | (default)          |
-| cadastrar            | Início do proceso de cadastro  |                   |
+| Botão de voltar à tela antecessora        | Leva à tela antecessora  |         (default)          |
 
 
 **Nome da atividade 2**
