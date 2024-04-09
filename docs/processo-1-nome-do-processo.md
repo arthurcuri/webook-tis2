@@ -64,10 +64,10 @@ _* **Tabela** - campo formado por uma matriz de valores_
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
 | Nome do Usuario          | Caixa de Texto   | Apenas letras |    Usuario Cadastrado            |
-| Livro Escolhido          | Caixa de Texto   | Apenas letras |                |
-| Data de Retirada          | Data   |  |    X            |
+| Livro Escolhido          | Caixa de Texto   | Apenas letras |      X          |
+| Data de Retirada          | Data   | X |    X            |
 | Prazo pra devolucao          | Data   |  Valor não editável |    X            |
-| Preco         | Numero   |  |    X            |
+| Preco         | Numero   |  X |    X            |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
