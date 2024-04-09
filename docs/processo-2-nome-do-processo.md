@@ -82,4 +82,17 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |      
+| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |    
+
+___________________________________________________________________________________________________________________________________
+
+**Tela de pagamento de empréstimo do livro**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
+| Opções de pagamento | Seleção única  |         Não tem      |            ---   |                                                                 
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |    
+
