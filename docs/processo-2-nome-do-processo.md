@@ -50,14 +50,14 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
+| Tela de Registro de devolução de livro |Caixa de texto |     Não tem           |      ---             |
 | ***Exemplo:***  |                  |                |                   |
 | login           | Caixa de Texto   | formato de e-mail |                |
 | senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
+|  Botão Pagar da taxa extra | Leva à tela de pagamento de taxa extra  | (default) |
 | ***Exemplo:***       |                                |                   |
 | entrar               | Fim do Processo 1              | default           |
 | cadastrar            | Início do proceso de cadastro  |                   |
