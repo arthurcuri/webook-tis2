@@ -65,10 +65,8 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Não tem | Não tem  |         Não tem      |             Não tem      |
-|                 |                  |                |                   |
+| Opções de pagamento | Seleção única  |         Não tem      |            ---   |                                                                 
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Tela de pagamento de taxa extra | Atividade/processo de destino  | (default/cancel/  ) |
-|                      |                                |                   |
+| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |                                                                  
