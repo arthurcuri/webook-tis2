@@ -6,20 +6,16 @@
 #### Detalhamento das atividades
 
 
-**Iniciar gerenciamento de usuários**
-
+**Iniciar gerenciamento de usuários -**
 O bibliotecario irá acessar a tela de gerenciamento de usuários, nela haverá 4 botões uma que irá levar para a tela de adicionar um usuário, um que leve para a tela de remoção de usuários, um que irá levar para a página de alteração e um botão para voltar
 
-**Enviar dados de usuários**
-
+**Enviar dados de usuários -**
 O usuário deve preencher os campos da tela com seus dados, caso maior de 18 anos marcar a seleção unica e enviar foto do seu RG/Documento de Identidade, caso não marcar a seleção informada enviar RG/Documento de Identidade de um responsavel.
 
-**Verificar informações**
-
+**Verificar informações -**
 O bibliotecario irá verificar as informações enviadas para validar a documentação do usuário ou do seu responsavel.
 
-**Editar dados de usuários**
-
+**Editar dados de usuários -**
 O bibliotecário então é redirecionado para uma tela com um campo de seleção múltipla com todos os usuarios cadastrados ele então poderá selecionar um ou mais para serem removidos. Nela haverá um campo com seleção múltipla contendo todos os usuarios cadastrados. Também haverá um botão para voltar e outro para remover.
 
 **Remover dados de usuários**
@@ -42,6 +38,7 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | Botão remover        | Inicio processo de remoção de usuario    | Default           |
 | Botão voltar         | Retorna para tela anterior               | Default           |
 
+___________________________________________________________________________________________________________________________________
 
 **Enviar dados de usuários**
 
@@ -54,10 +51,13 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | Foto documento identidade | Arquivo          | Sem Restrição  | ---               |
 
 
+
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão adicionar      | Fim do processo                | Default           |
+
+___________________________________________________________________________________________________________________________________
 
 **Verificar informações**
 
@@ -75,6 +75,8 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | Aprovar dados         | Fim do processo               | Default           |
 | Reprovar dados        | Fim do processo               | Default           |
 
+___________________________________________________________________________________________________________________________________
+
 **Editar dados de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
@@ -90,6 +92,8 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão editar         | Fim do processo                | Default           |
 
+___________________________________________________________________________________________________________________________________
+ 
 **Remover dados de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
