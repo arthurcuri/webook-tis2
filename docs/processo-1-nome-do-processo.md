@@ -39,7 +39,7 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Caixa Pesquisa           | Caixa de Texto   | Apenas letras |                |
+| Pesquisa           | Área de Texto   | Apenas letras |    X            |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
@@ -52,8 +52,37 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Caixa de texto                 |   Date               |        Data futura        |                   |
+| Data Devolucao                 |   Data               |       Somente datas futuras        |      X             |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
 | Botão Registrar Data                     |  Tela de Registrar Empréstimo                              |  default                 |
+
+
+**Registrar Empréstimo**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
+| Nome do Usuario          | Caixa de Texto   | Apenas letras |    Usuario Cadastrado            |
+| Livro Escolhido          | Caixa de Texto   | Apenas letras |                |
+| Data de Retirada          | Data   |  |    X            |
+| Prazo pra devolucao          | Data   |  Valor não editável |    X            |
+| Preco         | Numero   |  |    X            |
+
+| **Comandos**         |  **Destino**                   | **Tipo** |
+| ---                  | ---                            | ---               |
+| Botão Voltar               | Retorna para a tela anterior          | default           |
+| Botão Registrar               | Tela final de conclusão do emprestimo           | default           |
+
+
+**Verificar Quantidade de Livros**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
+| Informações do Empréstimo         | Tabela   | Valores não editáveis |    Livro Escolhido, Quantidade            |
+
+
+| **Comandos**         |  **Destino**                   | **Tipo** |
+| ---                  | ---                            | ---               |
+| Botão Voltar               | Retorna para a tela anterior          | default           |
+| Botão Concluir               | Fim do Processo          | X           |
