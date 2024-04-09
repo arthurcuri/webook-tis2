@@ -19,8 +19,8 @@ Devem estar relacionadas com o modelo de processo apresentado anteriormente._
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
 | Botão adicionar      | Início processo de cadastro de usuario   | Default           |
-| Botão remover        | Início do processo alteração de usuario  | Default           |
-| Botão alterar        | Inicio processo de remoção de usuario    | Default           |
+| Botão alterar        | Início do processo alteração de usuario  | Default           |
+| Botão remover        | Inicio processo de remoção de usuario    | Default           |
 | Botão voltar         | Retorna para tela anterior               | Default           |
 
 
