@@ -46,7 +46,7 @@ _* **Link** - campo que armazena uma URL_
 
 _* **Tabela** - campo formado por uma matriz de valores_
 
-**Nome da atividade 1**
+**Tela de Registrar a devolção do livro**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -61,14 +61,14 @@ _* **Tabela** - campo formado por uma matriz de valores_
 | Botão de voltar à tela antecessora        | Leva à tela antecessora  |         (default)          |
 
 
-**Nome da atividade 2**
+**Tela de pagamento de taxa extra**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
+| Não tem | [tipo de dados]  |                |                   |
 |                 |                  |                |                   |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
+| Tela de pagamento de taxa extra | Atividade/processo de destino  | (default/cancel/  ) |
 |                      |                                |                   |
