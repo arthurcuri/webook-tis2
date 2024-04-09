@@ -8,38 +8,12 @@
 _Descreva aqui cada uma das propriedades das atividades do processo 1. 
 Devem estar relacionadas com o modelo de processo apresentado anteriormente._
 
-_Os tipos de dados a serem utilizados são:_
-
-_* **Área de texto** - campo texto de múltiplas linhas_
-
-_* **Caixa de texto** - campo texto de uma linha_
-
-_* **Número** - campo numérico_
-
-_* **Data** - campo do tipo data (dd-mm-aaaa)_
-
-_* **Hora** - campo do tipo hora (hh:mm:ss)_
-
-_* **Data e Hora** - campo do tipo data e hora (dd-mm-aaaa, hh:mm:ss)_
-
-_* **Imagem** - campo contendo uma imagem_
-
-_* **Seleção única** - campo com várias opções de valores que são mutuamente exclusivas (tradicional radio button ou combobox)_
-
-_* **Seleção múltipla** - campo com várias opções que podem ser selecionadas mutuamente (tradicional checkbox ou listbox)_
-
-_* **Arquivo** - campo de upload de documento_
-
-_* **Link** - campo que armazena uma URL_
-
-_* **Tabela** - campo formado por uma matriz de valores_
-
 
 **Requisitar Empréstimo**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Pesquisa           | Área de Texto   | Apenas letras |    X            |
+| Pesquisa           | Área de Texto   | Apenas letras |                |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
@@ -52,7 +26,7 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Data Devolucao                 |   Data               |       Somente datas futuras        |      X             |
+| Data Devolução                 |   Data               |       Somente datas futuras        |                   |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
@@ -63,16 +37,16 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Nome do Usuario          | Caixa de Texto   | Apenas letras |    Usuario Cadastrado            |
-| Livro Escolhido          | Caixa de Texto   | Apenas letras |      X          |
-| Data de Retirada          | Data   | X |    X            |
-| Prazo pra devolucao          | Data   |  Valor não editável |    X            |
-| Preco         | Numero   |  X |    X            |
+| CPF do Usuário          | Número   | 12 caracteres |                |
+| Livro Escolhido          | Caixa de Texto   | Apenas letras |                |
+| Data de Retirada          | Data   |  |                |
+| Prazo pra Devolução          | Data   |  Valor não editável |                |
+| Preço         | Número   |   |                |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
 | Botão Voltar               | Retorna para a tela anterior          | default           |
-| Botão Registrar               | Tela final de conclusão do emprestimo           | default           |
+| Botão Registrar               | Tela final de conclusão do empréstimo           | default           |
 
 
 **Verificar Quantidade de Livros**
@@ -85,4 +59,4 @@ _* **Tabela** - campo formado por uma matriz de valores_
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
 | Botão Voltar               | Retorna para a tela anterior          | default           |
-| Botão Concluir               | Fim do Processo          | X           |
+| Botão Concluir               | Fim do Processo          |            |
