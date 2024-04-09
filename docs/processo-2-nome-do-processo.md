@@ -50,7 +50,7 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Tela de Registro de devolução de livro |Caixa de texto |     Não tem           |      ---             |
+| Não tem |Caixa de texto |     Não tem           |      ---             |
 
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
