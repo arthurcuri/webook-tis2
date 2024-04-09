@@ -56,7 +56,7 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão remover        | Fim do processo                | ---               |
 
-**Escolher qual livro deseja informar**
+**Escolher qual livro deseja editar**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
