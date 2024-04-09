@@ -13,7 +13,7 @@ Devem estar relacionadas com o modelo de processo apresentado anteriormente._
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Pesquisa           | Área de Texto   | Apenas letras |                |
+| Pesquisa           | Área de Texto   | Apenas letras |  ---              |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
@@ -26,7 +26,7 @@ Devem estar relacionadas com o modelo de processo apresentado anteriormente._
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Data Devolução                 |   Data               |       Somente datas futuras        |                   |
+| Data Devolução                 |   Data               |       Somente datas futuras        |     ---              |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
@@ -37,11 +37,11 @@ Devem estar relacionadas com o modelo de processo apresentado anteriormente._
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| CPF do Usuário          | Número   | 12 caracteres |                |
-| Livro Escolhido          | Caixa de Texto   | Apenas letras |                |
-| Data de Retirada          | Data   |  |                |
+| CPF do Usuário          | Número   | 12 Caracteres | ---               |
+| Livro Escolhido          | Caixa de Texto   | Apenas letras | ---               |
+| Data de Retirada          | Data   | --- |  ---              |
 | Prazo pra Devolução          | Data   |  Valor não editável |                |
-| Preço         | Número   |   |                |
+| Preço         | Número   | ---  | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
@@ -59,4 +59,4 @@ Devem estar relacionadas com o modelo de processo apresentado anteriormente._
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
 | Botão Voltar               | Retorna para a tela anterior          | default           |
-| Botão Concluir               | Fim do Processo          |            |
+| Botão Concluir               | Fim do Processo          | ---           |
