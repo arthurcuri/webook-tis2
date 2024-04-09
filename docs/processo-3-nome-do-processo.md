@@ -27,8 +27,8 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
 | Botão adicionar      | Início processo de cadastro de livro     | Default           |
-| Botão remover        | Início Do processo alteração             | Default           |
-| Botão alterar        | Inicio Processo de remoção               | Default           |
+| Botão alterar        | Início do processo alteração             | Default           |
+| Botão remover        | Inicio Processo de remoção               | Default           |
 | Botão voltar         | Retorna para tela anterior               | Default           |
 
 
