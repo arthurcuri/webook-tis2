@@ -60,6 +60,7 @@ _* **Tabela** - campo formado por uma matriz de valores_
 | Botão de Pagar empréstimo do livro           |         Leva à tela de pagar empréstimo do livro      | (default)          |
 | Botão de voltar à tela antecessora        | Leva à tela antecessora  |         (default)          |
 
+___________________________________________________________________________________________________________________________________
 
 **Tela de pagamento de taxa extra**
 
@@ -69,4 +70,16 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |                                                                  
+| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |              
+
+___________________________________________________________________________________________________________________________________
+
+**Tela de pagamento de multa**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
+| Opções de pagamento | Seleção única  |         Não tem      |            ---   |                                                                 
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |      
