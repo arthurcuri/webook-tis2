@@ -53,8 +53,8 @@ Devem estar relacionadas com o modelo de processo apresentado anteriormente._
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão remover        | Fim do processo                | Default           |
+| Aprovar dados         | Fim do processo               | Default           |
+| Reprovar dados        | Fim do processo               | Default           |
 
 **Editar dados de usuários**
 
