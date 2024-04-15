@@ -35,7 +35,13 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Opções de pagamento | Seleção única  |         Não tem      |            ---   |                                                                 
+| Opções de pagamento | Seleção única  |         Não tem      |            ---   |
+| Numero cartão | Número |  Após escolher cartão de débito/crédito   |         ---   | 
+| Data de vencimento | Número |  Após escolher cartão de débito/crédito   |         ---   |      
+| Código de segurança | Número |  Após escolher cartão de débito/crédito   |         ---   | 
+| Nome do dono do cartão | Campo de texto |  Após escolher cartão de débito/crédito   |         ---   | 
+| QR Code do PIX | Imagem |  Após escolher PIX   |         ---   | 
+
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
@@ -47,7 +53,12 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Opções de pagamento | Seleção única  |         Não tem      |            ---   |                                                                 
+| Opções de pagamento | Seleção única  |         Não tem      |            ---   |
+| Numero cartão | Número |  Após escolher cartão de débito/crédito   |         ---   | 
+| Data de vencimento | Número |  Após escolher cartão de débito/crédito   |         ---   |      
+| Código de segurança | Número |  Após escolher cartão de débito/crédito   |         ---   | 
+| Nome do dono do cartão | Campo de texto |  Após escolher cartão de débito/crédito   |         ---   | 
+| QR Code do PIX | Imagem |  Após escolher PIX   |         ---   |                                                                  
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
@@ -59,7 +70,12 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Opções de pagamento | Seleção única  |         Não tem      |            ---   |                                                                 
+| Opções de pagamento | Seleção única  |         Não tem      |            ---   |
+| Numero cartão | Número |  Após escolher cartão de débito/crédito   |         ---   | 
+| Data de vencimento | Número |  Após escolher cartão de débito/crédito   |         ---   |      
+| Código de segurança | Número |  Após escolher cartão de débito/crédito   |         ---   | 
+| Nome do dono do cartão | Campo de texto |  Após escolher cartão de débito/crédito   |         ---   | 
+| QR Code do PIX | Imagem |  Após escolher PIX   |         ---   |                                                                  
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
