@@ -20,11 +20,14 @@ ________________________________________________________________________________
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
 | Pesquisa           | Área de Texto   | Apenas letras |  ---              |
+| Título do Livro           | Área de Texto   | Não editável |  ---              |
+| Tipo do Livro           | Área de Texto   | Não editável |  ---              |
+| Imagem do LIvro           | Imagem  |  |  ---              |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| Botão Ver Livros               | Tela com as opções de livro              | default           |
-| Botão Buscar               | Livro digitado na busca              | default           |
+| Botão Ver Livros               | Desce a tela com as opções de livros              | default           |
+| Botão Buscar               | Livro digitado na caixa de pesquisa              | default           |
 | Botão Escolher Livro             | Verificar quantidade de livros              | default           |
 
 ____________________________________________________________________________________________________________________________________________________________________
@@ -33,6 +36,8 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
+| CPF do Usuário          | Número   | 12 Caracteres | ---               |
+| Data de Retirada          | Data   | Não editável | ---               |
 | Data Devolução                 |   Data               |       Somente datas futuras        |     ---              |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
@@ -48,7 +53,7 @@ ________________________________________________________________________________
 | CPF do Usuário          | Número   | 12 Caracteres | ---               |
 | Livro Escolhido          | Caixa de Texto   | Apenas letras | ---               |
 | Data de Retirada          | Data   | --- |  ---              |
-| Prazo pra Devolução          | Data   |  Valor não editável |                |
+| Prazo pra Devolução          | Data   | Não editável |                |
 | Preço         | Número   | ---  | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
@@ -62,12 +67,12 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Nome Livro         | Caixa de Texto   | ---  | ---               |
-| Seção Livro        | Caixa de Texto   | ---  | ---               |
-| Nome Autor         | Caixa de Texto   | ---  | ---               |
-| Ano publicação  | Caixa de Texto   | ---  | ---               |
-| Título Original | Caixa de Texto   | ---  | ---               |
-| Quantidade | Número  | ---  | ---               |
+| Nome Livro         | Caixa de Texto   | Não editável | ---               |
+| Seção Livro        | Caixa de Texto   | Não editável  | ---               |
+| Nome Autor         | Caixa de Texto   | Não editável  | ---               |
+| Ano publicação  | Caixa de Texto   | Não editável  | ---               |
+| Título Original | Caixa de Texto   | Não editável  | ---               |
+| Quantidade | Número  | Não editável  | ---               |
 
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
