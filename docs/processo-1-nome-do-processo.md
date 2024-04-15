@@ -62,7 +62,12 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Informações do Empréstimo         | Tabela   | Valores não editáveis |    Livro Escolhido, Quantidade, Preço           |
+| Nome Livro         | Caixa de Texto   | ---  | ---               |
+| Seção Livro        | Caixa de Texto   | ---  | ---               |
+| Nome Autor         | Caixa de Texto   | ---  | ---               |
+| Ano publicação  | Caixa de Texto   | ---  | ---               |
+| Título Original | Caixa de Texto   | ---  | ---               |
+| Quantidade | Número  | ---  | ---               |
 
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
