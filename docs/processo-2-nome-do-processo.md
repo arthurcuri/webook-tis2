@@ -15,11 +15,7 @@
 
 
 
-**Tela de Registrar a devolção do livro**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| Não tem |Caixa de texto |     Não tem           |      ---             |
+**Registrar a devolção do livro**
 
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
@@ -31,28 +27,26 @@
 
 ___________________________________________________________________________________________________________________________________
 
-**Tela de pagamento de taxa extra**
+**Cobrar taxa extra ou devolução do livro**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Opções de pagamento | Seleção única  |         Não tem      |            ---   |
-| Numero cartão | Número |  Após escolher cartão de débito/crédito   |         ---   | 
-| Data de vencimento | Número |  Após escolher cartão de débito/crédito   |         ---   |      
-| Código de segurança | Número |  Após escolher cartão de débito/crédito   |         ---   | 
-| Nome do dono do cartão | Campo de texto |  Após escolher cartão de débito/crédito   |         ---   | 
-| QR Code do PIX | Imagem |  Após escolher PIX   |         ---   | 
+| Valor taxa extra  | Número       | ---            | ---               |
+| Motivo de taxa extra | Campo de texto  |    Não tem      |            ---   |
+
 
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |              
+| Botão de confirmar cobrança | Leva à tela de Registrar devolução de livro de volta | (default) |              
 
 ___________________________________________________________________________________________________________________________________
 
-**Tela de pagamento de multa**
+**Pagar multa de atraso**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
+| Valor multa     | Número          | ---            | ---               |
 | Opções de pagamento | Seleção única  |         Não tem      |            ---   |
 | Numero cartão | Número |  Após escolher cartão de débito/crédito   |         ---   | 
 | Data de vencimento | Número |  Após escolher cartão de débito/crédito   |         ---   |      
@@ -66,10 +60,11 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
 
-**Tela de pagamento de empréstimo do livro**
+**Pagar o empréstimo do livro**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
+| Valor empréstimo      | Número        | ---            | ---               |
 | Opções de pagamento | Seleção única  |         Não tem      |            ---   |
 | Numero cartão | Número |  Após escolher cartão de débito/crédito   |         ---   | 
 | Data de vencimento | Número |  Após escolher cartão de débito/crédito   |         ---   |      
