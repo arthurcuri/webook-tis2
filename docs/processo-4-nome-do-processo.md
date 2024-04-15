@@ -76,6 +76,21 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
 
+**Escolher qual usuário quer alterar**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
+| CPF             | Seleção única | --- | ---               |
+
+
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão editar         | Fim do processo                | Default           |
+
+___________________________________________________________________________________________________________________________________
+
 **Editar dados de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
@@ -97,8 +112,9 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Usuários cadastrados| Seleção múltipla| Sem restrição | Nome do usuário cadastrado |
-| Data de nascimento  | Data            | Apenas Numeros| ---                        |
+| Nome do usuário | Seleção múltipla| Sem restrição | Nome do usuário cadastrado |
+| CPF             |   Caixa de Texto | Apenas Numeros | ---               |
+| Data de nascimento  | Data            | Apenas Numeros| ---             |
 
 
 
