@@ -1,6 +1,6 @@
 ### 3.3.3 Processo 3 – Processo Gerenciamento de Livros
 
-![Processo Gerenciamento de Livros](images/processoGL4.png "Modelo BPMN do Processo 3.")
+![Processo Gerenciamento de Livros](images/processoGL5.png "Modelo BPMN do Processo 3.")
 
 
 #### Detalhamento das atividades
@@ -59,11 +59,22 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
 
-**Alterar informações do livro**
+**Escolher qual livro deseja alterar**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
 | Livros Cadastrados | Seleção única   | Sem Restrição  | Nome Livro Cadastrado |
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão alterar        | Alterar informações do livro   | ---               |
+___________________________________________________________________________________________________________________________________
+
+**Alterar informações do livro**
+
+| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| ---             | ---              | ---            | ---               |
 | Nome Livro         | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Seção Livro        | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Nome Autor         | Caixa de Texto   | Após a seleção do livro  | ---               |
