@@ -33,15 +33,13 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
+| ISBN | Número  | 13 Caracteres     | ---               |
 | Título do Livro     | Caixa de Texto   | Sem Restrição  | ---               |
 | Seção do Livro     | Caixa de Texto   | Apenas Letras  | ---               |
 | Nome do Autor      | Caixa de Texto   | Apenas Letras  | ---               |
 | Ano de publicação  | Caixa de Texto   | Apenas Letras  | ---               |
-| Título Original | Caixa de Texto   | Apenas Letras  | ---               |
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
 | Preço | Número   | ---   | ---               |
-| Quantidade de páginas | Número  | ---     | ---               |
-| ISBN | Número  | ---     | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
@@ -79,15 +77,12 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Nome Livro         | Caixa de Texto   | Após a seleção do livro  | ---               |
+| ISBN | Número  | 13 Caracteres     | ---               |
+| Título do Livro         | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Seção Livro        | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Nome Autor         | Caixa de Texto   | Após a seleção do livro  | ---               |
-| Ano publicação  | Caixa de Texto   | Após a seleção do livro  | ---               |
-| Título Original | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
 | Preço | Número   | ---   | ---               |
-| Quantidade de páginas | Número  | ---     | ---               |
-| ISBN | Número  | ---     | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
