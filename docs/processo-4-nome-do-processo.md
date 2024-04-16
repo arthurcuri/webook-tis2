@@ -76,7 +76,8 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| CPF             | Seleção única | --- | ---               |
+| Nome do usuário | Seleção única | --- | Nome do usuário cadastrado |
+| CPF             | Seleção única | --- | CPF do usuário cadastrado   |
 
 
 
@@ -108,9 +109,9 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Nome do usuário | Seleção múltipla| Sem restrição | Nome do usuário cadastrado |
+| Nome do usuário | Seleção única | Sem restrição | Nome do usuário cadastrado |
 | CPF             |   Caixa de Texto | Apenas Numeros | ---               |
-| Data de nascimento  | Data            | Apenas Numeros| ---             |
+
 
 
 
