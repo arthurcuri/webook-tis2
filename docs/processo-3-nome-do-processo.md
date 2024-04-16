@@ -39,6 +39,8 @@ ________________________________________________________________________________
 | Ano publicação  | Caixa de Texto   | Apenas Letras  | ---               |
 | Título Original | Caixa de Texto   | Apenas Letras  | ---               |
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
+| Preço | Número   | ---   | ---               |
+| Quantidade de páginas | Número  | ---     | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
@@ -82,6 +84,8 @@ ________________________________________________________________________________
 | Ano publicação  | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Título Original | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
+| Preço | Número   | ---   | ---               |
+| Quantidade de páginas | Número  | ---     | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
