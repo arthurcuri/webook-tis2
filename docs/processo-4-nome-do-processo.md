@@ -25,10 +25,6 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 
 **Iniciar gerenciamento de usuários**
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| Não tem         | Não tem          | Não tem        | Não tem           |
-
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
