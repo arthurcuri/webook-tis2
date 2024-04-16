@@ -43,7 +43,7 @@ ________________________________________________________________________________
 | Data de nascimento| Caixa de Texto | Apenas Numeros | ---               |
 | CPF             |   Numero         | 12 Numeros | ---               |
 | Maior idade     | Seleção Unica    | Sem Restrição  | ---               |
-| Foto documento identidade | Arquivo          | Sem Restrição  | ---               |
+
 
 
 
