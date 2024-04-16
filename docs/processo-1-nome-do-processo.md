@@ -67,15 +67,12 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
+| ISBN | Número  | 13 Caracteres     | ---               |
 | Título do Livro         | Caixa de Texto   | Não editável | ---               |
 | Seção do Livro        | Caixa de Texto   | Não editável  | ---               |
 | Nome do Autor         | Caixa de Texto   | Não editável  | ---               |
-| Ano de publicação  | Caixa de Texto   | Não editável  | ---               |
 | Editora | Caixa de Texto   | Não editável  | ---               |
 | Preço | Número   | Não editável   | ---               |
-| Quantidade de páginas | Número  | Não editável     | ---               |
-| Preço | Número  | Não editável  | ---               |
-| ISBN | Número  | ---     | ---               |
 | Quantidade | Número  | Não editável  | ---               |
 
 
