@@ -75,8 +75,10 @@ ________________________________________________________________________________
 | Editora | Caixa de Texto   | Não editável  | ---               |
 | Preço | Número   | Não editável   | ---               |
 | Quantidade de páginas | Número  | Não editável     | ---               |
-| Quantidade | Número  | Não editável  | ---               |
 | Preço | Número  | Não editável  | ---               |
+| ISBN | Número  | ---     | ---               |
+| Quantidade | Número  | Não editável  | ---               |
+
 
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
