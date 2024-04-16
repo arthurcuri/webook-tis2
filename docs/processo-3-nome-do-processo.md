@@ -41,6 +41,7 @@ ________________________________________________________________________________
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
 | Preço | Número   | ---   | ---               |
 | Quantidade de páginas | Número  | ---     | ---               |
+| ISBN | Número  | ---     | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
@@ -86,6 +87,7 @@ ________________________________________________________________________________
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
 | Preço | Número   | ---   | ---               |
 | Quantidade de páginas | Número  | ---     | ---               |
+| ISBN | Número  | ---     | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
