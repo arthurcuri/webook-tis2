@@ -21,7 +21,7 @@ ________________________________________________________________________________
 | ---             | ---              | ---            | ---               |
 | Pesquisa           | Área de Texto   | Apenas letras |  ---              |
 | Título do Livro           | Área de Texto   | Não editável |  ---              |
-| Tipo do Livro           | Área de Texto   | Não editável |  ---              |
+| Seção do Livro           | Área de Texto   | Não editável |  ---              |
 | Imagem do LIvro           | Imagem  |  |  ---              |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
