@@ -33,10 +33,10 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Nome Livro      | Caixa de Texto   | Sem Restrição  | ---               |
-| Seção Livro     | Caixa de Texto   | Apenas Letras  | ---               |
-| Nome Autor      | Caixa de Texto   | Apenas Letras  | ---               |
-| Ano publicação  | Caixa de Texto   | Apenas Letras  | ---               |
+| Título do Livro     | Caixa de Texto   | Sem Restrição  | ---               |
+| Seção do Livro     | Caixa de Texto   | Apenas Letras  | ---               |
+| Nome do Autor      | Caixa de Texto   | Apenas Letras  | ---               |
+| Ano de publicação  | Caixa de Texto   | Apenas Letras  | ---               |
 | Título Original | Caixa de Texto   | Apenas Letras  | ---               |
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
 | Preço | Número   | ---   | ---               |
