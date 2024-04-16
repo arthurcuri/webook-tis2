@@ -20,9 +20,9 @@
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-|  Botão Pagar da taxa extra | Leva à tela de pagamento de taxa extra  | (default) |
-| Botão de Pagar multa de atraso     |        Leva à tela de pagamento de multa                        |           (default)        |
-| Botão de Pagar empréstimo do livro           |         Leva à tela de pagar empréstimo do livro      | (default)          |
+|  Botão Cobrar da taxa extra | Cobrar taxa extra ou devolução do livro  | (default) |
+| Botão de Pagar multa de atraso     |        Pagar multa de atraso                        |           (default)        |
+| Botão de Pagar empréstimo do livro           |         Pagar o empréstimo do livro      | (default)          |
 | Botão de voltar à tela antecessora        | Leva à tela antecessora  |         (default)          |
 
 ___________________________________________________________________________________________________________________________________
@@ -38,7 +38,7 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar cobrança | Leva à tela de Registrar devolução de livro de volta | (default) |              
+| Botão de confirmar cobrança | Registrar a devolução do livro na biblioteca | (default) |              
 
 ___________________________________________________________________________________________________________________________________
 
@@ -56,7 +56,7 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |    
+| Botão de confirmar pagamento ("Ja paguei")| Registrar a devolução do livro na biblioteca | (default) |    
 
 ___________________________________________________________________________________________________________________________________
 
@@ -74,5 +74,5 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar pagamento ("Ja paguei")| Leva à tela de Registrar devolução de livro de volta | (default) |    
+| Botão de confirmar pagamento ("Ja paguei")| Registrar a devolução do livro na biblioteca | (default) |    
 
