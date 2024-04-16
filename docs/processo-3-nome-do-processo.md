@@ -38,6 +38,7 @@ ________________________________________________________________________________
 | Nome Autor      | Caixa de Texto   | Apenas Letras  | ---               |
 | Ano publicação  | Caixa de Texto   | Apenas Letras  | ---               |
 | Título Original | Caixa de Texto   | Apenas Letras  | ---               |
+| Editora | Caixa de Texto   | Apenas Letras  | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
@@ -80,6 +81,7 @@ ________________________________________________________________________________
 | Nome Autor         | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Ano publicação  | Caixa de Texto   | Após a seleção do livro  | ---               |
 | Título Original | Caixa de Texto   | Após a seleção do livro  | ---               |
+| Editora | Caixa de Texto   | Apenas Letras  | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
