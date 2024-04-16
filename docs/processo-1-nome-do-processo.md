@@ -71,6 +71,10 @@ ________________________________________________________________________________
 | Seção do Livro        | Caixa de Texto   | Não editável  | ---               |
 | Nome do Autor         | Caixa de Texto   | Não editável  | ---               |
 | Ano de publicação  | Caixa de Texto   | Não editável  | ---               |
+| Título Original | Caixa de Texto   | Não editável  | ---               |
+| Editora | Caixa de Texto   | Não editável  | ---               |
+| Preço | Número   | Não editável   | ---               |
+| Quantidade de páginas | Número  | Não editável     | ---               |
 | Quantidade | Número  | Não editável  | ---               |
 | Preço | Número  | Não editável  | ---               |
 
