@@ -13,7 +13,7 @@ _Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou s
 | **Dimensão**   | **Tecnologia**  | **Utilização** |
 | ---            | ---             | ---            |
 | SGBD           | MySQL           |                |
-| Front end      | HTML+CSS+JS     |                |
-| Back end       | Java SpringBoot |                |
-| Deploy         | Github Pages    |                |
+| Front-end      | HTML + CSS + JS     |                |
+| Back-end       | Java  |  Linguagem de programação usada para o desenvolvimento do back-end  |
+| Deploy         | Github    |  Salvar versões dos arquivos no repositório remoto   |
 
