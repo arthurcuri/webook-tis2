@@ -8,8 +8,6 @@
 
 ### 4.2. Tecnologias
 
-_Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas._
-
 | **Dimensão**   | **Tecnologia**  | **Utilização** |
 | ---            | ---             | ---            |
 | SGBD           | MySQL           |  Software de criação e vizualização dos dados armazenados  |
