@@ -19,7 +19,7 @@ _Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou s
 | APIs           | Postman  |  Plataforma de testes dos endpoints da API  |
 | Deploy         | Git  |  Gerenciamento das versões dos arquivos  |
 | Deploy         | Github    |  Salvar versões dos arquivos no repositório remoto  |
-| IDE            | Visual Studio Code |  Ferramenta usada pela equipe para codar  |
-| Modeler        | Camunda |  Ferramenta usada pela equipe para definir os processos, fazer fluxos de funcionamento das aplicacoes  |
-| Database Diagram | dbdiagram.io | Ferramenta ultilizada para definição dos diagramas do banco de dados  |
+| IDE            | Visual Studio Code |  Ferramenta usada pela equipe para desenvolvimento de software  |
+| Modeler        | Camunda |  Ferramenta usada pela equipe para definir os processos, fazer fluxos de funcionamento das aplicaçoes  |
+| Database Diagram | dbdiagram.io | Ferramenta ultilizada pela equipe para para definição dos diagramas do banco de dados  |
 
