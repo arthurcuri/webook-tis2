@@ -17,7 +17,7 @@ _Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou s
 | Back-end       | Java  |  Linguagem de programação usada para o desenvolvimento do back-end  |
 | Back-end       | Spring Boot  |  Framework back-end utilizado para criar e gerenciar as entidades do banco de dados  |
 | Back-end       | Java  |  Linguagem de programação usada para o desenvolvimento do back-end  |
-| ?       | Postman  |  Plataforma de testes dos endpoints da API  |
+| APIs           | Postman  |  Plataforma de testes dos endpoints da API  |
 | Editor de Código | Visual Studio Code |  Ferramenta utilizada pela equipe para codar  |
 | Deploy         | Github    |  Salvar versões dos arquivos no repositório remoto   |
 
