@@ -13,10 +13,13 @@ _Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou s
 | **Dimensão**   | **Tecnologia**  | **Utilização** |
 | ---            | ---             | ---            |
 | SGBD           | MySQL           |  Software de criação e vizualização dos dados armazenados  |
-| Front-end      | HTML + CSS + JS |  Linguagens voltadas para o desenvolvimento do front-end  |
+| Front-end      | HTML + CSS + JS |  Linguagens voltadas para criação da interface da aplicação na web  |
 | Back-end       | Java  |  Linguagem de programação usada para o desenvolvimento do back-end  |
 | Framework      | Spring Boot  |  Framework back-end usado para criar e gerenciar as entidades do banco de dados  |
 | APIs           | Postman  |  Plataforma de testes dos endpoints da API  |
 | Deploy         | Git  |  Gerenciamento das versões dos arquivos  |
 | Deploy         | Github    |  Salvar versões dos arquivos no repositório remoto  |
-| Editor de Código | Visual Studio Code |  Ferramenta usada pela equipe para codar  |
+| IDE            | Visual Studio Code |  Ferramenta usada pela equipe para codar  |
+| Modeler        | Camunda |  Ferramenta usada pela equipe para definir os processos, fazer fluxos de funcionamento das aplicacoes  |
+| Database Diagram | dbdiagram.io | Ferramenta ultilizada para definição dos diagramas do banco de dados  |
+
