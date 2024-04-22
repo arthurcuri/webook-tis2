@@ -103,8 +103,6 @@ Apenas dois participantes no processo, seriam eles:
 
 ## 4. Projeto da solução
 
-O documento a seguir apresenta o detalhamento do projeto da solução. São apresentadas duas seções que descrevem, respectivamente: modelo relacional e tecnologias.
-
 [Projeto da solução](solution-design.md "Detalhamento do projeto da solução: modelo relacional e tecnologias.")
 
 
