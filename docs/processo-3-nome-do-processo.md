@@ -37,7 +37,6 @@ ________________________________________________________________________________
 | Título do Livro     | Caixa de Texto   | Sem Restrição  | ---               |
 | Seção do Livro     | Caixa de Texto   | Apenas Letras  | ---               |
 | Nome do Autor      | Caixa de Texto   | Apenas Letras  | ---               |
-| Ano de publicação  | Caixa de Texto   | Apenas Letras  | ---               |
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
 | Preço | Número   | ---   | ---               |
 
