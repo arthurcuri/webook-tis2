@@ -10,7 +10,7 @@
 O bibliotecario irá acessar a tela de gerenciamento de usuários, nela haverá 4 botões uma que irá levar para a tela de adicionar um usuário, um que leve para a tela de remoção de usuários, um que irá levar para a página de alteração e um botão para voltar
 
 **Enviar dados de usuários -**
-O usuário deve preencher os campos da tela com seus dados, caso maior de 18 anos marcar a seleção unica e enviar foto do seu RG/Documento de Identidade, caso não marcar a seleção informada enviar RG/Documento de Identidade de um responsavel.
+O usuário deve preencher os campos da tela com seus dados.
 
 **Verificar informações -**
 O bibliotecario irá verificar as informações enviadas para validar a documentação do usuário ou do seu responsavel.
@@ -62,7 +62,6 @@ ________________________________________________________________________________
 | Data de nascimento| Data           | Apenas Numeros | ---               |
 | CPF             |   Numero | 12 Numeros | ---               |
 | Maior idade     | Seleção Unica    | Sem Restrição  | ---               |
-| Foto documento identidade| Arquivo          | Sem Restrição  | ---               |
 
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
