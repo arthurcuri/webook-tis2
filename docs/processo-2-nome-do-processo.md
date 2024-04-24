@@ -5,13 +5,13 @@
 
 
 #### **Detalhamento das atividades**
-**Registrar a devolução do livro na biblioteca** - Bibliotecario entra na tela do registro da devolução de livros. A tela possui 4 botões, um que leva à pagina anterior, um que leva a uma tela que registra que uma multa foi paga devido à danos no livro. Além desses botões, nessa mesma tela temos a opção de verificar se o livro está com atraso na devolução ou não, preenchendo as informações do cliente ou do proprio livro (é possivel pelos 2 caminhos). E os ultimos 2 botões levam a outras 2 telas diferentes, que são a de pagamento de multa e a do pagamento do empréstimo do livro.
+**Registrar a devolução do livro na biblioteca** - Bibliotecário entra na tela do registro da devolução de livros. A tela possui 4 botões, um que leva à pagina anterior, um que leva a uma tela que registra que uma multa foi paga devido à danos no livro. Além desses botões, nessa mesma tela temos a opção de verificar se o livro está com atraso na devolução ou não, preenchendo as informações do cliente ou do proprio livro (é possivel pelos 2 caminhos). E os ultimos 2 botões levam a outras 2 telas diferentes, que são a de pagamento de multa e a do pagamento do empréstimo do livro.
 
-**Cobrar taxa extra** - Bibliotecario apenas acessará essa tela a partir da tela do registro da devolução do livro caso o livro tenha voltado com defeitos que não possuia antes. Essa tela possibilitará deixar registrado o ocorrido com o livro caso ocorram futuras duvidas em relação ao ocorrido. Além de tudo, essa tela possuirá apenas um botão para que o bibliotecario possa retornar à tela de registro de devolção.
+**Cobrar taxa extra** - Bibliotecário apenas acessará essa tela a partir da tela do registro da devolução do livro, caso o livro tenha voltado com defeitos que não possuia antes. Essa tela possibilitará deixar registrado o ocorrido com o valor que será cobrado ao usuário pelos danos. Ela terá apenas um botão para dar sequência ao processo.
 
-**Pagar multa de atraso** - Essa tela so será acessada pelo bilbiotecario a partir da tela de devolução de livros caso o usuário tenha atraso na data de devolução do livro. A tela possuirá as opções de pagamento do cliente com o valor já calculado pelo proprio software na tela. Essa tela possuirá apenas um botão para que o bibliotecario possa voltar à tela de devolução de livro apos o pagamento da multa.
+**Pagar multa de atraso** - O usuário receberá as informações de devolução enviadas peo bibliotecário. Neste caso, apresentará uma tela informando o valor de multa que será adicionado ao preço do empréstimo, para o pagamento em conjunto na tela seguinte.
 
-**Pagar o empréstimo do livro** - Após todo o processo verificado e executado, o bilbiotecario passará obrigatoriamente por essa tela para que o cliente possa pagar o valor do empréstimo do livro. Essa possuirá o valor ja calculado do empréstimo pelo software e oferecerá as opções de pagamento disponíveis ao usuário. A tela possuirá apenas um botão para confirmar que o pagamento foi executado. O botão será ativado manualmente pelo bibliotecario apenas após a confirmação de pagamento feita pelo cliente.
+**Pagar o empréstimo do livro** - Após todo o processo verificado e executado, o usuário recebe uma tela com o preço inteiro a ser pago, já considerando as taxas de dano e multa, caso apresente alguma delas, e as meios de pagamento a serem utilizados. Após a conclusão do mesmo, o usuário apresenta o comprovante e o livro é disponibilizado novamente no sistema.
 
 
 
