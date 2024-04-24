@@ -1,6 +1,6 @@
 ### 3.3.3 Processo 3 – Processo Gerenciamento de Livros
 
-![Processo Gerenciamento de Livros](images/processoGL5.png "Modelo BPMN do Processo 3.")
+![Processo Gerenciamento de Livros](images/processoGL.png "Modelo BPMN do Processo 3.")
 
 
 #### Detalhamento das atividades
