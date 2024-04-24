@@ -24,9 +24,9 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| Botão Ver Livros               | Desce a tela com as opções de livros              | default           |
-| Botão Buscar               | Livro digitado na caixa de pesquisa              | default           |
-| Botão Escolher Livro             | Verificar livros escolhidos              | default           |
+| Botão Ver Livros               | Desce a tela com as opções de livros              | Default           |
+| Botão Buscar               | Livro digitado na caixa de pesquisa              | Default           |
+| Botão Escolher Livro             | Verificar livros escolhidos              | Default           |
 
 ____________________________________________________________________________________________________________________________________________________________________
 
@@ -40,7 +40,7 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão Registrar Data                     |  Tela de Registrar Empréstimo                              |  default                 |
+| Botão Registrar Data                     |  Tela de Registrar Empréstimo                              |  Default                 |
 
 ____________________________________________________________________________________________________________________________________________________________________
 
@@ -56,7 +56,7 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| Botão Voltar               | Retorna para a tela anterior          | default           |
-| Botão Registrar               | Tela final de conclusão do empréstimo           | default           |
+| Botão Voltar               | Retorna para a tela anterior          | Default           |
+| Botão Registrar               | Tela final de conclusão do empréstimo           | Default           |
 
 
