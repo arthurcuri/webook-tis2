@@ -11,8 +11,6 @@
 
 **Registrar Empréstimo -** Essa tela so será acessada pelo bilbiotecário após prencheer a tela de definição da data de devolução. Nela o bibliotecário seguirá preenchendo as informações necessárias pra concluir o processo, sendo elas: CPF do Usuário que requisitou o empréstimo, livro escolhido, data de retirada, o prazo definido na tela anterior e por fim o preço desse empréstimo. Após concluir esses passos, o bibliotecário terá 2 botões, o de voltar a tela anterior, caso tenha cometido erros no preenchimento da data, e o de registrar a conclusão final do empréstimo. 
 
-**Verificar Livros Escolhidos -** Por fim, o usuário recebe uma tela com as informações básicas contendo o nome do livro escolhido, seção que esse livro se encontra na biblioteca, editora, nome do autor, ano de publicação, quantidade de livros que selecionou e o preço, somente para confirmar se está tudo conforme o solicitado para concluir o processo de Empréstimo. Caso tenha algo de errado, o usuário terá o botão voltar para retomar a requisição.
-
 ____________________________________________________________________________________________________________________________________________________________________
 
 **Requisitar Empréstimo de um Livro**
@@ -61,23 +59,4 @@ ________________________________________________________________________________
 | Botão Voltar               | Retorna para a tela anterior          | default           |
 | Botão Registrar               | Tela final de conclusão do empréstimo           | default           |
 
-____________________________________________________________________________________________________________________________________________________________________
 
-**Verificar Livros Escolhidos**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| ISBN | Número  | 13 Caracteres     | ---               |
-| Título do Livro         | Caixa de Texto   | Não editável | ---               |
-| Seção do Livro        | Caixa de Texto   | Não editável  | ---               |
-| Nome do Autor         | Caixa de Texto   | Não editável  | ---               |
-| Editora | Caixa de Texto   | Não editável  | ---               |
-| Preço | Número   | Não editável   | ---               |
-| Quantidade | Número  | Não editável  | ---               |
-
-
-
-| **Comandos**         |  **Destino**                   | **Tipo** |
-| ---                  | ---                            | ---               |
-| Botão Voltar               | Retorna para a tela de Requisição          | default           |
-| Botão Concluir               | Fim do Processo          | ---           |
