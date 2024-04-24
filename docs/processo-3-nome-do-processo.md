@@ -60,17 +60,6 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
 
-**Escolher qual livro deseja alterar**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| Livros Cadastrados | Seleção única   | Sem Restrição  | Nome Livro Cadastrado |
-
-| **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
-| Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão alterar        | Alterar informações do livro   | ---               |
-___________________________________________________________________________________________________________________________________
 
 **Alterar informações do livro**
 
