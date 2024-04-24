@@ -28,9 +28,9 @@
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de continuar | Aguarda o usuário realizar o pagamento | (default) |    
-| Botão de cobrar taxa extra | Tela de cobrar taxa extra | (default) |   
-| Botão devolução atrasada | Tela de pagar multa atraso | (default) |   
+| Botão de continuar | Aguarda o usuário realizar o pagamento | Default |    
+| Botão de cobrar taxa extra | Tela de cobrar taxa extra | Default |   
+| Botão devolução atrasada | Tela de pagar multa atraso | Default |   
 
 ___________________________________________________________________________________________________________________________________
 
@@ -45,7 +45,7 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar cobrança | Aguarda o usuário realizar o pagamento | (default) |              
+| Botão de confirmar cobrança | Aguarda o usuário realizar o pagamento | Default |              
 
 ___________________________________________________________________________________________________________________________________
 
@@ -60,7 +60,7 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de continuar | Tela de pagamento final | (default) |    
+| Botão de continuar | Tela de pagamento final | Default |    
 
 ___________________________________________________________________________________________________________________________________
 
@@ -78,5 +78,5 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar pagamento | Fim do processo de devolução | (default) |    
+| Botão de confirmar pagamento | Fim do processo de devolução | Default |    
 
