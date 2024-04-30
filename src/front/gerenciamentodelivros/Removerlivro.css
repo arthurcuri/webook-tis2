@@ -4,13 +4,6 @@
     justify-content: center;
     transform: scale(1.3);
 }
-.barradepesquisa input[type="search"] {
-
-}
-.barradepesquisa button[type="submit"] {
-    /* Estilos adicionais para o botão de busca */
-    /* Adicione aqui seus estilos personalizados se desejar */
-}
 
 /* Estilos para posicionar a imagem na parte superior esquerda da tela */
 .imagem-logo {
