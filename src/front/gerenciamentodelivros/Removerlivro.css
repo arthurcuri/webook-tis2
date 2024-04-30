@@ -1,56 +1,23 @@
+/* Estilos para centralizar a navbar e aumentar seu tamanho em 30% */
+.barradepesquisa {
+    display: flex;
+    justify-content: center;
+    transform: scale(1.3);
+}
+.barradepesquisa input[type="search"] {
+    /* Estilos adicionais para o input de pesquisa */
+    /* Adicione aqui seus estilos personalizados se desejar */
+}
+.barradepesquisa button[type="submit"] {
+    /* Estilos adicionais para o botão de busca */
+    /* Adicione aqui seus estilos personalizados se desejar */
+}
 
-.carrossel{
-    margin: 0 auto;
-    width: 650px;
-    height: 600px;
-    overflow: hidden;
-    }
-    .botoesefotos{
-     width: 400%;
-     height: 500px;
-     display: flex;
-    }
-    
-    .botoesefotos input{
-    
-        display: none;
-    }
-    .fotoscarrossel{
-    
-        width: 25%;
-        position: relative;
-    }
-    .fotoscarrossel img{
-        width:650px;
-    }
-    .manual-navigation{
-        position:absolute;
-        width: 650px;
-        bottom: 14%;
-        right: 1px;
-        margin-top: -40px;
-        display: flex;
-        justify-content: center;
-    }
-    .manual-btn{
-        border: 2px solid floralwhite;
-        padding: 5px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    .manual-btn:not(:last-child){
-        margin-right: 40px;
-    }
-    
-    .manual-btn:hover{
-        background-color: white;
-    }
-    #radio1:checked ~ .first{
-        margin-left: 0;
-    }
-    #radio2:checked ~ .first{
-        margin-left: -25%;
-    }
-    
+/* Estilos para posicionar a imagem na parte superior esquerda da tela */
+.imagem-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px; /* Margem para espaçamento */
+    /* Adicione aqui seus estilos personalizados se desejar */
+}
