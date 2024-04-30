@@ -20,7 +20,7 @@ ________________________________________________________________________________
 | Pesquisa           | Área de Texto   | Apenas letras |  ---              |
 | Título do Livro           | Área de Texto   | Não editável |  ---              |
 | Seção do Livro           | Área de Texto   | Não editável |  ---              |
-| Imagem do LIvro           | Imagem  |  |  ---              |
+| Imagem do LIvro           | Imagem  | --- |  ---              |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
@@ -51,7 +51,7 @@ ________________________________________________________________________________
 | CPF do Usuário          | Número   | 12 Caracteres | ---               |
 | Livro Escolhido          | Caixa de Texto   | Apenas letras | ---               |
 | Data de Retirada          | Data   | --- |  ---              |
-| Prazo pra Devolução          | Data   | Não editável |                |
+| Prazo pra Devolução          | Data   | Não editável |   ---          |
 | Preço         | Número   | ---  | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo** |

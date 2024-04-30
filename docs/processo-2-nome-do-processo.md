@@ -13,9 +13,9 @@
 
 **Pagar o empréstimo do livro** - Após todo o processo verificado e executado, o usuário recebe uma tela com o preço inteiro a ser pago, já considerando as taxas de dano e multa, caso apresente alguma delas, e as meios de pagamento a serem utilizados. Após a conclusão do mesmo, o usuário apresenta o comprovante e o livro é disponibilizado novamente no sistema.
 
+___________________________________________________________________________________________________________________________________
 
-
-**Registrar a devolção do livro**
+**Registrar a devolução do livro**
 
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
