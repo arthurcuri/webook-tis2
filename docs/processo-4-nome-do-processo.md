@@ -27,22 +27,20 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
-| ---                  | ---                            | ---               |
+| ---                  | ---                            | ---                         |
 | Botão adicionar      | Início processo de cadastro de usuario   | Default           |
-| Botão alterar        | Início do processo alteração de usuario  | Default           |
-| Botão remover        | Inicio processo de remoção de usuario    | Default           |
+| Botão remover ou editar | Inicio processo de remoção de usuario ou edição  | Default|
 | Botão voltar         | Retorna para tela anterior               | Default           |
 
 ___________________________________________________________________________________________________________________________________
 
-**Enviar dados de usuários**
+**Cadastrar dados de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
 | Nome            | Caixa de Texto   | Apenas Letras  | ---               |
 | Data de nascimento| Caixa de Texto | Apenas Numeros | ---               |
 | CPF             |   Numero         | 12 Numeros | ---               |
-| Maior idade     | Seleção Unica    | Sem Restrição  | ---               |
 
 
 
@@ -52,55 +50,23 @@ ________________________________________________________________________________
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão adicionar      | Fim do processo                | Default           |
 
-___________________________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________________________
 
-**Verificar informações**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| Nome            | Caixa de Texto   | Apenas Letras  | ---               |
-| Data de nascimento| Data           | Apenas Numeros | ---               |
-| CPF             |   Numero | 12 Numeros | ---               |
-| Maior idade     | Seleção Unica    | Sem Restrição  | ---               |
-
-
-| **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
-| Aprovar dados         | Fim do processo               | Default           |
-| Reprovar dados        | Fim do processo               | Default           |
-
-___________________________________________________________________________________________________________________________________
-
-**Escolher qual usuário quer alterar**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| Nome do usuário | Seleção única | --- | Nome do usuário cadastrado |
-| CPF             | Seleção única | --- | CPF do usuário cadastrado   |
-
-
-
-| **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
-| Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão editar         | Fim do processo                | Default           |
-
-___________________________________________________________________________________________________________________________________
 
 **Editar dados de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Nome            | Caixa de Texto   | Apenas Letras  | Nome do usuário cadastrado|
-| Data de nascimento| Data           | Apenas Numeros | ---               |
-| CPF             |   Caixa de Texto | Apenas Numeros | ---               |
+| Nome do usuário | Caixa de Texto | Sem restrição | Nome do usuário cadastrado |
+| CPF             |   Caixa de Texto | Apenas Numeros | CPF do usuário cadastrado               |
+| Data de nascimento| Data           | Apenas Numeros | Data do usuário cadastrado               |
 
 
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão editar         | Fim do processo                | Default           |
+| Botão salvar alterações    | Fim do processo                | Default           |
 
 ___________________________________________________________________________________________________________________________________
  
@@ -108,8 +74,10 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Nome do usuário | Seleção única | Sem restrição | Nome do usuário cadastrado |
-| CPF             |   Caixa de Texto | Apenas Numeros | ---               |
+| Nome do usuário | Caixa de Texto   | Não alteravel | Nome do usuário cadastrado |
+| CPF             |   Caixa de Texto | Não alteravel | CPF do usuário cadastrado  |
+| Data de nascimento| Data           | Não alteravel | Data do usuário cadastrado |
+| Ações |  Caixa de Texto        | Não alteravel | Remover/Editar |
 
 
 
@@ -118,3 +86,4 @@ ________________________________________________________________________________
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão remover        | Fim do processo                | Default           |
+| Botão editar        | Encaminha para tela de editar   | Default          |
