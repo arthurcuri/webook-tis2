@@ -70,7 +70,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
  
-**Remover dados de usuários ou escolher usuario para editar**
+**Remover dados de usuários ou escolher usuario para alterar informações**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
