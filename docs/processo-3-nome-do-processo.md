@@ -25,21 +25,20 @@ ________________________________________________________________________________
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
 | Botão adicionar      | Início processo de cadastro de livro     | Default           |
-| Botão alterar        | Início do processo alteração             | Default           |
-| Botão remover        | Inicio Processo de remoção               | Default           |
+| Botão remover ou editar      | Inicio Processo de remoção               | Default           |
 | Botão voltar         | Retorna para tela anterior               | Default           |
 
 ___________________________________________________________________________________________________________________________________
 
-**Preencher informações  do livro (nome, seçao, autor)**
+**Preencher informações  do livro**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| ISBN | Número  | 13 Caracteres     | ---               |
 | Título do Livro     | Caixa de Texto   | Sem Restrição  | ---               |
-| Seção do Livro     | Caixa de Texto   | Apenas Letras  | ---               |
 | Nome do Autor      | Caixa de Texto   | Apenas Letras  | ---               |
+| ISBN | Número  | 13 Caracteres     | ---               |
 | Editora | Caixa de Texto   | Apenas Letras  | ---               |
+| Seção do Livro     | Caixa de Texto   | Apenas Letras  | ---               |
 | Preço | Número   | ---   | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
@@ -49,16 +48,23 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
 
-**Apagar informações do livro**
+**Remover informações do livro ou escolher livro para editar**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Livros Cadastrados | Seleção única | Sem restrição  | Nome Livro Cadastrado |       |                   |
+| Título do Livro     | Caixa de Texto   | Sem Restrição  | Titulo do livro cadastrado          |
+| Nome do Autor      | Caixa de Texto      | Apenas Letras  | Nome do autor cadastrado             |
+| ISBN | Número  | 13 Caracteres           | IBNN do livro cadastrado                 |
+| Editora | Caixa de Texto   | Apenas Letras  | Editora do livro cadastrado                 |
+| Seção do Livro     | Caixa de Texto   | Apenas Letras  | Seção do livro cadastrado                 |
+| Preço | Número   | ---   | Preço do livro cadastrado                 |
+| Ações |  Caixa de Texto        | Não alteravel | Remover/Editar |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão remover        | Fim do processo                | ---               |
+| Botão editar        | Encaminha para tela de editar livros  | Default          |
 
 ___________________________________________________________________________________________________________________________________
 
@@ -67,12 +73,12 @@ ________________________________________________________________________________
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| ISBN | Número  | 13 Caracteres     | ---               |
-| Título do Livro         | Caixa de Texto   | Após a seleção do livro  | ---               |
-| Seção Livro        | Caixa de Texto   | Após a seleção do livro  | ---               |
-| Nome Autor         | Caixa de Texto   | Após a seleção do livro  | ---               |
-| Editora | Caixa de Texto   | Apenas Letras  | ---               |
-| Preço | Número   | ---   | ---               |
+| Título do Livro     | Caixa de Texto   | Sem Restrição  | Titulo do livro cadastrado          |
+| Nome do Autor      | Caixa de Texto      | Apenas Letras  | Nome do autor cadastrado             |
+| ISBN | Número  | 13 Caracteres           | IBNN do livro cadastrado                 |
+| Editora | Caixa de Texto   | Apenas Letras  | Editora do livro cadastrado                 |
+| Seção do Livro     | Caixa de Texto   | Apenas Letras  | Seção do livro cadastrado                 |
+| Preço | Número   | ---   | Preço do livro cadastrado                 |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
