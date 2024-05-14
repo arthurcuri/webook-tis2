@@ -33,7 +33,7 @@ public class Livro {
     private Long  Id;
 
     @ManyToOne
-    @JoinColumn(name ="usuario_id", nullable = false, updatable = false)
+    @JoinColumn(name ="usuario_id", nullable = true, updatable = true)
     private Usuario usuario;
 
     @Column(name = "ISBN", unique = true, nullable = false)
