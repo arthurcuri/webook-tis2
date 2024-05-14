@@ -48,7 +48,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
 
-**Remover informações do livro ou escolher livro para editar**
+**Remover informações do livro ou escolher livro para alterar informações**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
