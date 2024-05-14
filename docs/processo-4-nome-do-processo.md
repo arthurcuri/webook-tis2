@@ -34,7 +34,7 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 
 ___________________________________________________________________________________________________________________________________
 
-**Cadastrar dados de usuários**
+**Preencher dados de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -86,4 +86,4 @@ ________________________________________________________________________________
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão remover        | Fim do processo                | Default           |
-| Botão editar        | Encaminha para tela de editar   | Default          |
+| Botão editar        | Encaminha para tela de editar usuarios  | Default          |
