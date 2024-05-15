@@ -24,34 +24,35 @@
             <h2>Adicionar Livro</h2>
             <form>
                 <div class="container">
-                <div class="form-group">
-                    <label for="titulo">Título:</label>
-                    <input type="text" id="titulo" name="titulo" required>
+                    <div class="form-group">
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="autor">Nome do Autor:</label>
+                        <input type="text" id="autor" name="autor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN:</label>
+                        <input type="number" id="isbn" name="isbn" minlength="12" maxlength="12" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editora">Editora:</label>
+                        <input type="text" id="editora" name="editora" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="secao">Seção:</label>
+                        <input type="text" id="secao" name="secao" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="preco">Preço:</label>
+                        <input type="number" id="preco" name="preco" required>
+                    </div>
+                    <button type="button" onclick="cadastrar()">Adicionar Livro</button>
+                    <div id="mensagem" style="display: none; color: green;">Livro cadastrado com sucesso!</div> <!-- Elemento para exibir a mensagem -->
                 </div>
-                <div class="form-group">
-                    <label for="autor">Nome do Autor:</label>
-                    <input type="text" id="autor" name="autor" required>
-                </div>
-                <div class="form-group">
-                    <label for="isbn">ISBN:</label>
-                    <input type="number" id="isbn" name="isbn" minlength="12" maxlength="12" required>
-                </div>
-                <div class="form-group">
-                    <label for="editora">Editora:</label>
-                    <input type="text" id="editora" name="editora" required>
-                </div>
-                <div class="form-group">
-                    <label for="secao">Seção:</label>
-                    <input type="text" id="secao" name="secao" required>
-                </div>
-                <div class="form-group">
-                    <label for="preco">Preço:</label>
-                    <input type="number" id="preco" name="preco" required>
-                </div>
-                <button type="button" onclick="cadastrar()">Adicionar Livro</button>
             </form>
         </div>
-    </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -80,15 +81,6 @@
                alert('ISBN deve conter apenas numeros');
               return;
             }
-            for(var i = 0 ; i<autor.lenght ; i++){
-                var j;
-                j = autor.charAt(i);
-                if(j<='64' || j>='123' || j !='32' ){
-                    alert('Autor deve conter apenas letras')
-                    return;
-                }
-
-            }
 
             const novoLivro = {
                 tituloLivro: titulo,
@@ -112,15 +104,18 @@
                     if (!response.ok) {
                         throw new Error('Erro ao cadastrar livro');
                     }
+                    document.getElementById('mensagem').style.display = "block"; //
+                    document.getElementById('mensagem').style.display = "block"; // Exibe a mensagem de sucesso
+                    console.log('Livro cadaastrado com sucesso!'); // Exibe mensagem no console
+                    setTimeout(() => {
+                        console.log('Redirecionando para a tela inicial...');
+                        window.location.href = "/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html"; // Redireciona para a página principal após 2 segundos
+                    }, 2000); // 2000 milissegundos = 2 segundos
                     return response.json();
-                })
-                .then(data => {
-                    console.log('Livro cadastrado com sucesso:', data);
                 })
                 .catch(error => {
                     console.error('Erro ao cadastrar livro:', error);
                 });
-            window.location.href = "/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html";
         }
     </script>
 </body>

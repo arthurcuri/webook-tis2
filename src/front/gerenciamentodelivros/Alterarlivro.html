@@ -25,7 +25,7 @@
             <form>
                 <div class="form-group">
                     <label for="id">ID:</label>
-                    <input type="text" id="id" name="id" required>
+                    <input type="text" id="id" name="id" required readonly>
                 </div>
                 <div class="form-group">
                     <label for="titulo">Título:</label>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label for="isbn">ISBN:</label>
-                    <input type="number" id="isbn" name="isbn" required>
+                    <input type="number" id="isbn" name="isbn" required readonly>
                 </div>
                 <div class="form-group">
                     <label for="editora">Editora:</label>
@@ -68,64 +68,55 @@
 </body>
 <script>
     async function editarLivro() {
-        const id = document.getElementById('id').value;
-        const titulo = document.getElementById('titulo').value;
-        const autor = document.getElementById('autor').value;
-        const isbn = document.getElementById('isbn').value;
-        const editora = document.getElementById('editora').value;
-        const secao = document.getElementById('secao').value;
-        const preco = document.getElementById('preco').value;
+    const id = document.getElementById('id').value;
+    const titulo = document.getElementById('titulo').value;
+    const autor = document.getElementById('autor').value;
+    const isbn = document.getElementById('isbn').value;
+    const editora = document.getElementById('editora').value;
+    const secao = document.getElementById('secao').value;
+    const preco = document.getElementById('preco').value;
 
-        if (!titulo || !autor || !isbn || !editora || !secao || !preco) {
-                alert("Todos os campos devem ser preenchidos.");
-                return;
-            }
-            if (isNaN(isbn)){
-               alert('ISBN deve conter apenas numeros');
-              return;
-            }
-            for(var i = 0 ; i<autor.lenght ; i++){
-                var j;
-                j = autor.charAt(i);
-                if(j<='64' || j>='123' || j !='32' ){
-                    alert('Autor deve conter apenas letras')
-                    return;
-                }
-
-            }
-        const livroEditado = {
-            id: id,
-            tituloLivro: titulo,
-            autor: autor,
-            isbn: isbn,
-            editora: editora,
-            secao: secao,
-            preco: preco
-        };
-
-        const requestOptions = {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(livroEditado)
-        };
-
-        fetch(`http://localhost:8080/livro/${id}`, requestOptions)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao editar livro');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Livro editado com sucesso:', data);
-            })
-            .catch(error => {
-                console.error('Erro ao editar livro:', error);
-            });
-        window.location.href = "/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html";
+    if (!titulo || !autor || !isbn || !editora || !secao || !preco) {
+        alert("Todos os campos devem ser preenchidos.");
+        return;
     }
+
+    if (isNaN(isbn)) {
+        alert('ISBN deve conter apenas números');
+        return;
+    }
+
+    const livroEditado = {
+        id: id,
+        tituloLivro: titulo,
+        autor: autor,
+        isbn: isbn,
+        editora: editora,
+        secao: secao,
+        preco: preco
+    };
+
+    const requestOptions = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(livroEditado)
+    };
+
+    try {
+        const response = await fetch(`http://localhost:8080/livro/${id}`, requestOptions);
+        if (!response.ok) {
+            throw new Error('Erro ao editar livro');
+        }
+        console.log('Livro editado com sucesso');
+        alert('Livro editado com sucesso');
+        window.location.href = "/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html";
+    } catch (error) {
+        console.error('Erro ao editar livro:', error);
+        alert('Erro ao editar livro');
+    }
+}
 
     async function preencherCampos(id) {
         try {

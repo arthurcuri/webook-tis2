@@ -10,6 +10,7 @@ import com.tis2.services.UsuarioServices;
 import jakarta.validation.Valid;
 
 import java.net.URI;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +32,12 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioServices usuarioServices;
+
+    @GetMapping
+    public ResponseEntity<List<Usuario>> findAllUsuarios() {
+    List<Usuario> listaUsuarios = this.usuarioServices.findAll();
+    return ResponseEntity.ok().body(listaUsuarios);
+}
 
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> findById(@PathVariable Long id){
