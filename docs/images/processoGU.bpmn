@@ -17,6 +17,7 @@
         <bpmn:flowNodeRef>Gateway_1ylq9i2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1hxkkwb</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0um5ka5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0hawnln</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:userTask id="Activity_1egwbvq" name="Preencher informações do usuario">
@@ -41,6 +42,7 @@
     </bpmn:exclusiveGateway>
     <bpmn:userTask id="Activity_1idbas9" name="Escolher qual usuario deseja remover ou editar">
       <bpmn:incoming>Flow_0gqlpsb</bpmn:incoming>
+      <bpmn:incoming>Flow_18hvv6e</bpmn:incoming>
       <bpmn:outgoing>Flow_05kscz5</bpmn:outgoing>
       <bpmn:outgoing>Flow_1ecyjqk</bpmn:outgoing>
     </bpmn:userTask>
@@ -64,7 +66,7 @@
       <bpmn:outgoing>Flow_1hgjd75</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:userTask id="Activity_1hxkkwb" name="Confirmar remoção do usuario">
-      <bpmn:incoming>Flow_1duzplz</bpmn:incoming>
+      <bpmn:incoming>Flow_0tk3add</bpmn:incoming>
       <bpmn:outgoing>Flow_1gt6l2w</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:userTask id="Activity_0um5ka5" name="Alterar informações do usuario">
@@ -80,12 +82,19 @@
     <bpmn:sequenceFlow id="Flow_1gjny1u" sourceRef="Activity_18ctzfg" targetRef="Gateway_1bb5zmd" />
     <bpmn:sequenceFlow id="Flow_0gqlpsb" name="Remover ou editar usuarios do sistema" sourceRef="Gateway_1bb5zmd" targetRef="Activity_1idbas9" />
     <bpmn:sequenceFlow id="Flow_1ecyjqk" sourceRef="Activity_1idbas9" targetRef="Gateway_1s1oows" />
-    <bpmn:sequenceFlow id="Flow_1duzplz" name="Remover" sourceRef="Gateway_1s1oows" targetRef="Activity_1hxkkwb" />
+    <bpmn:sequenceFlow id="Flow_1duzplz" name="Remover" sourceRef="Gateway_1s1oows" targetRef="Gateway_0hawnln" />
     <bpmn:sequenceFlow id="Flow_1tt0k65" name="Editar" sourceRef="Gateway_1s1oows" targetRef="Activity_0um5ka5" />
     <bpmn:sequenceFlow id="Flow_1hgjd75" name="Não" sourceRef="Gateway_1ylq9i2" targetRef="Activity_1ak3ron" />
     <bpmn:sequenceFlow id="Flow_08zhsl9" sourceRef="Activity_1ak3ron" targetRef="Event_0kk8sqj" />
     <bpmn:sequenceFlow id="Flow_1gt6l2w" sourceRef="Activity_1hxkkwb" targetRef="Gateway_1ylq9i2" />
     <bpmn:sequenceFlow id="Flow_1kq6nzr" sourceRef="Activity_0um5ka5" targetRef="Gateway_1ylq9i2" />
+    <bpmn:exclusiveGateway id="Gateway_0hawnln" name="Deseja remover o usuario?">
+      <bpmn:incoming>Flow_1duzplz</bpmn:incoming>
+      <bpmn:outgoing>Flow_0tk3add</bpmn:outgoing>
+      <bpmn:outgoing>Flow_18hvv6e</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0tk3add" name="Sim" sourceRef="Gateway_0hawnln" targetRef="Activity_1hxkkwb" />
+    <bpmn:sequenceFlow id="Flow_18hvv6e" name="Não" sourceRef="Gateway_0hawnln" targetRef="Activity_1idbas9" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0rbwblt">
@@ -142,6 +151,12 @@
         <dc:Bounds x="950" y="410" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0hawnln_di" bpmnElement="Gateway_0hawnln" isMarkerVisible="true">
+        <dc:Bounds x="795" y="205" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="836" y="256" width="88" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0n07cvs_di" bpmnElement="Flow_0n07cvs">
         <di:waypoint x="480" y="295" />
         <di:waypoint x="480" y="140" />
@@ -196,10 +211,9 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1duzplz_di" bpmnElement="Flow_1duzplz">
         <di:waypoint x="820" y="295" />
-        <di:waypoint x="820" y="230" />
-        <di:waypoint x="950" y="230" />
+        <di:waypoint x="820" y="255" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="867" y="213" width="46" height="14" />
+          <dc:Bounds x="767" y="273.00000000000006" width="46" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1tt0k65_di" bpmnElement="Flow_1tt0k65">
@@ -230,6 +244,21 @@
         <di:waypoint x="1050" y="450" />
         <di:waypoint x="1160" y="450" />
         <di:waypoint x="1278" y="333" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tk3add_di" bpmnElement="Flow_0tk3add">
+        <di:waypoint x="845" y="230" />
+        <di:waypoint x="950" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="888" y="212" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18hvv6e_di" bpmnElement="Flow_18hvv6e">
+        <di:waypoint x="795" y="230" />
+        <di:waypoint x="690" y="230" />
+        <di:waypoint x="690" y="280" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="732" y="212" width="21" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

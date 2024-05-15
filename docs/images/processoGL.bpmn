@@ -17,6 +17,7 @@
         <bpmn:flowNodeRef>Gateway_1ylq9i2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1hxkkwb</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0um5ka5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_09cpvgb</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:sequenceFlow id="Flow_1k1j79l" sourceRef="StartEvent_1" targetRef="Activity_18ctzfg" />
@@ -34,7 +35,6 @@
     <bpmn:sequenceFlow id="Flow_1se4c60" name="Sim" sourceRef="Gateway_1ylq9i2" targetRef="Activity_18ctzfg" />
     <bpmn:sequenceFlow id="Flow_1gt6l2w" sourceRef="Activity_1hxkkwb" targetRef="Gateway_1ylq9i2" />
     <bpmn:sequenceFlow id="Flow_1kq6nzr" sourceRef="Activity_0um5ka5" targetRef="Gateway_1ylq9i2" />
-    <bpmn:sequenceFlow id="Flow_1duzplz" name="Remover" sourceRef="Gateway_1s1oows" targetRef="Activity_1hxkkwb" />
     <bpmn:sequenceFlow id="Flow_1tt0k65" name="Editar" sourceRef="Gateway_1s1oows" targetRef="Activity_0um5ka5" />
     <bpmn:userTask id="Activity_18ctzfg" name="Iniciar gerenciamento de livros">
       <bpmn:incoming>Flow_1k1j79l</bpmn:incoming>
@@ -53,13 +53,14 @@
     </bpmn:exclusiveGateway>
     <bpmn:userTask id="Activity_1idbas9" name="Escolher qual livro deseja remover ou editar">
       <bpmn:incoming>Flow_0gqlpsb</bpmn:incoming>
+      <bpmn:incoming>Flow_0thr8tu</bpmn:incoming>
       <bpmn:outgoing>Flow_1ecyjqk</bpmn:outgoing>
       <bpmn:outgoing>Flow_05kscz5</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:exclusiveGateway id="Gateway_1s1oows">
       <bpmn:incoming>Flow_1ecyjqk</bpmn:incoming>
-      <bpmn:outgoing>Flow_1duzplz</bpmn:outgoing>
       <bpmn:outgoing>Flow_1tt0k65</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0z8ut36</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:serviceTask id="Activity_1ak3ron" name="Salvar informações no sistema">
       <bpmn:incoming>Flow_1hgjd75</bpmn:incoming>
@@ -77,7 +78,7 @@
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_1ecyjqk" sourceRef="Activity_1idbas9" targetRef="Gateway_1s1oows" />
     <bpmn:userTask id="Activity_1hxkkwb" name="Confirmar remoção do livro">
-      <bpmn:incoming>Flow_1duzplz</bpmn:incoming>
+      <bpmn:incoming>Flow_05gbu3h</bpmn:incoming>
       <bpmn:outgoing>Flow_1gt6l2w</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:userTask id="Activity_0um5ka5" name="Alterar informações do livro">
@@ -86,6 +87,14 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_05kscz5" sourceRef="Activity_1idbas9" targetRef="Activity_18ctzfg" />
     <bpmn:sequenceFlow id="Flow_1ukzxy2" name="" sourceRef="Activity_1egwbvq" targetRef="Activity_18ctzfg" />
+    <bpmn:exclusiveGateway id="Gateway_09cpvgb" name="Deseja remover o livro?">
+      <bpmn:incoming>Flow_0z8ut36</bpmn:incoming>
+      <bpmn:outgoing>Flow_05gbu3h</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0thr8tu</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0z8ut36" name="Remover" sourceRef="Gateway_1s1oows" targetRef="Gateway_09cpvgb" />
+    <bpmn:sequenceFlow id="Flow_05gbu3h" name="Sim" sourceRef="Gateway_09cpvgb" targetRef="Activity_1hxkkwb" />
+    <bpmn:sequenceFlow id="Flow_0thr8tu" name="Não" sourceRef="Gateway_09cpvgb" targetRef="Activity_1idbas9" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0kujcn3">
@@ -135,10 +144,17 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1uo338i_di" bpmnElement="Activity_1hxkkwb">
         <dc:Bounds x="980" y="210" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0bohf9l_di" bpmnElement="Activity_0um5ka5">
         <dc:Bounds x="980" y="430" width="100" height="80" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_09cpvgb_di" bpmnElement="Gateway_09cpvgb" isMarkerVisible="true">
+        <dc:Bounds x="825" y="225" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="876" y="266" width="88" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1k1j79l_di" bpmnElement="Flow_1k1j79l">
         <di:waypoint x="298" y="340" />
@@ -198,14 +214,6 @@
         <di:waypoint x="1190" y="470" />
         <di:waypoint x="1308" y="353" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1duzplz_di" bpmnElement="Flow_1duzplz">
-        <di:waypoint x="850" y="315" />
-        <di:waypoint x="850" y="250" />
-        <di:waypoint x="980" y="250" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="897" y="233" width="46" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1tt0k65_di" bpmnElement="Flow_1tt0k65">
         <di:waypoint x="850" y="365" />
         <di:waypoint x="850" y="470" />
@@ -228,6 +236,28 @@
         <di:waypoint x="820" y="160" />
         <di:waypoint x="380" y="160" />
         <di:waypoint x="380" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0z8ut36_di" bpmnElement="Flow_0z8ut36">
+        <di:waypoint x="850" y="315" />
+        <di:waypoint x="850" y="275" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="797" y="292" width="46" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05gbu3h_di" bpmnElement="Flow_05gbu3h">
+        <di:waypoint x="875" y="250" />
+        <di:waypoint x="980" y="250" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="918" y="232" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0thr8tu_di" bpmnElement="Flow_0thr8tu">
+        <di:waypoint x="825" y="250" />
+        <di:waypoint x="720" y="250" />
+        <di:waypoint x="720" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="762" y="232" width="21" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
