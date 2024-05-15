@@ -93,13 +93,13 @@ Apenas dois participantes no processo, seriam eles:
 
 ### 3.3. Modelagem dos processos
 
-[PROCESSO 1 - Processo de Empréstimo](processo-1-nome-do-processo.md "Detalhamento do Processo 1.")
+[PROCESSO 1 - Processo de Empréstimo](processo-1-Emprestimo.md "Detalhamento do Processo 1.")
 
-[PROCESSO 2 - Processo de Devolução](processo-2-nome-do-processo.md "Detalhamento do Processo 2.")
+[PROCESSO 2 - Processo de Devolução](processo-2-Devolução.md "Detalhamento do Processo 2.")
 
-[PROCESSO 3 - Processo de Gerenciamento de Livros](processo-3-nome-do-processo.md "Detalhamento do Processo 3.")
+[PROCESSO 3 - Processo de Gerenciamento de Livros](processo-3-GerenciamentoDeLivros.md "Detalhamento do Processo 3.")
 
-[PROCESSO 4 - Processo de Gerenciamento de Usuário](processo-4-nome-do-processo.md "Detalhamento do Processo 4.")
+[PROCESSO 4 - Processo de Gerenciamento de Usuário](processo-4-GerenciamentoDeUsuarios.md "Detalhamento do Processo 4.")
 
 ## 4. Projeto da solução
 
