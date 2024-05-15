@@ -99,7 +99,7 @@ Apenas dois participantes no processo, seriam eles:
 
 [PROCESSO 3 - Processo de Gerenciamento de Livros](processo-3-GerenciamentoDeLivros.md "Detalhamento do Processo 3.")
 
-[PROCESSO 4 - Processo de Gerenciamento de Usuário](processo-4-GerenciamentoDeUsuarios.md "Detalhamento do Processo 4.")
+[PROCESSO 4 - Processo de Gerenciamento de Usuário](processo-4-GerenciamentoDeUsuario.md "Detalhamento do Processo 4.")
 
 ## 4. Projeto da solução
 
