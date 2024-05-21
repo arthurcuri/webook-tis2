@@ -70,7 +70,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
  
-**Remover dados de usuários ou escolher usuario para alterar informações**
+**Escolher qual usuario deseja remover ou editar**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -87,3 +87,16 @@ ________________________________________________________________________________
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão remover        | Fim do processo                | Default           |
 | Botão editar        | Encaminha para tela de editar usuarios  | Default          |
+
+___________________________________________________________________________________________________________________________________
+
+**Confirmar remoção do usuário**
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão remover| Remove o usuário | alert |
+
+
+
+
+
