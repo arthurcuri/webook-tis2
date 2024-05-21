@@ -8,7 +8,7 @@
 **Iniciar gerenciamento de livros -**
 O bibliotecário irá acessar a tela de gerenciamento de livro, nela haverá 4 botões uma que irá levar para a tela de adicionar uma livro, um que leve para a tela de remoção de livros, um que irá levar para a página de alteração e um botão para voltar
 
-**Preencher informações  do livro (nome, seçao, autor) -**
+**Preencher informações  do livro -**
 O bibliotecário então é redirecionado para a tela de cadastro de livro nela haverá 3 campos de texto: um para inserir o Nome do livro, outro para a seção do livro e outro para o nome do Autor. Também haverá um botão para voltar e outro para cadastrar.
 
 **Escolher qual livro deseja alterar ou remover -**
@@ -51,7 +51,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
 
-**Escolher qual livro deseja remover ou se deseja alterar**
+**Escolher qual livro deseja alterar ou remover**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -66,7 +66,7 @@ ________________________________________________________________________________
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão remover        | Fim do processo                | ---               |
+| Botão remover        | Leva a um alert               | ---               |
 | Botão editar        | Encaminha para tela de editar livros  | Default          |
 
 ___________________________________________________________________________________________________________________________________
@@ -88,4 +88,11 @@ ________________________________________________________________________________
 | Botão voltar         | Retorna para tela anterior     | Default           |
 | Botão alterar        | Fim do processo                | ---               |
 
+___________________________________________________________________________________________________________________________________
 
+**Confirmar remoção do livro**
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão OK| Remove o usuário | default |
+| Botão cancelar | Volta á tela anterior | default |
