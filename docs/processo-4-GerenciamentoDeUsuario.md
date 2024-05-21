@@ -60,7 +60,7 @@ ________________________________________________________________________________
 | Nome do usuário | Caixa de Texto | Sem restrição | Nome do usuário cadastrado |
 | CPF             |   Caixa de Texto | Apenas Numeros | CPF do usuário cadastrado               |
 | Data de nascimento| Data           | Apenas Numeros | Data do usuário cadastrado               |
-
+| ID | Caixa de texto | Não alteravel | ID da ordem de cadastramento do usuário
 
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
@@ -77,7 +77,7 @@ ________________________________________________________________________________
 | Nome do usuário | Caixa de Texto   | Não alteravel | Nome do usuário cadastrado |
 | CPF             |   Caixa de Texto | Não alteravel | CPF do usuário cadastrado  |
 | Data de nascimento| Data           | Não alteravel | Data do usuário cadastrado |
-| Ações |  Caixa de Texto        | Não alteravel | Remover/Editar |
+| ID|  Caixa de Texto        | Não alteravel | ID da ordem do usuário cadastrado |
 
 
 
