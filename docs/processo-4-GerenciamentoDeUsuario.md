@@ -85,7 +85,7 @@ ________________________________________________________________________________
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão remover        | Fim do processo                | Default           |
+| Botão remover        | Leva à um alert              | Default           |
 | Botão editar        | Encaminha para tela de editar usuarios  | Default          |
 
 ___________________________________________________________________________________________________________________________________
@@ -94,8 +94,8 @@ ________________________________________________________________________________
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão remover| Remove o usuário | alert |
-
+| Botão OK| Remove o usuário | default |
+| Botão cancelar | Volta á tela anterior | default |
 
 
 
