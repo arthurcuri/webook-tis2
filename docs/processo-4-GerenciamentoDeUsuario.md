@@ -7,21 +7,21 @@
 
 
 **Iniciar gerenciamento de usuários -**
-O bibliotecario irá acessar a tela de gerenciamento de usuários, nela haverá 4 botões uma que irá levar para a tela de adicionar um usuário, um que leve para a tela de remoção de usuários, um que irá levar para a página de alteração e um botão para voltar
+O bibliotecario irá acessar a tela de gerenciamento de usuários, nela haverá 3 botões uma que irá levar para a tela de adicionar um usuário, um que leve para a tela de remoção e alteração de usuário e um botão para voltar.
 
-**Enviar dados de usuários -**
-O usuário deve preencher os campos da tela com seus dados.
+**Escolher qual usuário deseja remover ou editar -**
+O bibliotecário é redirecionado para uma tela que possui uma tabela contendo todos os usuários cadastrados no sistema com as informações preenchidas anteriormente.
 
-**Verificar informações -**
-O bibliotecario irá verificar as informações enviadas para validar a documentação do usuário ou do seu responsavel.
+**Preencher informações do usuário -**
+O bibliotecário então é redirecionado para a tela de cadastro de livro nela haverá 3 campos de texto: um para inserir o Nome do usuário, outro para o CPF e outro para a data de nascimento. Também haverá um botão para voltar e outro para cadastrar.
 
-**Editar dados de usuários -**
-O bibliotecário então é redirecionado para uma tela com um campo de seleção múltipla com todos os usuarios cadastrados ele então poderá selecionar um ou mais para serem removidos. Nela haverá um campo com seleção múltipla contendo todos os usuarios cadastrados. Também haverá um botão para voltar e outro para remover.
+**Alterar informações de usuários -**
+O bibliotecário então é redirecionado para uma tela com um capo para seleção única contendo todos os usuários, ao selecionar um usuário 3 novos campos de área de texto irão aparecer sendo eles o Nome, a Data e o CPF do usuário selecionado com os valores que foram cadastrados ele então poderá alterar os campos. Também haverá um botão para voltar e outro para alterar.
 
-**Remover dados de usuários -**
-O bibliotecário então é redirecionado para uma tela com um capo para seleção única contendo todos os livros usuarios, ao selecionar um usuario 3 novos campos de área de texto irão aparecer sendo eles o Nome, a Data e o CPF do usuário selecionado com os valores que foram cadastrados ele então poderá alterar os campos. Também haverá um botão para voltar e outro para alterar.
+**Confirmar remoção do usuário -**
+O bibliotecário então é redirecionado para uma tela com um campo de seleção única com todos os usuários cadastrados ele então poderá selecionar um ou mais para serem removidos. Também haverá um botão para voltar e outro para remover.
 
-
+___________________________________________________________________________________________________________________________________
 
 **Iniciar gerenciamento de usuários**
 
@@ -34,7 +34,7 @@ O bibliotecário então é redirecionado para uma tela com um capo para seleçã
 
 ___________________________________________________________________________________________________________________________________
 
-**Preencher dados de usuários**
+**Preencher informações do usuário**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -53,14 +53,14 @@ ________________________________________________________________________________
 __________________________________________________________________________________________________________________________________
 
 
-**Editar dados de usuários**
+**Alterar informações de usuários**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
 | Nome do usuário | Caixa de Texto | Sem restrição | Nome do usuário cadastrado |
 | CPF             |   Caixa de Texto | Apenas Numeros | CPF do usuário cadastrado               |
 | Data de nascimento| Data           | Apenas Numeros | Data do usuário cadastrado               |
-
+| ID | Caixa de texto | Não alteravel | ID da ordem de cadastramento do usuário
 
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
@@ -70,14 +70,14 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________
  
-**Remover dados de usuários ou escolher usuario para alterar informações**
+**Escolher qual usuario deseja remover ou editar**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
 | Nome do usuário | Caixa de Texto   | Não alteravel | Nome do usuário cadastrado |
 | CPF             |   Caixa de Texto | Não alteravel | CPF do usuário cadastrado  |
 | Data de nascimento| Data           | Não alteravel | Data do usuário cadastrado |
-| Ações |  Caixa de Texto        | Não alteravel | Remover/Editar |
+| ID|  Caixa de Texto        | Não alteravel | ID da ordem do usuário cadastrado |
 
 
 
@@ -85,5 +85,18 @@ ________________________________________________________________________________
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão remover        | Fim do processo                | Default           |
+| Botão remover        | Leva à um alert              | Default           |
 | Botão editar        | Encaminha para tela de editar usuarios  | Default          |
+
+___________________________________________________________________________________________________________________________________
+
+**Confirmar remoção do usuário**
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão OK| Remove o usuário | default |
+| Botão cancelar | Volta á tela anterior | default |
+
+
+
+
