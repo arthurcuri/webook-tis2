@@ -18,20 +18,21 @@ ________________________________________________________________________________
 **Registrar a devolução do livro**
 
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| Campo       | Tipo         | Restrições | Valor default |
 | ---             | ---              | ---            | ---               |
-| CPF do usuário     | Número          | 12 Caracteres           | ---               |
-| Título do Livro    | Campo de Texto          | ---            | ---               |
-| Seção do Livro     | Campo de Texto          | ---            | ---               |
-| Data de Retirada     | Data          | Não editável            | ---               |
-| Data de Devolução    | Data          | Não editável            | ---               |
+| Título do Livro     | Caixa de Texto   | Sem Restrição  | Titulo do livro cadastrado          |
+| Nome do Autor      | Caixa de Texto      | Apenas Letras  | Nome do autor cadastrado             |
+| ISBN | Número  | 13 Caracteres           | IBNN do livro cadastrado                 |
+| Editora | Caixa de Texto   | Apenas Letras  | Editora do livro cadastrado                 |
+| Seção do Livro     | Caixa de Texto   | Apenas Letras  | Seção do livro cadastrado                 |
+| Preço | Número   | ---   | Preço do livro cadastrado                 |
+| Ações |  Caixa de Texto        | Não alteravel | Remover/Editar |
 
-| **Comandos**         |  **Destino**                   | **Tipo**          |
+| Comandos         |  Destino                   | Tipo          |
 | ---                  | ---                            | ---               |
-| Botão de continuar | Aguarda o usuário realizar o pagamento | Default |    
-| Botão de cobrar taxa extra | Tela de cobrar taxa extra | Default |   
-| Botão devolução atrasada | Tela de pagar multa atraso | Default |   
-
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão remover        | Leva a um alert               | ---               |
+| Botão editar        | Encaminha para tela de editar livros  | Default          |
 ___________________________________________________________________________________________________________________________________
 
 **Cobrar taxa extra ou devolução do livro**
