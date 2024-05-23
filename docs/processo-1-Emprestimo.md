@@ -1,6 +1,6 @@
 ### 3.3.1 Processo 1 – Processo Empréstimo
 
-![Processo Empréstimo](images/processoEmprestimo.png "Modelo BPMN do Processo 1.")
+![Processo Empréstimo](images/novoProcessoEmprestimo.png "Modelo BPMN do Processo 1.")
 
 
 #### Detalhamento das atividades
