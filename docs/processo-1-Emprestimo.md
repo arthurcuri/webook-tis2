@@ -13,38 +13,27 @@
 
 ____________________________________________________________________________________________________________________________________________________________________
 
-**Requisitar Empréstimo de um Livro**
+**Selecionar o livro que o usuario quer alugar**
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
+| Campo       | Tipo         | Restrições | Valor default |
 | ---             | ---              | ---            | ---               |
-| Pesquisa           | Área de Texto   | Apenas letras |  ---              |
-| Título do Livro           | Área de Texto   | Não editável |  ---              |
-| Seção do Livro           | Área de Texto   | Não editável |  ---              |
-| Imagem do LIvro           | Imagem  | --- |  ---              |
+| Título do Livro     | Caixa de Texto   | Sem Restrição  | Titulo do livro cadastrado          |
+| Nome do Autor      | Caixa de Texto      | Apenas Letras  | Nome do autor cadastrado             |
+| ISBN | Número  | 13 Caracteres           | IBNN do livro cadastrado                 |
+| Editora | Caixa de Texto   | Apenas Letras  | Editora do livro cadastrado                 |
+| Seção do Livro     | Caixa de Texto   | Apenas Letras  | Seção do livro cadastrado                 |
+| Preço | Número   | ---   | Preço do livro cadastrado                 |
+| Ações |  Caixa de Texto        | Não alteravel | Remover/Editar |
 
-| **Comandos**         |  **Destino**                   | **Tipo** |
+| Comandos         |  Destino                   | Tipo          |
 | ---                  | ---                            | ---               |
-| Botão Ver Livros               | Desce a tela com as opções de livros              | Default           |
-| Botão Buscar               | Livro digitado na caixa de pesquisa              | Default           |
-| Botão Escolher Livro             | Verificar livros escolhidos              | Default           |
+| Botão voltar         | Retorna para tela anterior     | Default           |
+| Botão emprestimo      |Leva á tela de logar o usuario que deseja alugar o livro       | ---               |
+
 
 ____________________________________________________________________________________________________________________________________________________________________
 
-**Definir Data de Devolução**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| CPF do Usuário          | Número   | 12 Caracteres | ---               |
-| Data de Retirada          | Data   | Não editável | ---               |
-| Data Devolução                 |   Data               |       Somente datas futuras        |     ---              |
-
-| **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
-| Botão Registrar Data                     |  Tela de Registrar Empréstimo                              |  Default                 |
-
-____________________________________________________________________________________________________________________________________________________________________
-
-**Registrar Empréstimo**
+**Registrar Empréstimo e data de devolução**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
@@ -57,6 +46,6 @@ ________________________________________________________________________________
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
 | Botão Voltar               | Retorna para a tela anterior          | Default           |
-| Botão Registrar               | Tela final de conclusão do empréstimo           | Default           |
+| Botão Registrar               | Retorna á tela inicial do software          | Default           |
 
 
