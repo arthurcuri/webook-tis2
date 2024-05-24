@@ -15,13 +15,13 @@ ________________________________________________________________________________
 
 | Campo       | Tipo         | Restrições | Valor default |
 | ---             | ---              | ---            | ---               |
-| Título do Livro     | Caixa de Texto   | Sem Restrição  | Titulo do livro cadastrado          |
+| Título do Livro     | Caixa de Texto   | ---  | Título do livro cadastrado          |
 | Nome do Autor      | Caixa de Texto      | Apenas Letras  | Nome do autor cadastrado             |
 | ISBN | Número  | 13 Caracteres           | IBNN do livro cadastrado                 |
 | Editora | Caixa de Texto   | Apenas Letras  | Editora do livro cadastrado                 |
 | Seção do Livro     | Caixa de Texto   | Apenas Letras  | Seção do livro cadastrado                 |
 | Preço | Número   | ---   | Preço do livro cadastrado                 |
-| Ações |  Caixa de Texto        | Não alteravel | Emprestar |
+| Ações |  Caixa de Texto        | Não editável | Emprestar |
 
 | Comandos         |  Destino                   | Tipo          |
 | ---                  | ---                            | ---               |
