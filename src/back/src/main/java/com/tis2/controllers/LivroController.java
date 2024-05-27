@@ -64,5 +64,11 @@ public class LivroController {
         this.livroServices.delete(Id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/usuario/{userId}")
+    public ResponseEntity<List<Livro>> findAllByUserId(@PathVariable Long userId){
+        List<Livro> objs = this.livroServices.findAllByUserId(userId);
+        return ResponseEntity.ok().body(objs);
+    }
     
 }

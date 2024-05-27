@@ -1,6 +1,8 @@
 package com.tis2.models;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,6 +36,7 @@ public class Livro {
 
     @ManyToOne
     @JoinColumn(name ="usuario_id", nullable = true, updatable = true)
+    @JsonBackReference
     private Usuario usuario;
 
     @Column(name = "ISBN", unique = true, nullable = false)
@@ -59,7 +62,6 @@ public class Livro {
     @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
     @Column(name = "preco", nullable = false)
     private float preco;
-   
 
     public Long getId() {
         return this.Id;
@@ -69,6 +71,15 @@ public class Livro {
         this.Id = Id;
     }
     
+
+    public Usuario getUsuario() {
+        return this.usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     public Long getISBN() {
         return this.ISBN;
     }

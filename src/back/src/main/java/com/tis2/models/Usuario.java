@@ -3,6 +3,7 @@ package com.tis2.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,7 +39,9 @@ public class Usuario {
     @Column(name = "dataNascimento", nullable = false)
     private String dataNascimento;
 
+
     @OneToMany(mappedBy = "usuario")
+    @JsonManagedReference
     private List<Livro> livro = new ArrayList<Livro>();
 
     public Usuario() {

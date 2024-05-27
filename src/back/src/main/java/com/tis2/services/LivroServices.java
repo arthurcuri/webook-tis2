@@ -18,10 +18,19 @@ public class LivroServices {
 
     @Autowired
     private LivroRepository livroRepository;
+
+
+
     @GetMapping
     public List<Livro> findAll(){
         return livroRepository.findAll();
     }
+
+    public List<Livro> findAllByUserId (Long userId) {
+        List<Livro> livros = this.livroRepository.findByUsuario_Id(userId);
+        return livros;
+    }
+
     public Livro buscarPeloId(Long Id){
         Optional<Livro> livro = this.livroRepository.findById(Id);
         
@@ -41,6 +50,7 @@ public class LivroServices {
     @Transactional
     public Livro update(Livro obj){
         Livro newObj = buscarPeloId(obj.getId());
+        newObj.setUsuario(obj.getUsuario());
         newObj.setTituloLivro(obj.getTituloLivro());
         newObj.setAutor(obj.getAutor());
         newObj.setEditora(obj.getEditora());
