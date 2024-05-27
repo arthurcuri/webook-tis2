@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.tis2.models.Livro;
 import com.tis2.models.Usuario;
 import com.tis2.repositories.UsuarioRepository;
 
