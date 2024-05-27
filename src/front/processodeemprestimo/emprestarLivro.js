@@ -48,3 +48,27 @@ async function emprestarLivro() {
         alert('Erro ao editar livro');
     }
 }
+async function preencherCampos(id) {
+    try {
+        const response = await fetch(`http://localhost:8080/livro/${id}`);
+        const livro = await response.json();
+
+        document.getElementById('id').value = livro.id;
+        document.getElementById('titulo').value = livro.tituloLivro;
+        document.getElementById('autor').value = livro.autor;
+        document.getElementById('isbn').value = livro.isbn;
+        document.getElementById('editora').value = livro.editora;
+        document.getElementById('secao').value = livro.secao;
+        document.getElementById('preco').value = livro.preco;
+    } catch (error) {
+        console.error('Erro ao buscar livro:',   error);
+    }
+}
+
+window.onload = function() {
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+if (id) {
+    preencherCampos(id);
+}
+};
