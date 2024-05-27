@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Livro</title>
+    <link href="/webook/src/front/processodeemprestimo/emprestarLivro.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html">
+                <img src="/webook/docs/images/Logopng.png" alt="Logo" class="logo">
+            </a>
+        </div>
+    </header>
+    <main class="central">
+        <div class="editar-livro-form">
+            <h2>Informações Livro</h2>
+            <form>
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" name="id" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="autor">Nome do Autor:</label>
+                    <input type="text" id="autor" name="autor" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="number" id="isbn" name="isbn" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="editora">Editora:</label>
+                    <input type="text" id="editora" name="editora" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="secao">Seção:</label>
+                    <input type="text" id="secao" name="secao" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="number" id="preco" name="preco"  required readonly>
+                </div>
+            </form> 
+        </div>
+        <div class="editar-livro-form2">
+            <h2>Emprestar Livro</h2>
+            <form>
+                <div class="form-group">
+                    <label for="id">CPF:</label>
+                    <input type="text" id="id" name="id" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Data de retirada:</label>
+                    <input type="date" id="titulo" name="titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="autor">Prazo pra devolução:</label>
+                    <input type="number" id="autor" name="autor" required>
+                </div>
+                <button type="button" onclick="editarLivro()">Emprestar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>© Webook - Gerenciar Livros. Todos os direitos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script>
+    async function editarLivro() {
+    const id = document.getElementById('id').value;
+    const titulo = document.getElementById('titulo').value;
+    const autor = document.getElementById('autor').value;
+    const isbn = document.getElementById('isbn').value;
+    const editora = document.getElementById('editora').value;
+    const secao = document.getElementById('secao').value;
+    const preco = document.getElementById('preco').value;
+
+    if (!titulo || !autor || !isbn || !editora || !secao || !preco) {
+        alert("Todos os campos devem ser preenchidos.");
+        return;
+    }
+
+    if (isNaN(isbn)) {
+        alert('ISBN deve conter apenas números');
+        return;
+    }
+
+    const livroEditado = {
+        id: id,
+        tituloLivro: titulo,
+        autor: autor,
+        isbn: isbn,
+        editora: editora,
+        secao: secao,
+        preco: preco
+    };
+
+    const requestOptions = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(livroEditado)
+    };
+
+    try {
+        const response = await fetch(`http://localhost:8080/livro/${id}`, requestOptions);
+        if (!response.ok) {
+            throw new Error('Erro ao editar livro');
+        }
+        console.log('Livro editado com sucesso');
+        alert('Livro editado com sucesso');
+        window.location.href = "/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html";
+    } catch (error) {
+        console.error('Erro ao editar livro:', error);
+        alert('Erro ao editar livro');
+    }
+}
+
+    async function preencherCampos(id) {
+        try {
+            const response = await fetch(`http://localhost:8080/livro/${id}`);
+            const livro = await response.json();
+
+            document.getElementById('id').value = livro.id;
+            document.getElementById('titulo').value = livro.tituloLivro;
+            document.getElementById('autor').value = livro.autor;
+            document.getElementById('isbn').value = livro.isbn;
+            document.getElementById('editora').value = livro.editora;
+            document.getElementById('secao').value = livro.secao;
+            document.getElementById('preco').value = livro.preco;
+        } catch (error) {
+            console.error('Erro ao buscar livro:',   error);
+        }
+    }
+
+    window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    if (id) {
+        preencherCampos(id);
+    }
+};
+
+</script>
+
+</html>

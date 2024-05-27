@@ -4,43 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login do Cliente</title>
-    <link href="/webook/src/front/gerenciamentodeusuarios/AdicionarUsuario.css" rel="stylesheet" />
+    <title>Emprestimo de Livros</title>
+    <link href="/webook/src/front/gerenciamentodelivros/Removerlivro.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="/webook/src/front/processodeemprestimo/clienteInicial.js" rel="script" />
+    <script src="/webook/src/front/processodeemprestimo/clienteInicial.js"></script>
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <a href="/webook/src/front/gerenciamentodeusuarios/Gerenciamento.html">
+            <a href="/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html">
                 <img src="/webook/docs/images/Logopng.png" alt="Logo" class="logo">
             </a>
+            <div class="search-container">
+                <input type="search" placeholder="Buscar Livro..." class="search-bar" id="searchInput">
+                <button class="search-button" onclick="buscarLivro()">Buscar</button>
+            </div>
         </div>
     </header>
-    <main>
-        <div class="adicionar-usuario-form">
-            <h2>Logar Usuário</h2>
-            <form>
-                <div class="form-group">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="cpf">CPF:</label>
-                    <input type="number" id="cpf" name="cpf" required>
-                </div>
-                <div class="form-group">
-                    <label for="data">Data de Nascimento:</label>
-                    <input type="date" id="data" name="data" required>
-                </div>
-                <button type="button" onclick="cadastrar()">Adicionar Usuário</button>
-            </form>
-        </div>
-        <p id="mensagem" style="display: none; color: green;">Usuário cadastrado com sucesso!</p> <!-- Mensagem de sucesso -->
-    </main>
+
+    <table id="livros-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>ISBN</th>
+                <th>Editora</th>
+                <th>Seção</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
     <footer>
         <div class="footer-content">
             <p>© Webook - Gerenciar Livros. Todos os direitos reservados.</p>
@@ -51,3 +52,8 @@
             </ul>
         </div>
     </footer>
+
+   
+</body>
+
+</html>
