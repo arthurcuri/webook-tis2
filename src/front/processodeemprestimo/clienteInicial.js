@@ -17,7 +17,7 @@ async function fetchLivros() {
                 <td>${livro.tituloLivro}</td>
                 <td>${livro.autor}</td>
                 <td>${livro.isbn}</td>
-                <td>${livro.editora}</td>
+                <td>${livro.editora}</td> 
                 <td>${livro.secao}</td>
                 <td>${livro.preco}$</td>
                 <td>
@@ -56,8 +56,7 @@ async function buscarLivro() {
             <td>${livro.secao}</td>
             <td>${livro.preco}$</td>
             <td>
-                <button onclick="editarLivro(${livro.id})">Editar</button>
-                <button onclick="confirmarRemoverLivro(${livro.id})">Remover</button>
+                <button onclick="emprestarLivro(${livro.id})">Emprestar</button>
             </td>
         `;
         tbody.appendChild(newRow);
@@ -67,8 +66,8 @@ async function buscarLivro() {
 }
 
 
-async function editarLivro(id) {
-    window.location.href = `/webook/src/front/gerenciamentodelivros/Alterarlivro.html?id=${id}`;
+async function emprestarLivro(id) {
+    window.location.href = `/webook/src/front/processodeemprestimo/emprestarLivro.html?id=${id}`;
 }
 
 window.onload = fetchLivros;
