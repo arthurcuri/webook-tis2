@@ -17,7 +17,7 @@ async function emprestarLivro() {
         return;
     }
 
-    const livroEditado = {
+    const livroEmprestado = {
         id: id,
         tituloLivro: titulo,
         autor: autor,
@@ -41,8 +41,8 @@ async function emprestarLivro() {
             throw new Error('Erro ao editar livro');
         }
         console.log('Livro editado com sucesso');
-        alert('Livro editado com sucesso');
-        window.location.href = "/webook/src/front/processodeemprestimo/clienteInicial.js";
+        alert('Livro emprestado com sucesso');
+        window.location.href = "/webook/src/front/Main.html";
     } catch (error) {
         console.error('Erro ao editar livro:', error);
         alert('Erro ao editar livro');
@@ -72,3 +72,4 @@ if (id) {
     preencherCampos(id);
 }
 };
+
