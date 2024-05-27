@@ -56,6 +56,8 @@ public class LivroServices {
         newObj.setEditora(obj.getEditora());
         newObj.setSecao(obj.getSecao());
         newObj.setPreco(obj.getPreco());
+        newObj.setDataEmprestimo(obj.getDataEmprestimo());
+        newObj.setDiasEmprestado(obj.getDiasEmprestado());
         return this.livroRepository.save(newObj);
     }
 

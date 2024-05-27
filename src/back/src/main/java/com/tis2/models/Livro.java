@@ -1,6 +1,8 @@
 package com.tis2.models;
 
 
+import java.time.LocalDate;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
@@ -62,6 +64,31 @@ public class Livro {
     @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
     @Column(name = "preco", nullable = false)
     private float preco;
+
+    @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
+    @Column(name = "dataEmprestimo", nullable = true)
+    private LocalDate dataEmprestimo;
+
+    @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
+    @Column(name = "diasEmprestado", nullable = false)
+    private int diasEmprestado;
+
+
+    public int getDiasEmprestado() {
+        return this.diasEmprestado;
+    }
+
+    public void setDiasEmprestado(int diasEmprestado) {
+        this.diasEmprestado = diasEmprestado;
+    }
+
+    public LocalDate getDataEmprestimo() {
+        return this.dataEmprestimo;
+    }
+
+    public void setDataEmprestimo(LocalDate dataEmprestimo) {
+        this.dataEmprestimo = dataEmprestimo;
+    }
 
     public Long getId() {
         return this.Id;

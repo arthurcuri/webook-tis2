@@ -1,5 +1,6 @@
 package com.tis2.models;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,9 +14,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = Usuario.TABLE_NAME)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Usuario {
     public interface CriarUsuario {}
     public interface AtualizarUsuario {}
@@ -37,24 +42,12 @@ public class Usuario {
 
     @NotBlank(groups = {CriarUsuario.class, AtualizarUsuario.class})
     @Column(name = "dataNascimento", nullable = false)
-    private String dataNascimento;
+    private LocalDate dataNascimento;
 
 
     @OneToMany(mappedBy = "usuario")
     @JsonManagedReference
     private List<Livro> livro = new ArrayList<Livro>();
-
-    public Usuario() {
-    }
-
-
-    public Usuario(Long id, Long cpf, String nome, String dataNascimento, List<Livro> livro) {
-        this.id = id;
-        this.cpf = cpf;
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-        this.livro = livro;
-    }
 
 
     public Long getId() {
@@ -81,11 +74,12 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getDataNascimento() {
+
+    public LocalDate getDataNascimento() {
         return this.dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
