@@ -20,14 +20,13 @@
 }
 
 
-
-
-
 footer {
     background: rgb(192, 211, 230);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px 10px;
     width: 100%;
+    bottom: 0;
+    left: 0;
     text-align: center;
 }
 
@@ -66,12 +65,12 @@ footer {
 .central {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 40px;
 }
 
 .editar-livro-form,
 .editar-livro-form2 {
-    width: 48%; /* Ajusta para caber lado a lado com espaçamento */
+    width: 45%; /* Ajusta para caber lado a lado com espaçamento */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
