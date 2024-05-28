@@ -48,7 +48,7 @@ header {
     font-size: large;
     margin-top: 20px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     cursor: pointer;
     background-color: #fff;
     color: #010e1c;
@@ -56,6 +56,7 @@ header {
 
 button:hover {
     background-color: rgb(192, 211, 230);
+    border: 1px solid #010e1c;
     transform: scale(1.05);
     transition: 0.3s;
 }
