@@ -135,3 +135,11 @@ footer {
 .social-links li a:hover {
     color: rgb(64, 95, 121);
 }
+.titulo{
+
+align-items: center;
+justify-content: center;
+text-align: center;
+color: black;
+
+}
