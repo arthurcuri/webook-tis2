@@ -59,6 +59,13 @@ public class LivroController {
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping ("/{Id}/updateEmprestimo")
+    public ResponseEntity<Void> updateEmprestimo(@Valid @RequestBody Livro obj, @PathVariable Long Id){
+        obj.setId(Id);  
+        this.livroServices.updateEmprestimo(obj);
+        return ResponseEntity.noContent().build();
+    }
+
     @DeleteMapping("/{Id}")
     public ResponseEntity<Void> delete(@PathVariable Long Id){
         this.livroServices.delete(Id);

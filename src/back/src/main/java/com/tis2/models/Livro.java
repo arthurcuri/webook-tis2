@@ -70,7 +70,7 @@ public class Livro {
     private LocalDate dataEmprestimo;
 
     @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
-    @Column(name = "diasEmprestado", nullable = false)
+    @Column(name = "diasEmprestado", nullable = true)
     private int diasEmprestado;
 
 
