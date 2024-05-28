@@ -1,6 +1,6 @@
 ## 5. Indicadores de desempenho
 
-_Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no modelo relacional. Defina no mínimo 3 indicadores._
+
 
 | **Indicador** | **Objetivos** | **Descrição** | **Fonte de dados** | **Fórmula de cálculo** |
 | ---           | ---           | ---           | ---             | ---             |
@@ -8,4 +8,4 @@ _Apresente aqui os principais indicadores de desempenho e algumas metas para o p
 | Taxa de Renovação de Empréstimos | Avaliar a quantia de vezes que o livro foi renovado | Mede a porcentagem de livros que foram emprestados mais de uma vez pelos usuários | Tabela de empréstimos | (número de empréstimos renovados / número total de empréstimos) * 100 |
 | Taxa de Empréstimos Atendidos | Melhorar a eficiência do atendimento de pedidos de empréstimos de livros | Mede a porcentagem de pedidos de empréstimo que são atendidos dentro de um prazo estabelecido | Tabela de empréstimos | (número de emprestimo atendidos no prazo / número total de emprestimos) * 100 |
 
-_Obs.: todas as informações para gerar os indicadores devem estar no modelo relacional._
+
