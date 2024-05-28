@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html">
+            <a href="/webook/src/front/Main.html">
                 <img src="/webook/docs/images/Logopng.png" alt="Logo" class="logo">
             </a>
         </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <label for="isbn">ISBN:</label>
-                    <input type="number" id="isbn" name="isbn" required readonly>
+                    <input type="text" id="isbn" name="isbn" required readonly>
                 </div>
                 <div class="form-group">
                     <label for="editora">Editora:</label>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="preco">Preço:</label>
-                    <input type="number" id="preco" name="preco"  required readonly>
+                    <input type="text" id="preco" name="preco" required readonly>
                 </div>
             </form> 
         </div>
@@ -58,18 +58,18 @@
             <h2>Emprestar Livro</h2>
             <form>
                 <div class="form-group">
-                    <label for="id">ID do usuario:</label>
-                    <input type="text" id="id" name="id" required >
+                    <label for="usuarioId">ID do Usuário:</label>
+                    <input type="text" id="usuarioId" name="usuarioId" required>
                 </div>
                 <div class="form-group">
-                    <label for="titulo">Data de retirada:</label>
-                    <input type="date" id="titulo" name="titulo" required>
+                    <label for="dataEmprestimo">Data de Retirada:</label>
+                    <input type="date" id="dataEmprestimo" name="dataEmprestimo" required>
                 </div>
                 <div class="form-group">
-                    <label for="autor">Prazo pra devolução:</label>
-                    <input type="number" id="autor" name="autor" required>
+                    <label for="diasEmprestados">Prazo para Devolução (dias):</label>
+                    <input type="number" id="diasEmprestados" name="diasEmprestados" required>
                 </div>
-                <button type="button" onclick="editarLivro()">Emprestar</button>
+                <button type="button" onclick="emprestarLivro()">Emprestar</button>
             </form>
         </div>
     </main>

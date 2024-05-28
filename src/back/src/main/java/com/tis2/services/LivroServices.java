@@ -49,14 +49,16 @@ public class LivroServices {
     }
     @Transactional
     public Livro update(Livro obj){
-        Livro newObj = buscarPeloId(obj.getId());
-        newObj.setTituloLivro(obj.getTituloLivro());
-        newObj.setAutor(obj.getAutor());
-        newObj.setEditora(obj.getEditora());
-        newObj.setSecao(obj.getSecao());
-        newObj.setPreco(obj.getPreco());
-        return this.livroRepository.save(newObj);
-    }
+    Livro newObj = buscarPeloId(obj.getId());
+    newObj.setTituloLivro(obj.getTituloLivro());
+    newObj.setAutor(obj.getAutor());
+    newObj.setISBN(obj.getISBN());
+    newObj.setEditora(obj.getEditora());
+    newObj.setSecao(obj.getSecao());
+    newObj.setPreco(obj.getPreco());
+    return this.livroRepository.save(newObj);
+}
+
 
     @Transactional
     public Livro updateEmprestimo(Livro obj){

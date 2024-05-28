@@ -77,5 +77,6 @@ public class LivroController {
         List<Livro> objs = this.livroServices.findAllByUserId(userId);
         return ResponseEntity.ok().body(objs);
     }
+
     
 }

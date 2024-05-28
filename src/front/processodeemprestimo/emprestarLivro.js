@@ -7,24 +7,31 @@ async function emprestarLivro() {
     const secao = document.getElementById('secao').value;
     const preco = document.getElementById('preco').value;
 
-    if (!titulo || !autor || !isbn || !editora || !secao || !preco) {
+    const usuarioId = document.getElementById('usuarioId').value;
+    const dataEmprestimo = document.getElementById('dataEmprestimo').value;
+    const diasEmprestados = document.getElementById('diasEmprestados').value;
+
+    if (!titulo || !autor || !isbn || !editora || !secao || !preco || !usuarioId || !dataEmprestimo || !diasEmprestados) {
         alert("Todos os campos devem ser preenchidos.");
         return;
     }
 
-    if (isNaN(isbn)) {
-        alert('ISBN deve conter apenas números');
+    if (isNaN(isbn) || isNaN(diasEmprestados)) {
+        alert('ISBN e Dias Emprestados devem conter apenas números');
         return;
     }
 
-    const livroEmprestado = {
+    const livroEditado = {
         id: id,
         tituloLivro: titulo,
         autor: autor,
         isbn: isbn,
         editora: editora,
         secao: secao,
-        preco: preco
+        preco: preco,
+        usuario: { id: usuarioId },
+        dataEmprestimo: dataEmprestimo,
+        diasEmprestado: parseInt(diasEmprestados, 10)
     };
 
     const requestOptions = {
@@ -38,16 +45,17 @@ async function emprestarLivro() {
     try {
         const response = await fetch(`http://localhost:8080/livro/${id}`, requestOptions);
         if (!response.ok) {
-            throw new Error('Erro ao editar livro');
+            throw new Error('Erro ao emprestar livro');
         }
-        console.log('Livro editado com sucesso');
+        console.log('Livro emprestado com sucesso');
         alert('Livro emprestado com sucesso');
-        window.location.href = "/webook/src/front/Main.html";
+        window.location.href = "/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html";
     } catch (error) {
-        console.error('Erro ao editar livro:', error);
-        alert('Erro ao editar livro');
+        console.error('Erro ao emprestar livro:', error);
+        alert('Erro ao emprestar livro');
     }
 }
+
 async function preencherCampos(id) {
     try {
         const response = await fetch(`http://localhost:8080/livro/${id}`);
@@ -61,15 +69,14 @@ async function preencherCampos(id) {
         document.getElementById('secao').value = livro.secao;
         document.getElementById('preco').value = livro.preco;
     } catch (error) {
-        console.error('Erro ao buscar livro:',   error);
+        console.error('Erro ao buscar livro:', error);
     }
 }
 
 window.onload = function() {
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id');
-if (id) {
-    preencherCampos(id);
-}
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    if (id) {
+        preencherCampos(id);
+    }
 };
-
