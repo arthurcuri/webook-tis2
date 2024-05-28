@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script>
         const apiUrl = 'http://localhost:8080/livro';
+        
 
         async function fetchLivros() {
     try {
@@ -22,28 +23,32 @@
         tbody.innerHTML = '';
 
         data.forEach(livro => {
-            console.log('Livro:', livro); // Adicionado para depuração
-            if (!livro.userId) {
-                const newRow = document.createElement('tr');
-                newRow.innerHTML = `
-                    <td>${livro.id}</td>
-                    <td>${livro.tituloLivro}</td>
-                    <td>${livro.autor}</td>
-                    <td>${livro.isbn}</td>
-                    <td>${livro.editora}</td> 
-                    <td>${livro.secao}</td>
-                    <td>${livro.preco}$</td>
-                    <td>
-                        <button onclick="emprestarLivro(${livro.id})">Emprestar</button>
-                    </td>
-                `;
-                tbody.appendChild(newRow);
-            }
-        });
+    console.log('Livro:', livro); 
+    if (!livro.userId || livro.userId === null) {
+        if (!livro.dataEmprestimo && !livro.diasEmprestado) {
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${livro.id}</td>
+                <td>${livro.tituloLivro}</td>
+                <td>${livro.autor}</td>
+                <td>${livro.isbn}</td>
+                <td>${livro.editora}</td> 
+                <td>${livro.secao}</td>
+                <td>${livro.preco}$</td>
+                <td>
+                    <button onclick="emprestarLivro(${livro.id})">Emprestar</button>
+                </td>
+            `;
+            tbody.appendChild(newRow);
+        }
+    }
+});
+
     } catch (error) {
         console.error('Erro ao buscar livros:', error);
     }
 }
+
 
 
         async function buscarLivro() {
