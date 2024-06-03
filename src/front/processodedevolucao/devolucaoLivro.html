@@ -85,6 +85,7 @@
                         <td>${livro.userId}</td>
                         <td>
                             <button onclick="devolverLivro(${livro.id})">Devolver</button>
+                            <button onclick="consertarLivro(${livro.id})">Livro Danificado</button>
                         </td>
                     `;
                     tbody.appendChild(newRow);
@@ -92,6 +93,9 @@
             } catch (error) {
                 console.error('Erro ao buscar livro:', error);
             }
+        }
+        async function consertarLivro(id) {
+            window.location.href = '/webook/src/front/processodedevolucao/livroDanificado.html?id=${id}';
         }
 
         async function devolverLivro(id) {
