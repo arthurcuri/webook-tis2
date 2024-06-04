@@ -1,6 +1,6 @@
 ### 3.3.2 Processo 2 – Processo Devolução
 
-![Processo Devolução](images/ProcessoDevolucaonovo.png "Modelo BPMN do Processo 2.")
+![Processo Devolução](images/ProcessoDevolucaoAtualizado.png "Modelo BPMN do Processo 2.")
 
 
 
