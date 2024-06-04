@@ -7,9 +7,13 @@
 #### **Detalhamento das atividades**
 **Registrar a devolução do livro na biblioteca** - Bibliotecário entrará no sistema que apresenta uma tabela com todos os livros que estão emprestados. A tela mostra o ID do empréstimo, a data no qual foi realizado o empréstimo, a data de devolução do livro e as ações de Devolver, que registrará a devolução daquele determinado livro e a de Reportar Livro Danificado.
 
-**Reportar Livro Danificado** - Bibliotecário apenas acessará essa tela a partir da tela do registro da devolução do livro, caso o livro tenha voltado com defeitos que não possuia antes. Essa tela possibilitará deixar registrado o ocorrido com o valor que será cobrado ao usuário pelos danos. Ela terá apenas um botão para dar sequência ao processo.
+**Concluir Devolução** - Bibliotecário apenas conclui a devolução do livro a partir de um botão OK.
 
-**Pagar multa de atraso** - O usuário receberá as informações de devolução enviadas pelo bibliotecário, contendo a data de retirada do livro e a data limite para a devolução que foi extrapolada. Neste caso, apresentará uma tela informando o valor de multa que será adicionado ao preço do empréstimo, para o pagamento em conjunto na tela seguinte.
+**Informar valor da Taxa Extra** - Bibliotecário informa o valor que será cobrado devido a devolução de um livro danificado.
+
+**Informar motivo da Taxa Extra** - Bibliotecário informa o motivo do por que será cobrado a taxa extra do livro danificado.
+
+**Concluir reporte do livro danificado** - Bibliotecário apenas conclui o reporte do livro danificado a partir de um botão OK.
 
 
 ___________________________________________________________________________________________________________________________________
@@ -26,37 +30,44 @@ ________________________________________________________________________________
 | Comandos         |  Destino                   | Tipo          |
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão Devolver        | ??               | ---               |
-| Botão Reportar Livro Danificado        | Reportar Livro Danificado  | Default          |
+| Botão Devolver        | Concluir Devolução               | ---               |
+| Botão Reportar Livro Danificado        | Informar o valor da taxa extra  | Default          |
 ___________________________________________________________________________________________________________________________________
 
-**Reportar Livro Danificado**
+**Informar o valor da taxa extra**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Valor taxa extra  | Número       | ---            | ---               |
-| Motivo de taxa extra | Campo de texto  |    ---      |            ---   |
-
-
+| Valor da taxa extra     | Número          | ---            | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de confirmar cobrança | Aguarda o usuário realizar o pagamento | Default |              
+| Botão OK | Informar o motivo da taxa extra | Default |    
 
 ___________________________________________________________________________________________________________________________________
 
-**Pagar multa de atraso**
+**Informar o motivo da taxa extra**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| Data de Retirada     | Data          | Não editável            | ---               |
-| Data de Devolução    | Data          | Não editável            | ---               |
-| Dias ultrapassados     | Campo de Texto          | Não editável            | ---               |
-| Valor multa     | Número          | Não editável            | ---               |
+| Motivo da taxa extra     | Caixa de Texto          | ---            | ---               |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| Botão de continuar | Tela de pagamento final | Default |    
+| Botão OK | Concluir reporte do livro danificado | Default |    
 
 ___________________________________________________________________________________________________________________________________
 
+**Confirmar Devolução**
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão OK | Fim do Processo | Default |    
+
+___________________________________________________________________________________________________________________________________
+
+**Concluir reporte do livro danificado**
+
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| ---                  | ---                            | ---               |
+| Botão OK | Fim do Processo | Default |    
