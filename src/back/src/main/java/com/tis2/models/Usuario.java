@@ -1,10 +1,9 @@
 package com.tis2.models;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -44,10 +43,9 @@ public class Usuario {
     @Column(name = "dataNascimento", nullable = false)
     private LocalDate dataNascimento;
 
-
     @OneToMany(mappedBy = "usuario")
-    @JsonManagedReference
-    private List<Livro> livro = new ArrayList<Livro>();
+    @JsonIgnore
+    private List<Emprestimo> emprestimos;
 
 
     public Long getId() {
@@ -83,12 +81,13 @@ public class Usuario {
         this.dataNascimento = dataNascimento;
     }
 
-    public List<Livro> getLivro() {
-        return this.livro;
+
+    public List<Emprestimo> getEmprestimos() {
+        return this.emprestimos;
     }
 
-    public void setLivro(List<Livro> livro) {
-        this.livro = livro;
+    public void setEmprestimos(List<Emprestimo> emprestimos) {
+        this.emprestimos = emprestimos;
     }
 
 

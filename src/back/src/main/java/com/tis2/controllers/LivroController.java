@@ -11,6 +11,7 @@ import jakarta.validation.Valid;
 import java.net.URI;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -44,7 +45,7 @@ public class LivroController {
         return ResponseEntity.ok().body(obj);
     }
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> create(@Valid @RequestBody Livro obj){
         this.livroServices.create(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -52,17 +53,10 @@ public class LivroController {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping ("/{Id}")
+    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> update(@Valid @RequestBody Livro obj, @PathVariable Long Id){
         obj.setId(Id);  
         this.livroServices.update(obj);
-        return ResponseEntity.noContent().build();
-    }
-
-    @PutMapping ("/{Id}/updateEmprestimo")
-    public ResponseEntity<Void> updateEmprestimo(@Valid @RequestBody Livro obj, @PathVariable Long Id){
-        obj.setId(Id);  
-        this.livroServices.updateEmprestimo(obj);
         return ResponseEntity.noContent().build();
     }
 
@@ -70,12 +64,6 @@ public class LivroController {
     public ResponseEntity<Void> delete(@PathVariable Long Id){
         this.livroServices.delete(Id);
         return ResponseEntity.noContent().build();
-    }
-
-    @GetMapping("/usuario/{userId}")
-    public ResponseEntity<List<Livro>> findAllByUserId(@PathVariable Long userId){
-        List<Livro> objs = this.livroServices.findAllByUserId(userId);
-        return ResponseEntity.ok().body(objs);
     }
 
     

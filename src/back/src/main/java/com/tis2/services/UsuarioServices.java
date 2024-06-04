@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
+
 
 import com.tis2.models.Usuario;
 import com.tis2.repositories.UsuarioRepository;
@@ -20,11 +20,11 @@ public class UsuarioServices {
     private UsuarioRepository usuarioRepository;
 
     public Usuario findById(Long id){
-
         Optional<Usuario> usuario = this.usuarioRepository.findById(id);
         return usuario.orElseThrow(() -> new RuntimeException("Usuário não encontrado! Id: " + id + ", Tipo: " + User.class.getName()));
     }
-    @GetMapping
+
+    
     public List<Usuario> findAll(){
         return usuarioRepository.findAll();
     }

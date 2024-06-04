@@ -3,9 +3,12 @@ package com.tis2.controllers;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+
 import com.tis2.models.Usuario;
 import com.tis2.models.Usuario.CriarUsuario;
 import com.tis2.services.UsuarioServices;
+
+import org.springframework.http.MediaType;
 
 import jakarta.validation.Valid;
 
@@ -45,7 +48,7 @@ public class UsuarioController {
         return ResponseEntity.ok().body(obj);
     }
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @Validated(CriarUsuario.class)
     public ResponseEntity<Void> create(@Valid @RequestBody Usuario obj){
         this.usuarioServices.create(obj);
@@ -53,7 +56,7 @@ public class UsuarioController {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> update(@Valid @RequestBody Usuario obj, @PathVariable Long id){
         obj.setId(id);
         this.usuarioServices.update(obj);

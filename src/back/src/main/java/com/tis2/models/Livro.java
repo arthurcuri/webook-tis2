@@ -1,17 +1,19 @@
 package com.tis2.models;
 
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -36,11 +38,6 @@ public class Livro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long  Id;
 
-    @ManyToOne
-    @JoinColumn(name ="usuario_id", nullable = true, updatable = true)
-    @JsonBackReference
-    private Usuario usuario;
-
     @Column(name = "ISBN", unique = true, nullable = false)
     @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
     private Long  ISBN;
@@ -63,7 +60,7 @@ public class Livro {
 
     @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
     @Column(name = "preco", nullable = false)
-    private float preco;
+    private BigDecimal preco;
 
     @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
     @Column(name = "dataEmprestimo", nullable = true)
@@ -73,6 +70,12 @@ public class Livro {
     @Column(name = "diasEmprestado", nullable = true)
     private int diasEmprestado;
 
+    @Column(name = "disponivel", nullable = false)
+    private boolean disponivel;
+
+    @ManyToMany(mappedBy = "livros")
+    @JsonIgnore
+    private List<Emprestimo> emprestimos;
 
     public int getDiasEmprestado() {
         return this.diasEmprestado;
@@ -96,15 +99,6 @@ public class Livro {
 
     public void setId(Long Id) {
         this.Id = Id;
-    }
-    
-
-    public Usuario getUsuario() {
-        return this.usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
     }
 
     public Long getISBN() {
@@ -147,12 +141,32 @@ public class Livro {
         this.editora = editora;
     }
 
-    public float getPreco() {
+    public BigDecimal getPreco() {
         return this.preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(BigDecimal preco) {
         this.preco = preco;
     }
 
+    public boolean isDisponivel() {
+        return this.disponivel;
+    }
+
+    public boolean getDisponivel() {
+        return this.disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+    public List<Emprestimo> getEmprestimos() {
+        return this.emprestimos;
+    }
+
+    public void setEmprestimos(List<Emprestimo> emprestimos) {
+        this.emprestimos = emprestimos;
+    }
+    
 }

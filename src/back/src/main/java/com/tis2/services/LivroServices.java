@@ -20,15 +20,14 @@ public class LivroServices {
     private LivroRepository livroRepository;
 
 
+    @Transactional
+    public Livro save(Livro livro) {
+        return livroRepository.save(livro);
+    }
 
     @GetMapping
     public List<Livro> findAll(){
         return livroRepository.findAll();
-    }
-
-    public List<Livro> findAllByUserId (Long userId) {
-        List<Livro> livros = this.livroRepository.findByUsuario_Id(userId);
-        return livros;
     }
 
     public Livro buscarPeloId(Long Id){
@@ -39,14 +38,17 @@ public class LivroServices {
         ));
     }
 
+    public List<Livro> findAllById(List<Long> ids) {
+        return livroRepository.findAllById(ids);
+    }
+
     @SuppressWarnings("null")
     @Transactional
-    public Livro create(Livro obj){
-        obj.setId((Long) null);
-        obj = this.livroRepository.save(obj);
-        
-        return obj;
+    public Livro create(Livro obj) {
+        obj.setId(null);
+        return livroRepository.save(obj);
     }
+    
     @Transactional
     public Livro update(Livro obj){
     Livro newObj = buscarPeloId(obj.getId());
@@ -59,15 +61,6 @@ public class LivroServices {
     return this.livroRepository.save(newObj);
 }
 
-
-    @Transactional
-    public Livro updateEmprestimo(Livro obj){
-        Livro newObj = buscarPeloId(obj.getId());
-        newObj.setUsuario(obj.getUsuario());
-        newObj.setDataEmprestimo(obj.getDataEmprestimo());
-        newObj.setDiasEmprestado(obj.getDiasEmprestado());
-        return this.livroRepository.save(newObj);
-    }
 
     public void delete(Long Id){
         buscarPeloId(Id);
