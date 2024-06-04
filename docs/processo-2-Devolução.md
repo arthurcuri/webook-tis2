@@ -20,19 +20,16 @@ ________________________________________________________________________________
 
 | Campo       | Tipo         | Restrições | Valor default |
 | ---             | ---              | ---            | ---               |
-| Título do Livro     | Caixa de Texto   | Sem Restrição  | Titulo do livro cadastrado          |
-| Nome do Autor      | Caixa de Texto      | Apenas Letras  | Nome do autor cadastrado             |
-| ISBN | Número  | 13 Caracteres           | IBNN do livro cadastrado                 |
-| Editora | Caixa de Texto   | Apenas Letras  | Editora do livro cadastrado                 |
-| Seção do Livro     | Caixa de Texto   | Apenas Letras  | Seção do livro cadastrado                 |
-| Preço | Número   | ---   | Preço do livro cadastrado                 |
-| Ações |  Caixa de Texto        | Não alteravel | Remover/Editar |
+| ID    | Apenas Números   | Não editável  | ID do empréstimo          |
+| Data de Empréstimo      | Date     | Não editável  | Data de empréstimo do livro            |
+| Data de Devolução | Date  | Não editável            | Prazo de devolução do livro                |
+| Ações |  Caixa de Texto        | Não editável | Devolver/Reportar |
 
 | Comandos         |  Destino                   | Tipo          |
 | ---                  | ---                            | ---               |
 | Botão voltar         | Retorna para tela anterior     | Default           |
-| Botão remover        | Leva a um alert               | ---               |
-| Botão editar        | Encaminha para tela de editar livros  | Default          |
+| Botão Devolver        | ??               | ---               |
+| Botão Reportar Livro Danificado        | ??  | Default          |
 ___________________________________________________________________________________________________________________________________
 
 **Cobrar taxa extra ou devolução do livro**
