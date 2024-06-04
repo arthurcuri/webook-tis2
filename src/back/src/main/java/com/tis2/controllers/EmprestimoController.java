@@ -120,9 +120,20 @@ public ResponseEntity<String> devolverEmprestimo(@PathVariable Long emprestimoId
     // Salvar as alterações do empréstimo no banco de dados
     emprestimoService.update(emprestimo);
     
+    // Atualizar a disponibilidade dos livros associados ao empréstimo
+    atualizarDisponibilidadeLivros(emprestimo);
+
     return ResponseEntity.ok().body("Empréstimo devolvido com sucesso.");
 }
 
+    // Função para atualizar a disponibilidade dos livros associados ao empréstimo
+    public void atualizarDisponibilidadeLivros(Emprestimo emprestimo) {
+        List<Livro> livros = emprestimo.getLivros();
+        for (Livro livro : livros) {
+            livro.setDisponivel(true); // Define disponibilidade como true
+            livroService.save(livro); // Salva a alteração no banco de dados
+        }
+    }
 
     @PutMapping("/{Id}")
     public ResponseEntity<Void> update(@Valid @RequestBody Emprestimo obj, @PathVariable Long Id) {

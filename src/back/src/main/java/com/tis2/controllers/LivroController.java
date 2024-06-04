@@ -54,8 +54,8 @@ public class LivroController {
     }
 
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Void> update(@Valid @RequestBody Livro obj, @PathVariable Long Id){
-        obj.setId(Id);  
+    public ResponseEntity<Void> update(@Valid @RequestBody Livro obj, @PathVariable Long id){
+        obj.setId(id);  
         this.livroServices.update(obj);
         return ResponseEntity.noContent().build();
     }

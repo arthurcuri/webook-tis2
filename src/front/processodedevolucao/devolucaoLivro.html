@@ -47,30 +47,48 @@
         }
 
         async function devolverLivro(id) {
-            try {
-                const response = await fetch(`${apiUrl}/devolver/${id}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        dataDevolucao: new Date().toISOString().split('T')[0]
-                    })
-                });
+    try {
+        // Requisição para devolver o livro
+        const response = await fetch(`${apiUrl}/devolver/${id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                dataDevolucao: new Date().toISOString().split('T')[0]
+            })
+        });
 
-                if (response.ok) {
-                    alert('Empréstimo devolvido com sucesso!');
-                    fetchLivrosDevolucao();
-                } else {
-                    throw new Error('Erro ao devolver empréstimo');
-                }
-            } catch (error) {
-                console.error('Erro ao devolver empréstimo:', error);
+        if (response.ok) {
+            // Requisição para atualizar a disponibilidade do livro
+            const livroResponse = await fetch(`http://localhost:8080/livro/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    disponibilidade: 1
+                })
+            });
+            
+            if (livroResponse.ok) {
+                alert('Empréstimo devolvido com sucesso e disponibilidade do livro atualizada!');
+                fetchLivrosDevolucao();
+                location.reload(); // Recarregar a página após a devolução do livro
+            } else {
+                throw new Error('Erro ao atualizar a disponibilidade do livro');
             }
+        } else {
+            throw new Error('Erro ao devolver empréstimo');
         }
+    } catch (error) {
+        console.error('Erro ao devolver empréstimo:', error);
+    }
+}
 
 
-        async function reportarLivroDanificado(id) {
+
+    async function reportarLivroDanificado(id) {
     try {
         const taxaExtraInput = prompt("Informe a taxa extra:");
         const motivoTaxaInput = prompt("Informe o motivo da taxa:");

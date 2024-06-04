@@ -10,52 +10,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script>
     async function emprestarLivro() {
-    const id = document.getElementById('id').value;
-    const usuarioId = document.getElementById('usuarioId').value;
-    let dataEmprestimo = document.getElementById('dataEmprestimo').value; // Obter a data de empréstimo
-    const diasEmprestados = document.getElementById('diasEmprestados').value;
+        const id = document.getElementById('id').value;
+        const usuarioId = document.getElementById('usuarioId').value;
+        let dataEmprestimo = document.getElementById('dataEmprestimo').value; // Obter a data de empréstimo
+        const diasEmprestados = document.getElementById('diasEmprestados').value;
 
-    if (!id || !usuarioId || !dataEmprestimo || !diasEmprestados) {
-        alert("Todos os campos devem ser preenchidos.");
-        return;
-    }
-
-    // Converter a data para o formato ISO 8601 (YYYY-MM-DD)
-    dataEmprestimo = new Date(dataEmprestimo).toISOString().split('T')[0];
-
-    const emprestimo = {
-        usuarioId: usuarioId,
-        livrosIds: [id], // Supondo que você está emprestando um livro de cada vez
-        dataEmprestimo: dataEmprestimo, // Utilizar a data convertida
-        diasEmprestados: parseInt(diasEmprestados, 10)
-    };
-
-    console.log('Dados enviados para o servidor:', emprestimo);
-
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(emprestimo)
-    };
-
-    try {
-        console.log('Enviando requisição para o servidor...');
-        const response = await fetch('http://localhost:8080/emprestimo/novo', requestOptions);
-        console.log('Resposta do servidor recebida.');
-        if (!response.ok) {
-            const errorMessage = await response.text();
-            throw new Error(`Erro ao emprestar livro: ${errorMessage}`);
+        if (!id || !usuarioId || !dataEmprestimo || !diasEmprestados) {
+            alert("Todos os campos devem ser preenchidos.");
+            return;
         }
-        console.log('Empréstimo criado com sucesso');
-        alert('Livro emprestado com sucesso');
-        window.location.href = "/webook/src/front/Main.html";
-    } catch (error) {
-        console.error('Erro ao emprestar livro:', error);
-        alert(`Erro ao emprestar livro: ${error.message}`);
+
+        // Converter a data para o formato ISO 8601 (YYYY-MM-DD)
+        dataEmprestimo = new Date(dataEmprestimo).toISOString().split('T')[0];
+
+        const emprestimo = {
+            usuarioId: usuarioId,
+            livrosIds: [id], // Supondo que você está emprestando um livro de cada vez
+            dataEmprestimo: dataEmprestimo, // Utilizar a data convertida
+            diasEmprestados: parseInt(diasEmprestados, 10)
+        };
+
+        console.log('Dados enviados para o servidor:', emprestimo);
+
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(emprestimo)
+        };
+
+        try {
+            console.log('Enviando requisição para o servidor...');
+            const response = await fetch('http://localhost:8080/emprestimo/novo', requestOptions);
+            console.log('Resposta do servidor recebida.');
+            if (!response.ok) {
+                const errorMessage = await response.text();
+                throw new Error(`Erro ao emprestar livro: ${errorMessage}`);
+            }
+            console.log('Empréstimo criado com sucesso');
+            alert('Livro emprestado com sucesso');
+            window.location.href = "/webook/src/front/Main.html";
+        } catch (error) {
+            console.error('Erro ao emprestar livro:', error);
+            alert(`Erro ao emprestar livro: ${error.message}`);
+        }
     }
-}
 
 
     async function preencherCampos(id) {
@@ -103,11 +103,14 @@
         }
         listarUsuarios();
 
-        // Definindo o prazo para devolução padrão como 7 dias
-        document.getElementById('diasEmprestados').removeAttribute('readonly'); // Removendo o atributo readonly
-        document.getElementById('diasEmprestados').value = 7;
-    };
+        // Definindo a data de retirada como o dia de hoje
+        const dataAtual = new Date().toISOString().split('T')[0];
+        document.getElementById('dataEmprestimo').value = dataAtual;
 
+        // Definindo o prazo para devolução padrão como 7 dias e impedindo a modificação do campo
+        document.getElementById('diasEmprestados').value = 7;
+        document.getElementById('diasEmprestados').setAttribute('readonly', 'readonly');
+    };
     </script>
 </head>
 <body>
@@ -172,17 +175,17 @@
                 <button type="button" onclick="emprestarLivro()">Emprestar</button>
             </form>
         </div>
-        </main>
-        <footer>
-            <div class="footer-content">
-                <p>© Webook - Gerenciar Livros. Todos os direitos reservados.</p>
-                <ul class="social-links">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </div>
-        </footer>
-        </body>
-        </html>
-        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>© Webook - Gerenciar Livros. Todos os direitos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+
