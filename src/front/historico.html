@@ -23,7 +23,7 @@
                 tbody.innerHTML = '';
 
                 for (const emprestimo of data) {
-                    if (emprestimo.dataDevolucao) {  // Filtrar livros devolvidos
+                    if (emprestimo.dataDevolucao) {  
                         const livroDanificado = emprestimo.motivoTaxa && emprestimo.taxaExtra;
                         const newRow = document.createElement('tr');
                         newRow.innerHTML = `

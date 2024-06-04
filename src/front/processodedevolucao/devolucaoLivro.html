@@ -23,7 +23,7 @@
                 tbody.innerHTML = '';
 
                 for (const emprestimo of data) {
-                    if (!emprestimo.dataDevolucao) {  // Filtrar livros não devolvidos
+                    if (!emprestimo.dataDevolucao) {  
                         const newRow = document.createElement('tr');
                         newRow.innerHTML = `
                             <td>${emprestimo.id}</td>
@@ -117,7 +117,7 @@
 
                 if (response.ok) {
                     alert('Livro danificado registrado com sucesso!');
-                    location.reload(); // Recarrega a página após o registro de livro danificado
+                    location.reload(); 
                 } else {
                     throw new Error('Erro ao registrar livro danificado');
                 }
