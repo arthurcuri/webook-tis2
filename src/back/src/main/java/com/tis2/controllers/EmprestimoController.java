@@ -91,40 +91,43 @@ public class EmprestimoController {
         return ResponseEntity.status(HttpStatus.CREATED).body("Empréstimo criado com sucesso.");
     }
 
-   @PostMapping("/devolver/{emprestimoId}")
-public ResponseEntity<String> devolverEmprestimo(@PathVariable Long emprestimoId, @Valid @RequestBody DevolucaoRequest devolucaoRequest) {
-    // Buscar o empréstimo pelo ID
-    Emprestimo emprestimo = emprestimoService.buscarPeloId(emprestimoId);
-    
-    // Verificar se o empréstimo existe
-    if (emprestimo == null) {
-        return ResponseEntity.notFound().build();
-    }
-    
-    // Verificar se o empréstimo já foi devolvido
-    if (emprestimo.getDataDevolucao() != null) {
-        return ResponseEntity.badRequest().body("O empréstimo já foi devolvido.");
-    }
-    
-    // Atualizar os campos do empréstimo com os dados fornecidos na solicitação de devolução
-    emprestimo.setDataDevolucao(devolucaoRequest.getDataDevolucao());
-    emprestimo.setMotivoTaxa(devolucaoRequest.getMotivoTaxa());
-    emprestimo.setTaxaExtra(devolucaoRequest.getTaxaExtra());
-    
-    // Calcular os valores de multa e valor do empréstimo
-    BigDecimal multa = emprestimo.calcularMulta();
-    BigDecimal valorEmprestimo = emprestimo.calcularPrecoTotal();
-    emprestimo.setValorMulta(multa);
-    emprestimo.setValorEmprestimo(valorEmprestimo);
-    
-    // Salvar as alterações do empréstimo no banco de dados
-    emprestimoService.update(emprestimo);
-    
-    // Atualizar a disponibilidade dos livros associados ao empréstimo
-    atualizarDisponibilidadeLivros(emprestimo);
+    @PostMapping("/devolver/{emprestimoId}")
+    public ResponseEntity<String> devolverEmprestimo(@PathVariable Long emprestimoId, @Valid @RequestBody DevolucaoRequest devolucaoRequest) {
+        // Buscar o empréstimo pelo ID
+        Emprestimo emprestimo = emprestimoService.buscarPeloId(emprestimoId);
+        
+        // Verificar se o empréstimo existe
+        if (emprestimo == null) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        // Verificar se o empréstimo já foi devolvido
+        if (emprestimo.getDataDevolucao() != null) {
+            return ResponseEntity.badRequest().body("O empréstimo já foi devolvido.");
+        }
+        
+        // Atualizar os campos do empréstimo com os dados fornecidos na solicitação de devolução
+        emprestimo.setDataDevolucao(devolucaoRequest.getDataDevolucao());
+        emprestimo.setMotivoTaxa(devolucaoRequest.getMotivoTaxa());
+        emprestimo.setTaxaExtra(devolucaoRequest.getTaxaExtra());
+        
+        // Calcular os valores de multa e valor do empréstimo
+        BigDecimal multa = emprestimo.calcularMulta();
+        BigDecimal valorEmprestimo = emprestimo.calcularPrecoTotal();
+        emprestimo.setValorMulta(multa);
+        emprestimo.setValorEmprestimo(valorEmprestimo);
+        
+        // Salvar as alterações do empréstimo no banco de dados
+        emprestimoService.update(emprestimo);
+        
+        // Verificar se a devolução inclui um livro danificado
+        if (devolucaoRequest.getTaxaExtra() == null) {
+            // Atualizar a disponibilidade dos livros associados ao empréstimo apenas se não houver taxa extra (não danificado)
+            atualizarDisponibilidadeLivros(emprestimo);
+        }
 
-    return ResponseEntity.ok().body("Empréstimo devolvido com sucesso.");
-}
+        return ResponseEntity.ok().body("Empréstimo devolvido com sucesso.");
+    }
 
     // Função para atualizar a disponibilidade dos livros associados ao empréstimo
     public void atualizarDisponibilidadeLivros(Emprestimo emprestimo) {

@@ -23,19 +23,21 @@
                 tbody.innerHTML = '';
 
                 for (const emprestimo of data) {
-                    const newRow = document.createElement('tr');
-                    newRow.innerHTML = `
-                        <td>${emprestimo.id}</td>
-                        <td>${emprestimo.dataEmprestimo.join('/')}</td>
-                        <td>${emprestimo.dataDevolucao ? emprestimo.dataDevolucao.join('/') : 'Não devolvido'}</td>
-                        <td>
-                            ${emprestimo.dataDevolucao ? 'Livro Devolvido' : `<button onclick="devolverLivro(${emprestimo.id})">Devolver</button>`}
-                        </td>
-                        <td>
-                            ${emprestimo.dataDevolucao ? 'Livro Devolvido' : emprestimo.danificado ? 'Livro devolvido com defeito' : `<button onclick="reportarLivroDanificado(${emprestimo.id}, ${emprestimo.idLivro})">Reportar Livro Danificado</button>`}
-                        </td>
-                    `;
-                    tbody.appendChild(newRow);
+                    if (!emprestimo.dataDevolucao) {  // Filtrar livros não devolvidos
+                        const newRow = document.createElement('tr');
+                        newRow.innerHTML = `
+                            <td>${emprestimo.id}</td>
+                            <td>${emprestimo.dataEmprestimo.join('/')}</td>
+                            <td>Não devolvido</td>
+                            <td>
+                                <button onclick="devolverLivro(${emprestimo.id})">Devolver</button>
+                            </td>
+                            <td>
+                                ${emprestimo.danificado ? 'Livro devolvido com defeito' : `<button onclick="reportarLivroDanificado(${emprestimo.id}, ${emprestimo.idLivro})">Reportar Livro Danificado</button>`}
+                            </td>
+                        `;
+                        tbody.appendChild(newRow);
+                    }
                 }
 
                 if (tbody.innerHTML === '') {
@@ -47,91 +49,82 @@
         }
 
         async function devolverLivro(id) {
-    try {
-        // Requisição para devolver o livro
-        const response = await fetch(`${apiUrl}/devolver/${id}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                dataDevolucao: new Date().toISOString().split('T')[0]
-            })
-        });
+            try {
+                const response = await fetch(`${apiUrl}/devolver/${id}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        dataDevolucao: new Date().toISOString().split('T')[0]
+                    })
+                });
+                location.reload(true);
+                if (response.ok) {
+                    const livroResponse = await fetch(`http://localhost:8080/livro/${id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            disponibilidade: 1
+                        })
+                    });
 
-        if (response.ok) {
-            // Requisição para atualizar a disponibilidade do livro
-            const livroResponse = await fetch(`http://localhost:8080/livro/${id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    disponibilidade: 1
-                })
-            });
-            
-            if (livroResponse.ok) {
-                alert('Empréstimo devolvido com sucesso e disponibilidade do livro atualizada!');
-                fetchLivrosDevolucao();
-                location.reload(); // Recarregar a página após a devolução do livro
-            } else {
-                throw new Error('Erro ao atualizar a disponibilidade do livro');
+                    if (livroResponse.ok) {
+                        alert('Empréstimo devolvido com sucesso e disponibilidade do livro atualizada!');
+                        location.reload(true);
+                    } else {
+                        throw new Error('Erro ao atualizar a disponibilidade do livro');
+                    }
+                } else {
+                    throw new Error('Erro ao devolver empréstimo');
+                }
+            } catch (error) {
+                console.error('Erro ao devolver empréstimo:', error);
             }
-        } else {
-            throw new Error('Erro ao devolver empréstimo');
-        }
-    } catch (error) {
-        console.error('Erro ao devolver empréstimo:', error);
-    }
-}
-
-
-
-    async function reportarLivroDanificado(id) {
-    try {
-        const taxaExtraInput = prompt("Informe a taxa extra:");
-        const motivoTaxaInput = prompt("Informe o motivo da taxa:");
-
-        // Verificar se o usuário clicou em "Cancelar" ou deixou os campos em branco
-        if (taxaExtraInput === null || motivoTaxaInput === null || taxaExtraInput.trim() === '' || motivoTaxaInput.trim() === '') {
-            alert("Informe a taxa extra e o motivo da taxa para prosseguir.");
-            return;
         }
 
-        // Converter os valores para os tipos corretos
-        const taxaExtra = parseFloat(taxaExtraInput);
-        const motivoTaxa = motivoTaxaInput.trim();
+        async function reportarLivroDanificado(id) {
+            try {
+                const taxaExtraInput = prompt("Informe a taxa extra:");
+                const motivoTaxaInput = prompt("Informe o motivo da taxa:");
 
-        // Verificar se a conversão foi bem-sucedida
-        if (isNaN(taxaExtra)) {
-            alert("A taxa extra deve ser um número válido.");
-            return;
+                if (taxaExtraInput === null || motivoTaxaInput === null || taxaExtraInput.trim() === '' || motivoTaxaInput.trim() === '') {
+                    alert("Informe a taxa extra e o motivo da taxa para prosseguir.");
+                    return;
+                }
+
+                const taxaExtra = parseFloat(taxaExtraInput);
+                const motivoTaxa = motivoTaxaInput.trim();
+
+                if (isNaN(taxaExtra)) {
+                    alert("A taxa extra deve ser um número válido.");
+                    return;
+                }
+
+                const response = await fetch(`${apiUrl}/devolver/${id}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        dataDevolucao: new Date().toISOString().split('T')[0],
+                        taxaExtra: taxaExtra,
+                        motivoTaxa: motivoTaxa
+                    })
+                });
+
+                if (response.ok) {
+                    alert('Livro danificado registrado com sucesso!');
+                    location.reload(); // Recarrega a página após o registro de livro danificado
+                } else {
+                    throw new Error('Erro ao registrar livro danificado');
+                }
+            } catch (error) {
+                console.error('Erro ao registrar livro danificado:', error);
+            }
         }
-
-        const response = await fetch(`${apiUrl}/devolver/${id}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                dataDevolucao: new Date().toISOString().split('T')[0],
-                taxaExtra: taxaExtra,
-                motivoTaxa: motivoTaxa
-            })
-        });
-
-        if (response.ok) {
-            alert('Livro danificado registrado com sucesso!');
-            fetchLivrosDevolucao();
-        } else {
-            throw new Error('Erro ao registrar livro danificado');
-        }
-    } catch (error) {
-        console.error('Erro ao registrar livro danificado:', error);
-    }
-}
-
 
         window.onload = fetchLivrosDevolucao;
     </script>
