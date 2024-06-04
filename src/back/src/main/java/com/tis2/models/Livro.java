@@ -62,14 +62,6 @@ public class Livro {
     @Column(name = "preco", nullable = false)
     private BigDecimal preco;
 
-    @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
-    @Column(name = "dataEmprestimo", nullable = true)
-    private LocalDate dataEmprestimo;
-
-    @NotBlank(groups = {CriarLivro.class, AtualizarLivro.class})
-    @Column(name = "diasEmprestado", nullable = true)
-    private int diasEmprestado;
-
     @Column(name = "disponivel", nullable = false)
     private boolean disponivel;
 
@@ -77,21 +69,6 @@ public class Livro {
     @JsonIgnore
     private List<Emprestimo> emprestimos;
 
-    public int getDiasEmprestado() {
-        return this.diasEmprestado;
-    }
-
-    public void setDiasEmprestado(int diasEmprestado) {
-        this.diasEmprestado = diasEmprestado;
-    }
-
-    public LocalDate getDataEmprestimo() {
-        return this.dataEmprestimo;
-    }
-
-    public void setDataEmprestimo(LocalDate dataEmprestimo) {
-        this.dataEmprestimo = dataEmprestimo;
-    }
 
     public Long getId() {
         return this.Id;

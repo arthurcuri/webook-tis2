@@ -72,6 +72,7 @@
             const editora = document.getElementById('editora').value;
             const secao = document.getElementById('secao').value;
             const preco = document.getElementById('preco').value;
+            const disponivel = 1;
 
             if (!titulo || !autor || !isbn || !editora || !secao || !preco) {
                 alert("Todos os campos devem ser preenchidos.");
@@ -88,7 +89,8 @@
                 isbn: isbn,
                 editora: editora,
                 secao: secao,
-                preco: preco
+                preco: preco,
+                disponivel: disponivel 
             };
 
             const requestOptions = {
@@ -106,7 +108,7 @@
                     }
                     document.getElementById('mensagem').style.display = "block"; 
                     document.getElementById('mensagem').style.display = "block"; // Exibe a mensagem de sucesso
-                    console.log('Livro cadaastrado com sucesso!'); // Exibe mensagem no console
+                    console.log('Livro cadastrado com sucesso!'); // Exibe mensagem no console
                     setTimeout(() => {
                         console.log('Redirecionando para a tela inicial...');
                         window.location.href = "/webook/src/front/gerenciamentodelivros/Iniciargerenciamento.html"; // Redireciona para a página principal após 2 segundos

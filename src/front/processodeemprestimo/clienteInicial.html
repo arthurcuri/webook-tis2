@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprestimo de Livros</title>
+    <title>Empréstimo de Livros</title>
     <link href="/webook/src/front/processodeemprestimo/clienteInicial.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,44 +12,37 @@
     <script>
         const apiUrl = 'http://localhost:8080/livro';
         
-
         async function fetchLivros() {
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
 
-        const livrosTable = document.getElementById('livros-table');
-        const tbody = livrosTable.getElementsByTagName('tbody')[0];
-        tbody.innerHTML = '';
+                const livrosTable = document.getElementById('livros-table');
+                const tbody = livrosTable.getElementsByTagName('tbody')[0];
+                tbody.innerHTML = '';
 
-        data.forEach(livro => {
-    console.log('Livro:', livro); 
-    if (!livro.userId || livro.userId === null) {
-        if (!livro.dataEmprestimo && !livro.diasEmprestado) {
-            const newRow = document.createElement('tr');
-            newRow.innerHTML = `
-                <td>${livro.id}</td>
-                <td>${livro.tituloLivro}</td>
-                <td>${livro.autor}</td>
-                <td>${livro.isbn}</td>
-                <td>${livro.editora}</td> 
-                <td>${livro.secao}</td>
-                <td>${livro.preco}$</td>
-                <td>
-                    <button onclick="emprestarLivro(${livro.id})">Emprestar</button>
-                </td>
-            `;
-            tbody.appendChild(newRow);
+                data.forEach(livro => {
+                    if (livro.disponivel) {
+                        const newRow = document.createElement('tr');
+                        newRow.innerHTML = `
+                            <td>${livro.id}</td>
+                            <td>${livro.tituloLivro}</td>
+                            <td>${livro.autor}</td>
+                            <td>${livro.isbn}</td>
+                            <td>${livro.editora}</td> 
+                            <td>${livro.secao}</td>
+                            <td>${livro.preco}$</td>
+                            <td>
+                                <button onclick="emprestarLivro(${livro.id})">Emprestar</button>
+                            </td>
+                        `;
+                        tbody.appendChild(newRow);
+                    }
+                });
+            } catch (error) {
+                console.error('Erro ao buscar livros:', error);
+            }
         }
-    }
-});
-
-    } catch (error) {
-        console.error('Erro ao buscar livros:', error);
-    }
-}
-
-
 
         async function buscarLivro() {
             const isbn = document.getElementById('searchInput').value;
@@ -66,20 +59,22 @@
                 const tbody = livrosTable.getElementsByTagName('tbody')[0];
                 tbody.innerHTML = '';
 
-                const newRow = document.createElement('tr');
-                newRow.innerHTML = `
-                    <td>${livro.id}</td>
-                    <td>${livro.tituloLivro}</td>
-                    <td>${livro.autor}</td>
-                    <td>${livro.isbn}</td>
-                    <td>${livro.editora}</td>
-                    <td>${livro.secao}</td>
-                    <td>${livro.preco}$</td>
-                    <td>
-                        <button onclick="emprestarLivro(${livro.id})">Emprestar</button>
-                    </td>
-                `;
-                tbody.appendChild(newRow);
+                if (livro.disponivel) {
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = `
+                        <td>${livro.id}</td>
+                        <td>${livro.tituloLivro}</td>
+                        <td>${livro.autor}</td>
+                        <td>${livro.isbn}</td>
+                        <td>${livro.editora}</td>
+                        <td>${livro.secao}</td>
+                        <td>${livro.preco}$</td>
+                        <td>
+                            <button onclick="emprestarLivro(${livro.id})">Emprestar</button>
+                        </td>
+                    `;
+                    tbody.appendChild(newRow);
+                }
             } catch (error) {
                 console.error('Erro ao buscar livro:', error);
             }
@@ -133,8 +128,6 @@
             </ul>
         </div>
     </footer>
-
-
 </body>
 
 </html>

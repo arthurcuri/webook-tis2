@@ -59,7 +59,9 @@ public class LivroServices {
     newObj.setSecao(obj.getSecao());
     newObj.setPreco(obj.getPreco());
     return this.livroRepository.save(newObj);
-}
+}   
+
+
 
 
     public void delete(Long Id){

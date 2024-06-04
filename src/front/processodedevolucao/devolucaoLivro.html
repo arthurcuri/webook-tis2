@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script>
-        const apiUrl = 'http://localhost:8080/livro';
+        const apiUrl = 'http://localhost:8080/emprestimo';
 
         async function fetchLivrosDevolucao() {
             try {
@@ -22,98 +22,98 @@
                 const tbody = livrosTable.getElementsByTagName('tbody')[0];
                 tbody.innerHTML = '';
 
-                data.forEach(livro => {
-                    console.log('Analisando livro:', livro); 
-                    if (livro.userId !== null && livro.userId !== undefined) {
-                        const newRow = document.createElement('tr');
-                        newRow.innerHTML = `
-                            <td>${livro.id}</td>
-                            <td>${livro.tituloLivro}</td>
-                            <td>${livro.autor}</td>
-                            <td>${livro.isbn}</td>
-                            <td>${livro.editora}</td> 
-                            <td>${livro.secao}</td>
-                            <td>${livro.preco}$</td>
-                            <td>${livro.dataEmprestimo}</td>
-                            <td>${livro.diasEmprestado}</td>
-                            <td>${livro.userId}</td>
-                            <td>
-                                <button onclick="devolverLivro(${livro.id})">Devolver</button>
-                            </td>
-                        `;
-                        tbody.appendChild(newRow);
-                    }
-                });
+                for (const emprestimo of data) {
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = `
+                        <td>${emprestimo.id}</td>
+                        <td>${emprestimo.dataEmprestimo.join('/')}</td>
+                        <td>${emprestimo.dataDevolucao ? emprestimo.dataDevolucao.join('/') : 'Não devolvido'}</td>
+                        <td>
+                            ${emprestimo.dataDevolucao ? 'Livro Devolvido' : `<button onclick="devolverLivro(${emprestimo.id})">Devolver</button>`}
+                        </td>
+                        <td>
+                            ${emprestimo.dataDevolucao ? 'Livro Devolvido' : emprestimo.danificado ? 'Livro devolvido com defeito' : `<button onclick="reportarLivroDanificado(${emprestimo.id}, ${emprestimo.idLivro})">Reportar Livro Danificado</button>`}
+                        </td>
+                    `;
+                    tbody.appendChild(newRow);
+                }
 
                 if (tbody.innerHTML === '') {
                     console.log('Nenhum livro encontrado para devolução.');
                 }
-
             } catch (error) {
                 console.error('Erro ao buscar livros:', error);
             }
         }
 
-        async function buscarLivro() {
-            const isbn = document.getElementById('searchInput').value;
-
-            try {
-                const response = await fetch(`${apiUrl}/${isbn}`);
-                if (!response.ok) {
-                    throw new Error('Livro não encontrado');
-                }
-
-                const livro = await response.json();
-                console.log('Livro encontrado:', livro);
-
-                const livrosTable = document.getElementById('livros-table');
-                const tbody = livrosTable.getElementsByTagName('tbody')[0];
-                tbody.innerHTML = '';
-
-                if (livro.userId !== null && livro.userId !== undefined) {
-                    const newRow = document.createElement('tr');
-                    newRow.innerHTML = `
-                        <td>${livro.id}</td>
-                        <td>${livro.tituloLivro}</td>
-                        <td>${livro.autor}</td>
-                        <td>${livro.isbn}</td>
-                        <td>${livro.editora}</td>
-                        <td>${livro.secao}</td>
-                        <td>${livro.preco}$</td>
-                        <td>${livro.dataEmprestimo}</td>
-                        <td>${livro.diasEmprestado}</td>
-                        <td>${livro.userId}</td>
-                        <td>
-                            <button onclick="devolverLivro(${livro.id})">Devolver</button>
-                            <button onclick="consertarLivro(${livro.id})">Livro Danificado</button>
-                        </td>
-                    `;
-                    tbody.appendChild(newRow);
-                }
-            } catch (error) {
-                console.error('Erro ao buscar livro:', error);
-            }
-        }
-        async function consertarLivro(id) {
-            window.location.href = '/webook/src/front/processodedevolucao/livroDanificado.html?id=${id}';
-        }
-
         async function devolverLivro(id) {
             try {
                 const response = await fetch(`${apiUrl}/devolver/${id}`, {
-                    method: 'POST'
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        dataDevolucao: new Date().toISOString().split('T')[0]
+                    })
                 });
 
                 if (response.ok) {
-                    alert('Livro devolvido com sucesso!');
+                    alert('Empréstimo devolvido com sucesso!');
                     fetchLivrosDevolucao();
                 } else {
-                    throw new Error('Erro ao devolver livro');
+                    throw new Error('Erro ao devolver empréstimo');
                 }
             } catch (error) {
-                console.error('Erro ao devolver livro:', error);
+                console.error('Erro ao devolver empréstimo:', error);
             }
         }
+
+
+        async function reportarLivroDanificado(id) {
+    try {
+        const taxaExtraInput = prompt("Informe a taxa extra:");
+        const motivoTaxaInput = prompt("Informe o motivo da taxa:");
+
+        // Verificar se o usuário clicou em "Cancelar" ou deixou os campos em branco
+        if (taxaExtraInput === null || motivoTaxaInput === null || taxaExtraInput.trim() === '' || motivoTaxaInput.trim() === '') {
+            alert("Informe a taxa extra e o motivo da taxa para prosseguir.");
+            return;
+        }
+
+        // Converter os valores para os tipos corretos
+        const taxaExtra = parseFloat(taxaExtraInput);
+        const motivoTaxa = motivoTaxaInput.trim();
+
+        // Verificar se a conversão foi bem-sucedida
+        if (isNaN(taxaExtra)) {
+            alert("A taxa extra deve ser um número válido.");
+            return;
+        }
+
+        const response = await fetch(`${apiUrl}/devolver/${id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                dataDevolucao: new Date().toISOString().split('T')[0],
+                taxaExtra: taxaExtra,
+                motivoTaxa: motivoTaxa
+            })
+        });
+
+        if (response.ok) {
+            alert('Livro danificado registrado com sucesso!');
+            fetchLivrosDevolucao();
+        } else {
+            throw new Error('Erro ao registrar livro danificado');
+        }
+    } catch (error) {
+        console.error('Erro ao registrar livro danificado:', error);
+    }
+}
+
 
         window.onload = fetchLivrosDevolucao;
     </script>
@@ -126,8 +126,8 @@
                 <img src="/webook/docs/images/Logopng.png" alt="Logo" class="logo">
             </a>
             <div class="search-container">
-                <input type="search" placeholder="Buscar Livro..." class="search-bar" id="searchInput">
-                <button class="search-button" onclick="buscarLivro()">Buscar</button>
+                <input type="search" placeholder="Buscar Empréstimo..." class="search-bar" id="searchInput">
+                <button class="search-button" onclick="buscarEmprestimo()">Buscar</button>
             </div>
         </div>
     </header>
@@ -136,16 +136,10 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>ISBN</th>
-                <th>Editora</th>
-                <th>Seção</th>
-                <th>Preço</th>
                 <th>Data de Empréstimo</th>
-                <th>Dias Emprestados</th>
-                <th>Usuário</th>
+                <th>Data de Devolução</th>
                 <th>Ações</th>
+                <th>Reportar Livro Danificado</th>
             </tr>
         </thead>
         <tbody>

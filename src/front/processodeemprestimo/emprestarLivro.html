@@ -1,166 +1,177 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Emprestar Livro</title>
-        <link href="/webook/src/front/processodeemprestimo/emprestarLivro.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-        <script>
-            async function emprestarLivro() {
-                const id = document.getElementById('id').value;
-                const usuarioId = document.getElementById('usuarioId').value;
-                const dataEmprestimo = document.getElementById('dataEmprestimo').value;
-                const diasEmprestados = document.getElementById('diasEmprestados').value;
-            
-                if (!id || !usuarioId || !dataEmprestimo || !diasEmprestados) {
-                    alert("Todos os campos devem ser preenchidos.");
-                    return;
-                }
-            
-                const livroEditado = {
-                    id: id,
-                    usuario: { id: usuarioId },
-                    dataEmprestimo: dataEmprestimo,
-                    diasEmprestado: parseInt(diasEmprestados, 10)
-                };
-            
-                console.log('Dados enviados para o servidor:', livroEditado); // Adicionado para depuração
-            
-                const requestOptions = {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(livroEditado)
-                };
-            
-                try {
-                    const response = await fetch(`http://localhost:8080/livro/${id}/updateEmprestimo`, requestOptions);
-                    if (!response.ok) {
-                        throw new Error('Erro ao emprestar livro');
-                    }
-                    console.log('Livro emprestado com sucesso');
-                    alert('Livro emprestado com sucesso');
-                    window.location.href = "/webook/src/front/Main.html";
-                } catch (error) {
-                    console.error('Erro ao emprestar livro:', error);
-                    alert('Erro ao emprestar livro');
-                }
-            }
-            
-            async function preencherCampos(id) {
-                try {
-                    const response = await fetch(`http://localhost:8080/livro/${id}`);
-                    const livro = await response.json();
-            
-                    document.getElementById('id').value = livro.id;
-                    document.getElementById('titulo').value = livro.tituloLivro;
-                    document.getElementById('autor').value = livro.autor;
-                    document.getElementById('isbn').value = livro.isbn;
-                    document.getElementById('editora').value = livro.editora;
-                    document.getElementById('secao').value = livro.secao;
-                    document.getElementById('preco').value = livro.preco;
-                } catch (error) {
-                    console.error('Erro ao buscar livro:', error);
-                }
-            }
-            
-            async function listarUsuarios() {
-                try {
-                    console.log('Buscando usuários...');
-                    const response = await fetch('http://localhost:8080/usuario');
-                    const usuarios = await response.json();
-                    console.log('Usuários recebidos:', usuarios);
-            
-                    const usuarioSelect = document.getElementById('usuarioId');
-                    usuarios.forEach(usuario => {
-                        const option = document.createElement('option');
-                        option.value = usuario.id;
-                        option.textContent = `${usuario.id} - ${usuario.nome} (CPF: ${usuario.cpf}, Nascimento: ${usuario.dataNascimento})`;
-                        usuarioSelect.appendChild(option);
-                    });
-                } catch (error) {
-                    console.error('Erro ao buscar usuários:', error);
-                    alert('Erro ao buscar usuários');
-                }
-            }
-            
-            window.onload = function() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const id = urlParams.get('id');
-                if (id) {
-                    preencherCampos(id);
-                }
-                listarUsuarios();
-            };
-            </script>
-            
-    </head>
-    <body>
-        <header>
-            <div class="header-container">
-                <a href="/webook/src/front/Main.html">
-                    <img src="/webook/docs/images/Logopng.png" alt="Logo" class="logo">
-                </a>
-            </div>
-        </header>
-        <main class="central">
-            <div class="editar-livro-form">
-                <h2>Informações Livro</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="id">ID:</label>
-                        <input type="text" id="id" name="id" required readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="titulo">Título:</label>
-                        <input type="text" id="titulo" name="titulo" required readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="autor">Nome do Autor:</label>
-                        <input type="text" id="autor" name="autor" required readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="isbn">ISBN:</label>
-                        <input type="text" id="isbn" name="isbn" required readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="editora">Editora:</label>
-                        <input type="text" id="editora" name="editora" required readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="secao">Seção:</label>
-                        <input type="text" id="secao" name="secao" required readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="preco">Preço:</label>
-                        <input type="text" id="preco" name="preco" required readonly>
-                    </div>
-                </form> 
-            </div>
-            <div class="editar-livro-form2">
-                <h2>Emprestar Livro</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="usuarioId">ID do Usuário:</label>
-                        <select id="usuarioId" name="usuarioId" required>
-                            <option value="">Selecione um usuário</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="dataEmprestimo">Data de Retirada:</label>
-                        <input type="date" id="dataEmprestimo" name="dataEmprestimo" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="diasEmprestados">Prazo para Devolução (dias):</label>
-                        <input type="number" id="diasEmprestados" name="diasEmprestados" required>
-                    </div>
-                    <button type="button" onclick="emprestarLivro()">Emprestar</button>
-                </form>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprestar Livro</title>
+    <link href="/webook/src/front/processodeemprestimo/emprestarLivro.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+    async function emprestarLivro() {
+    const id = document.getElementById('id').value;
+    const usuarioId = document.getElementById('usuarioId').value;
+    let dataEmprestimo = document.getElementById('dataEmprestimo').value; // Obter a data de empréstimo
+    const diasEmprestados = document.getElementById('diasEmprestados').value;
+
+    if (!id || !usuarioId || !dataEmprestimo || !diasEmprestados) {
+        alert("Todos os campos devem ser preenchidos.");
+        return;
+    }
+
+    // Converter a data para o formato ISO 8601 (YYYY-MM-DD)
+    dataEmprestimo = new Date(dataEmprestimo).toISOString().split('T')[0];
+
+    const emprestimo = {
+        usuarioId: usuarioId,
+        livrosIds: [id], // Supondo que você está emprestando um livro de cada vez
+        dataEmprestimo: dataEmprestimo, // Utilizar a data convertida
+        diasEmprestados: parseInt(diasEmprestados, 10)
+    };
+
+    console.log('Dados enviados para o servidor:', emprestimo);
+
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(emprestimo)
+    };
+
+    try {
+        console.log('Enviando requisição para o servidor...');
+        const response = await fetch('http://localhost:8080/emprestimo/novo', requestOptions);
+        console.log('Resposta do servidor recebida.');
+        if (!response.ok) {
+            const errorMessage = await response.text();
+            throw new Error(`Erro ao emprestar livro: ${errorMessage}`);
+        }
+        console.log('Empréstimo criado com sucesso');
+        alert('Livro emprestado com sucesso');
+        window.location.href = "/webook/src/front/Main.html";
+    } catch (error) {
+        console.error('Erro ao emprestar livro:', error);
+        alert(`Erro ao emprestar livro: ${error.message}`);
+    }
+}
+
+
+    async function preencherCampos(id) {
+        try {
+            const response = await fetch(`http://localhost:8080/livro/${id}`);
+            const livro = await response.json();
+
+            document.getElementById('id').value = livro.id;
+            document.getElementById('titulo').value = livro.tituloLivro;
+            document.getElementById('autor').value = livro.autor;
+            document.getElementById('isbn').value = livro.isbn;
+            document.getElementById('editora').value = livro.editora;
+            document.getElementById('secao').value = livro.secao;
+            document.getElementById('preco').value = livro.preco;
+        } catch (error) {
+            console.error('Erro ao buscar livro:', error);
+        }
+    }
+
+    async function listarUsuarios() {
+        try {
+            console.log('Buscando usuários...');
+            const response = await fetch('http://localhost:8080/usuario');
+            const usuarios = await response.json();
+            console.log('Usuários recebidos:', usuarios);
+
+            const usuarioSelect = document.getElementById('usuarioId');
+            usuarios.forEach(usuario => {
+                const option = document.createElement('option');
+                option.value = usuario.id;
+                option.textContent = `${usuario.id} - ${usuario.nome} (CPF: ${usuario.cpf}, Nascimento: ${usuario.dataNascimento})`;
+                usuarioSelect.appendChild(option);
+            });
+        } catch (error) {
+            console.error('Erro ao buscar usuários:', error);
+            alert('Erro ao buscar usuários');
+        }
+    }
+
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        if (id) {
+            preencherCampos(id);
+        }
+        listarUsuarios();
+
+        // Definindo o prazo para devolução padrão como 7 dias
+        document.getElementById('diasEmprestados').removeAttribute('readonly'); // Removendo o atributo readonly
+        document.getElementById('diasEmprestados').value = 7;
+    };
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/webook/src/front/Main.html">
+                <img src="/webook/docs/images/Logopng.png" alt="Logo" class="logo">
+            </a>
+        </div>
+    </header>
+    <main class="central">
+        <div class="editar-livro-form">
+            <h2>Informações Livro</h2>
+            <form>
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" name="id" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="autor">Nome do Autor:</label>
+                    <input type="text" id="autor" name="autor" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" id="isbn" name="isbn" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="editora">Editora:</label>
+                    <input type="text" id="editora" name="editora" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="secao">Seção:</label>
+                    <input type="text" id="secao" name="secao" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="preco" name="preco" required readonly>
+                </div>
+            </form> 
+        </div>
+        <div class="editar-livro-form2">
+            <h2>Emprestar Livro</h2>
+            <form>
+                <div class="form-group">
+                    <label for="usuarioId">ID do Usuário:</label>
+                    <select id="usuarioId" name="usuarioId" required>
+                        <option value="">Selecione um usuário</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dataEmprestimo">Data de Retirada:</label>
+                    <input type="date" id="dataEmprestimo" name="dataEmprestimo" required>
+                </div>
+                <div class="form-group">
+                    <label for="diasEmprestados">Prazo para Devolução (dias):</label>
+                    <input type="number" id="diasEmprestados" name="diasEmprestados" value="7" required readonly>
+                </div>
+                <button type="button" onclick="emprestarLivro()">Emprestar</button>
+            </form>
+        </div>
         </main>
         <footer>
             <div class="footer-content">
@@ -172,5 +183,6 @@
                 </ul>
             </div>
         </footer>
-    </body>
-    </html>
+        </body>
+        </html>
+        
