@@ -32,6 +32,7 @@
                             <td>${emprestimo.dataDevolucao.join('/')}</td>
                             <td>Livro Devolvido</td>
                             <td>${livroDanificado ? 'Livro devolvido danificado' : 'Livro em bom estado'}</td>
+                            <td>${emprestimo.valorEmprestimo}</td> <!-- Nova coluna para o valor do empréstimo -->
                         `;
                         tbody.appendChild(newRow);
                     }
@@ -70,6 +71,7 @@
                 <th>Data de Devolução</th>
                 <th>Status</th>
                 <th>Condição do Livro</th>
+                <th>Valor do Empréstimo</th> 
             </tr>
         </thead>
         <tbody>
