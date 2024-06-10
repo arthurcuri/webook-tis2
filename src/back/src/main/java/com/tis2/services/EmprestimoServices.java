@@ -2,6 +2,7 @@ package com.tis2.services;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -102,6 +103,21 @@ public double calcularPercentualDevolucoesAtrasadas() {
         
         return dataDevolucao != null && !dataDevolucao.isAfter(dataPrevistaDevolucao);
     }
+    public double calcularProporcaoItensEmprestados() {
+        List<Livro> todosLivros = livroRepository.findAll();
+        long totalLivros = todosLivros.size();
 
+        List<Livro> livrosEmprestados = todosLivros.stream()
+                .filter(Livro::isDisponivel)
+                .collect(Collectors.toList());
+
+        long totalLivrosEmprestados = livrosEmprestados.size();
+
+        if (totalLivros == 0) {
+            return 0.0; 
+        }
+
+        return ((double) totalLivrosEmprestados / totalLivros) * 100;
+    }
 }
 
