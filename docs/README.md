@@ -84,7 +84,9 @@ Apenas dois participantes no processo, seriam eles:
 ### 3.1. Análise da situação atual
 
   Nas bibliotecas atuais, o controle manual de empréstimos consome consideravelmente o tempo dos bibliotecários, tanto durante o processo de empréstimo realizado pelos clientes, quanto na gestão da disponibilidade dos livros para os leitores em datas específicas. Tradicionalmente, no procedimento geral de empréstimo, o cliente, após apresentar sua documentação, escolhe o livro desejado e assina um termo, registrando o momento da retirada e o responsável. Após essa etapa, o cliente recebe um comprovante contendo informações essenciais para a devolução na data estipulada, incluindo possíveis multas por atraso. Ao retornar à biblioteca, o cliente entrega o livro ao bibliotecário ou utiliza um terminal de autoatendimento designado para a devolução. O bibliotecário verifica o estado do livro, examinando possíveis danos ou itens em falta, e confirma a devolução. O status do livro é alterado para "devolvido" e remove a associação com o cliente. Caso o usuário esteja sujeito a multas devido ao atraso na devolução, ele gera automaticamente uma notificação, esta notificação pode ser enviada por e-mail, mensagem de texto ou até mesmo uma nota impressa, informando ao usuário sobre a multa e seu valor. São oferecidas ao usuário diferentes opções de pagamento para quitar a multa. Isso pode incluir o pagamento em dinheiro no balcão de atendimento ou até mesmo integração com sistemas de pagamento digital, no qual o cliente pode escolher a opção mais conveniente e realizar o pagamento. Após o pagamento ser efetuado, a transação é registrada, atualizando o status do cliente e removendo a multa pendente de seu registro, um recibo de pagamento pode ser emitido, fornecendo ao mesmo um comprovante da transação realizada. 
+  
   Se o cliente devolve o livro com danos visíveis ou informa à biblioteca sobre a perda do livro durante o período de empréstimo, um bibliotecário avalia a condição do exemplar, verifica se os danos são superficiais, como rasgos leves ou páginas dobradas, ou se são mais graves, como capas danificadas ou páginas arrancadas. Em caso de perda, a ausência total do livro também é verificada, o valor da compensação é calculado com base na política da biblioteca e no preço de reposição do livro. Se a biblioteca optar por substituir o livro danificado ou perdido, o cliente pode ser cobrado pelo custo da nova cópia, além de eventuais taxas administrativas. Se for aplicavél, o cliente é instruído sobre os próximos passos para resolver a questão, incluindo informações sobre como efetuar o pagamento ou fornecer uma cópia substituta do livro, se permitido pela biblioteca, o cliente tem a opção de pagar pela compensação dos danos ou pela perda do livro, seguindo os procedimentos estabelecidos pela biblioteca. Caso ele opte por fornecer uma cópia substituta do livro, ela será avaliada pela biblioteca para garantir que atenda aos requisitos de qualidade e edição. Após o pagamento ser efetuado ou a compensação ser aceita pela biblioteca, a transação é registrada e atualiza o status do cliente, adicionando o livro ao acervo da biblioteca e registrando como parte do processo de reposição. 
+  
   Infelizmente, muitas bibliotecas enfrentam desafios decorrentes do elevado volume de clientes, resultando em dificuldades e atrasos nesse processo que poderia ser agilizado e gerenciado de maneira mais eficiente. Diante dessas dificuldades, as bibliotecas em todo o Brasil enfrentam desafios significativos relacionados ao mal gerenciamento, roubos e danos aos livros emprestados aos leitores.
 
 
@@ -131,9 +133,17 @@ Fonte: https://www.spleituras.org.br/noticia/cerca-de-34-milhes-de-pessoas-frequ
 
 Acesso em: 29 fev. 2024.
 
-**[1.2]** - 
+**[1.2]** - Segundo o Censo 2022 do IBGE, apenas 16% das pessoas acima de 18 anos compraram livros nos últimos 12 meses.
 
-**[1.3]** - 
+Fonte: https://www.negociossc.com.br/blog/livros-no-brasil-pesquisa-revela-habito-de-leitura-no-pais/#:~:text=Em%20um%20pa%C3%ADs%20com%20203,pesquisa%20realizada%20pela%20Nielsen%20BookData.
+
+Acesso em: 29 fev. 2024.
+
+**[1.3]** - O alto preço dos livros no Brasil, que aumentou ainda mais nos últimos anos, e a falta de livrarias nas cidades, são sem dúvida fatores que dificultam o acesso à leitura de boa parte da população.
+
+Fonte: https://www.objetivo.br/institucional/noticias.aspx?titulo=brasileiro-le-um-livro-por-ano-revela-pesquisa#:~:text=Um%20levantamento%20do%20Instituto%20Pr%C3%B3,1%2C3%20livro%20por%20ano.
+
+Acesso em: 05 mar. 2024.
 
 **[1.4]** - 
 
