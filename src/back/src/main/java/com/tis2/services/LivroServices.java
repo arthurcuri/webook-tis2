@@ -22,7 +22,8 @@ public class LivroServices {
 
     @Transactional
     public Livro save(Livro livro) {
-        return livroRepository.save(livro);
+        Livro livroSalvo = livroRepository.save(livro);
+        return livroSalvo;
     }
 
     @GetMapping
@@ -60,8 +61,6 @@ public class LivroServices {
     newObj.setPreco(obj.getPreco());
     return this.livroRepository.save(newObj);
 }   
-
-
 
 
     public void delete(Long Id){

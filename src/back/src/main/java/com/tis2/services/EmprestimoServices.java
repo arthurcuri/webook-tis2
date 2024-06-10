@@ -1,5 +1,6 @@
 package com.tis2.services;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,7 @@ public class EmprestimoServices {
 
     @Transactional
     public Emprestimo update(Emprestimo obj) {
-        buscarPeloId(obj.getId()); 
+        buscarPeloId(obj.getId());
         return emprestimoRepository.save(obj);
     }
 
@@ -68,4 +69,39 @@ public void devolverEmprestimo(Long emprestimoId) {
     }
 }
 
+public double calcularPercentualDevolucoesAtrasadas() {
+    List<Emprestimo> emprestimos = emprestimoRepository.findAll();
+    long totalDevolucoes = emprestimos.stream().filter(e -> e.getDataDevolucao() != null).count();
+    long totalDevolucoesAtrasadas = emprestimos.stream()
+        .filter(e -> e.getDataDevolucao() != null && e.getDataDevolucao().isAfter(e.getDataEmprestimo().plusDays(7)))
+        .count();
+
+    if (totalDevolucoes == 0) {
+        return 0.0; 
+    }
+
+    return ((double) totalDevolucoesAtrasadas / totalDevolucoes) * 100;
 }
+
+  public double calcularTaxaEmprestimosNoPrazo(List<Emprestimo> emprestimos) {
+        long emprestimosNoPrazo = emprestimos.stream()
+                .filter(this::estaDentroDoPrazo)
+                .count();
+        long totalEmprestimos = emprestimos.size();
+        
+        if (totalEmprestimos == 0) {
+            return 0.0;
+        }
+        
+        return ((double) emprestimosNoPrazo / totalEmprestimos) * 100;
+    }
+
+    private boolean estaDentroDoPrazo(Emprestimo emprestimo) {
+        LocalDate dataDevolucao = emprestimo.getDataDevolucao();
+        LocalDate dataPrevistaDevolucao = emprestimo.getDataEmprestimo().plusDays(7); 
+        
+        return dataDevolucao != null && !dataDevolucao.isAfter(dataPrevistaDevolucao);
+    }
+
+}
+

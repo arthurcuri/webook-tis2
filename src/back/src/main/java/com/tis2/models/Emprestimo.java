@@ -183,6 +183,16 @@ public class Emprestimo {
         this.valorEmprestimo = precoTotal;
         return precoTotal;
     }
+     public static long countByDataDevolucaoIsNotNull(List<Emprestimo> emprestimos) {
+        return emprestimos.stream().filter(e -> e.getDataDevolucao() != null).count();
+    }
+
+    public static long countByDataDevolucaoAfterDataPrevistaDevolucao(List<Emprestimo> emprestimos) {
+        return emprestimos.stream()
+            .filter(e -> e.getDataDevolucao() != null && e.getDataDevolucao().isAfter(e.getDataEmprestimo().plusDays(7)))
+            .count();
+    }
+
 }
 
 

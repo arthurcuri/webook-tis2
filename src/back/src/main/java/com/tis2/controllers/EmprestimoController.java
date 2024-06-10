@@ -141,4 +141,22 @@ public class EmprestimoController {
         List<Emprestimo> objs = emprestimoService.findAllByUserId(userId);
         return ResponseEntity.ok().body(objs);
     }
+
+    // PDA = Porcentual devoluções atrasadas
+    @GetMapping("/PDA")
+    public ResponseEntity<Double> getPercentualDevolucoesAtrasadas() {
+        double percentual = emprestimoService.calcularPercentualDevolucoesAtrasadas();
+        return ResponseEntity.ok().body(percentual);
+    }
+
+     // TEP = Taxa Empresnimo no Prazo
+    @GetMapping("/TEP")
+    public ResponseEntity<Double> calcularTaxaEmprestimosNoPrazo() {
+        List<Emprestimo> emprestimos = emprestimoService.findAll();
+        double taxaEmprestimosNoPrazo = emprestimoService.calcularTaxaEmprestimosNoPrazo(emprestimos);
+        return ResponseEntity.ok().body(taxaEmprestimosNoPrazo);
+    }
+
+
+
 }
