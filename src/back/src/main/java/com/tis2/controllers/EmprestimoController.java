@@ -156,7 +156,13 @@ public class EmprestimoController {
         double taxaEmprestimosNoPrazo = emprestimoService.calcularTaxaEmprestimosNoPrazo(emprestimos);
         return ResponseEntity.ok().body(taxaEmprestimosNoPrazo);
     }
-    
+
+     // PIE = Proporção Itens Emprestados
+    @GetMapping("/PIE")
+    public ResponseEntity<Double> calcularProporcaoItensEmprestados() {
+        double proporcao = emprestimoService.calcularProporcaoItensEmprestados();
+        return ResponseEntity.ok().body(proporcao);
+    }
 
 
 }

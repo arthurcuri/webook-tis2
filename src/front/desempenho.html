@@ -26,10 +26,22 @@
     <!-- Conteúdo dos gráficos aqui -->
     <div class="charts-container">
         <!-- Gráfico 1: Porcentual de Devoluções Atrasadas (PDA) -->
-        <canvas id="chartPDA" width="400" height="400"></canvas>
+        <div class="chart">
+            <div class="chart-title">Porcentual de Devoluções Atrasadas (PDA)</div>
+            <canvas id="chartPDA" width="300" height="300"></canvas>
+        </div>
 
         <!-- Gráfico 2: Taxa de Empréstimos no Prazo (TEP) -->
-        <canvas id="chartTEP" width="400" height="400"></canvas>
+        <div class="chart">
+            <div class="chart-title">Taxa de Empréstimos no Prazo (TEP)</div>
+            <canvas id="chartTEP" width="300" height="300"></canvas>
+        </div>
+
+        <!-- Gráfico 3: Proporção de Itens Emprestados (PIE) -->
+        <div class="chart">
+            <div class="chart-title">Proporção de Itens Emprestados (PIE)</div>
+            <canvas id="chartPIE" width="300" height="300"></canvas>
+        </div>
     </div>
 
     <footer>
@@ -45,23 +57,22 @@
 
     <!-- Inclua seus scripts JavaScript aqui -->
     <script>
-        // Função para buscar e exibir os dados nos gráficos
         async function fetchAndDisplayData() {
             try {
-                // Busca os dados do endpoint PDA
                 const responsePDA = await fetch('http://localhost:8080/emprestimo/PDA');
                 const dataPDA = await responsePDA.json();
-                
-                // Busca os dados do endpoint TEP
+
                 const responseTEP = await fetch('http://localhost:8080/emprestimo/TEP');
                 const dataTEP = await responseTEP.json();
 
-                // Exibe os dados nos gráficos
-                if (dataPDA || dataTEP) {
+                const responsePIE = await fetch('http://localhost:8080/emprestimo/PIE');
+                const dataPIE = await responsePIE.json();
+
+                if (dataPDA || dataTEP || dataPIE) {
                     displayChartPDA(dataPDA);
                     displayChartTEP(dataTEP);
+                    displayChartPIE(dataPIE);
                 } else {
-                    // Exibe uma mensagem caso não haja dados
                     console.log('Não há dados disponíveis para exibir.');
                 }
             } catch (error) {
@@ -69,51 +80,57 @@
             }
         }
 
-        // Função para exibir o gráfico do Porcentual de Devoluções Atrasadas (PDA)
         function displayChartPDA(percentual) {
             const ctx = document.getElementById('chartPDA').getContext('2d');
             const chart = new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
-                    labels: ['Devoluções Atrasadas', 'Outros'],
+                    labels: ['Devoluções Atrasadas', 'Devoluções no Prazo'],
                     datasets: [{
-                        label: 'Porcentual de Devoluções Atrasadas (PDA)',
                         data: [percentual, 100 - percentual],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.5)',
-                            'rgba(54, 162, 235, 0.5)',
+                            'rgba(0, 0, 0, 0.1)',
+                            'rgb(192, 211, 230)',
                         ],
                     }]
                 },
             });
         }
 
-        // Função para exibir o gráfico da Taxa de Empréstimos no Prazo (TEP)
         function displayChartTEP(taxa) {
             const ctx = document.getElementById('chartTEP').getContext('2d');
             const chart = new Chart(ctx, {
-                type: 'bar',
+                type: 'doughnut',
                 data: {
-                    labels: ['Taxa de Empréstimos no Prazo (TEP)'],
+                    labels: ['Empréstimos no Prazo', 'Empréstimos fora do Prazo'],
                     datasets: [{
-                        label: 'Taxa de Empréstimos no Prazo (TEP)',
-                        data: [taxa],
-                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 1
+                        data: [taxa, 100 - taxa],
+                        backgroundColor: [
+                            'rgba(0, 0, 0, 0.1)',
+                            'rgb(192, 211, 230)',
+                        ],
                     }]
                 },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
             });
         }
 
-        // Chamada da função para buscar e exibir os dados nos gráficos
+        function displayChartPIE(proporcao) {
+            const ctx = document.getElementById('chartPIE').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Itens no Acervo', 'Itens Emprestados'],
+                    datasets: [{
+                        data: [proporcao, 100 - proporcao],
+                        backgroundColor: [
+                            'rgba(0, 0, 0, 0.1)',
+                            'rgb(192, 211, 230)',
+                        ],
+                    }]
+                },
+            });
+        }
+
         fetchAndDisplayData();
     </script>
 </body>
