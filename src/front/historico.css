@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    background: rgb(192, 211, 230);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    background-color: #010e1c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-button:hover {
+    background-color: rgb(64, 95, 121);
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .logo {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar, .search-button {
+        padding: 8px 10px;
+    }
+}
+
+footer {
+    background: rgb(192, 211, 230);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 10px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-links li a {
+    color: #010e1c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links li a:hover {
+    color: rgb(64, 95, 121);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #010e1c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(64, 95, 121);
+}

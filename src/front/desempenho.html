@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indicadores de Desempenho</title>
-    <!-- Inclua os links para seus arquivos CSS e JavaScript aqui -->
+    <!-- Incluindo o CDN do Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/webook/src/front/desempenho.css">
 </head>
 
 <body>
@@ -17,25 +19,17 @@
             <div class="search-container">
                 <input type="search" placeholder="Buscar Empréstimo..." class="search-bar" id="searchInput">
                 <button class="search-button" onclick="buscarEmprestimo()">Buscar</button>
-                <link rel="stylesheet" href="/webook/src/front/desempenho.css">
             </div>
         </div>
     </header>
 
     <!-- Conteúdo dos gráficos aqui -->
     <div class="charts-container">
-        <!-- Gráfico 1 -->
-        <div class="chart" id="chart1">
-            <!-- O gráfico 1 será inserido aqui -->
-        </div>
-        <!-- Gráfico 2 -->
-        <div class="chart" id="chart2">
-            <!-- O gráfico 2 será inserido aqui -->
-        </div>
-        <!-- Gráfico 3 -->
-        <div class="chart" id="chart3">
-            <!-- O gráfico 3 será inserido aqui -->
-        </div>
+        <!-- Gráfico 1: Porcentual de Devoluções Atrasadas (PDA) -->
+        <canvas id="chartPDA" width="400" height="400"></canvas>
+
+        <!-- Gráfico 2: Taxa de Empréstimos no Prazo (TEP) -->
+        <canvas id="chartTEP" width="400" height="400"></canvas>
     </div>
 
     <footer>
@@ -50,6 +44,78 @@
     </footer>
 
     <!-- Inclua seus scripts JavaScript aqui -->
+    <script>
+        // Função para buscar e exibir os dados nos gráficos
+        async function fetchAndDisplayData() {
+            try {
+                // Busca os dados do endpoint PDA
+                const responsePDA = await fetch('http://localhost:8080/emprestimo/PDA');
+                const dataPDA = await responsePDA.json();
+                
+                // Busca os dados do endpoint TEP
+                const responseTEP = await fetch('http://localhost:8080/emprestimo/TEP');
+                const dataTEP = await responseTEP.json();
+
+                // Exibe os dados nos gráficos
+                if (dataPDA || dataTEP) {
+                    displayChartPDA(dataPDA);
+                    displayChartTEP(dataTEP);
+                } else {
+                    // Exibe uma mensagem caso não haja dados
+                    console.log('Não há dados disponíveis para exibir.');
+                }
+            } catch (error) {
+                console.error('Erro ao buscar dados:', error);
+            }
+        }
+
+        // Função para exibir o gráfico do Porcentual de Devoluções Atrasadas (PDA)
+        function displayChartPDA(percentual) {
+            const ctx = document.getElementById('chartPDA').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Devoluções Atrasadas', 'Outros'],
+                    datasets: [{
+                        label: 'Porcentual de Devoluções Atrasadas (PDA)',
+                        data: [percentual, 100 - percentual],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.5)',
+                            'rgba(54, 162, 235, 0.5)',
+                        ],
+                    }]
+                },
+            });
+        }
+
+        // Função para exibir o gráfico da Taxa de Empréstimos no Prazo (TEP)
+        function displayChartTEP(taxa) {
+            const ctx = document.getElementById('chartTEP').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Taxa de Empréstimos no Prazo (TEP)'],
+                    datasets: [{
+                        label: 'Taxa de Empréstimos no Prazo (TEP)',
+                        data: [taxa],
+                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Chamada da função para buscar e exibir os dados nos gráficos
+        fetchAndDisplayData();
+    </script>
 </body>
 
 </html>

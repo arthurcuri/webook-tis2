@@ -156,7 +156,7 @@ public class EmprestimoController {
         double taxaEmprestimosNoPrazo = emprestimoService.calcularTaxaEmprestimosNoPrazo(emprestimos);
         return ResponseEntity.ok().body(taxaEmprestimosNoPrazo);
     }
-
+    
 
 
 }
