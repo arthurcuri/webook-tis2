@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tis2.models.DevolucaoRequest;
@@ -149,14 +150,14 @@ public class EmprestimoController {
         return ResponseEntity.ok().body(percentual);
     }
 
-     // TEP = Taxa Empresnimo no Prazo
-    @GetMapping("/TEP")
-    public ResponseEntity<Double> calcularTaxaEmprestimosNoPrazo() {
-        List<Emprestimo> emprestimos = emprestimoService.findAll();
-        double taxaEmprestimosNoPrazo = emprestimoService.calcularTaxaEmprestimosNoPrazo(emprestimos);
-        return ResponseEntity.ok().body(taxaEmprestimosNoPrazo);
+     // PLD = Percentual de Livros Danificados
+        @GetMapping("/PLD")
+    public ResponseEntity<Double> calcularPercentualLivrosDanificados() {
+        double percentual = emprestimoService.calcularPercentualLivrosDanificados();
+        return ResponseEntity.ok(percentual);
     }
 
+     
      // PIE = Proporção Itens Emprestados
     @GetMapping("/PIE")
     public ResponseEntity<Double> calcularProporcaoItensEmprestados() {

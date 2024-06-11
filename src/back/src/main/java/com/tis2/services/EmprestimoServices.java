@@ -1,5 +1,6 @@
 package com.tis2.services;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -104,20 +105,46 @@ public double calcularPercentualDevolucoesAtrasadas() {
         return dataDevolucao != null && !dataDevolucao.isAfter(dataPrevistaDevolucao);
     }
     public double calcularProporcaoItensEmprestados() {
-        List<Livro> todosLivros = livroRepository.findAll();
-        long totalLivros = todosLivros.size();
+    List<Livro> todosLivros = livroRepository.findAll();
+    long totalLivros = todosLivros.size();
 
-        List<Livro> livrosEmprestados = todosLivros.stream()
-                .filter(Livro::isDisponivel)
+    if (totalLivros == 0) {
+        return 0.0; 
+    }
+
+    long totalLivrosEmprestados = todosLivros.stream()
+            .filter(Livro::isDisponivel)
+            .count();
+
+    return ((double) totalLivrosEmprestados / totalLivros) * 100;
+}
+
+
+    public double calcularPercentualLivrosDanificados() {
+        List<Emprestimo> todosEmprestimos = emprestimoRepository.findAll();
+        long totalEmprestimos = todosEmprestimos.size();
+    
+        List<Emprestimo> emprestimosDanificados = todosEmprestimos.stream()
+                .filter(emprestimo -> {
+                    BigDecimal taxaExtra = emprestimo.getTaxaExtra();
+                    return taxaExtra != null && taxaExtra.compareTo(BigDecimal.ZERO) > 0 || emprestimo.getMotivoTaxa() != null;
+                })
                 .collect(Collectors.toList());
-
-        long totalLivrosEmprestados = livrosEmprestados.size();
-
-        if (totalLivros == 0) {
+    
+        long totalEmprestimosDanificados = emprestimosDanificados.size();
+    
+        if (totalEmprestimos == 0) {
             return 0.0; 
         }
-
-        return ((double) totalLivrosEmprestados / totalLivros) * 100;
+    
+        return ((double) totalEmprestimosDanificados / totalEmprestimos) * 100;
     }
+    
+    
+    
 }
+
+
+
+
 

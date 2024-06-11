@@ -86,45 +86,46 @@
         }
 
         async function reportarLivroDanificado(id) {
-            try {
-                const taxaExtraInput = prompt("Informe a taxa extra:");
-                const motivoTaxaInput = prompt("Informe o motivo da taxa:");
+    try {
+        const taxaExtraInput = prompt("Informe a taxa extra:");
+        const motivoTaxaInput = prompt("Informe o motivo da taxa:");
 
-                if (taxaExtraInput === null || motivoTaxaInput === null || taxaExtraInput.trim() === '' || motivoTaxaInput.trim() === '') {
-                    alert("Informe a taxa extra e o motivo da taxa para prosseguir.");
-                    return;
-                }
-
-                const taxaExtra = parseFloat(taxaExtraInput);
-                const motivoTaxa = motivoTaxaInput.trim();
-
-                if (isNaN(taxaExtra)) {
-                    alert("A taxa extra deve ser um número válido.");
-                    return;
-                }
-
-                const response = await fetch(`${apiUrl}/devolver/${id}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        dataDevolucao: new Date().toISOString().split('T')[0],
-                        taxaExtra: taxaExtra,
-                        motivoTaxa: motivoTaxa
-                    })
-                });
-
-                if (response.ok) {
-                    alert('Livro danificado registrado com sucesso!');
-                    location.reload(); 
-                } else {
-                    throw new Error('Erro ao registrar livro danificado');
-                }
-            } catch (error) {
-                console.error('Erro ao registrar livro danificado:', error);
-            }
+        if (taxaExtraInput === null || motivoTaxaInput === null || taxaExtraInput.trim() === '' || motivoTaxaInput.trim() === '') {
+            alert("Informe a taxa extra e o motivo da taxa para prosseguir.");
+            return;
         }
+
+        const taxaExtra = parseFloat(taxaExtraInput.replace(',', '.'));
+        const motivoTaxa = motivoTaxaInput.trim();
+
+        if (isNaN(taxaExtra)) {
+            alert("A taxa extra deve ser um número válido.");
+            return;
+        }
+
+        const response = await fetch(`${apiUrl}/devolver/${id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                dataDevolucao: new Date().toISOString().split('T')[0],
+                taxaExtra: taxaExtra,
+                motivoTaxa: motivoTaxa
+            })
+        });
+
+        if (response.ok) {
+            alert('Livro danificado registrado com sucesso!');
+            location.reload(); 
+        } else {
+            throw new Error('Erro ao registrar livro danificado');
+        }
+    } catch (error) {
+        console.error('Erro ao registrar livro danificado:', error);
+    }
+}
+
 
         window.onload = fetchLivrosDevolucao;
     </script>

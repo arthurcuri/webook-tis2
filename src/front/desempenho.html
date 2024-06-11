@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indicadores de Desempenho</title>
-    <!-- Incluindo o CDN do Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="/webook/src/front/desempenho.css">
 </head>
@@ -23,21 +22,18 @@
         </div>
     </header>
 
-    <!-- Conteúdo dos gráficos aqui -->
     <div class="charts-container">
-        <!-- Gráfico 1: Porcentual de Devoluções Atrasadas (PDA) -->
+
         <div class="chart">
-            <div class="chart-title">Porcentual de Devoluções Atrasadas (PDA)</div>
+            <div class="chart-title">Percentual de Devoluções Atrasadas (PDA)</div>
             <canvas id="chartPDA" width="300" height="300"></canvas>
         </div>
 
-        <!-- Gráfico 2: Taxa de Empréstimos no Prazo (TEP) -->
         <div class="chart">
-            <div class="chart-title">Taxa de Empréstimos no Prazo (TEP)</div>
-            <canvas id="chartTEP" width="300" height="300"></canvas>
+            <div class="chart-title">Percentual de Livros Danificados (PLD)</div>
+            <canvas id="chartPLD" width="300" height="300"></canvas>
         </div>
 
-        <!-- Gráfico 3: Proporção de Itens Emprestados (PIE) -->
         <div class="chart">
             <div class="chart-title">Proporção de Itens Emprestados (PIE)</div>
             <canvas id="chartPIE" width="300" height="300"></canvas>
@@ -55,22 +51,21 @@
         </div>
     </footer>
 
-    <!-- Inclua seus scripts JavaScript aqui -->
     <script>
         async function fetchAndDisplayData() {
             try {
                 const responsePDA = await fetch('http://localhost:8080/emprestimo/PDA');
                 const dataPDA = await responsePDA.json();
 
-                const responseTEP = await fetch('http://localhost:8080/emprestimo/TEP');
-                const dataTEP = await responseTEP.json();
+                const responsePLD = await fetch('http://localhost:8080/emprestimo/PLD');
+                const dataPLD = await responsePLD.json();
 
                 const responsePIE = await fetch('http://localhost:8080/emprestimo/PIE');
                 const dataPIE = await responsePIE.json();
 
-                if (dataPDA || dataTEP || dataPIE) {
+                if (dataPDA || dataPLD || dataPIE) {
                     displayChartPDA(dataPDA);
-                    displayChartTEP(dataTEP);
+                    displayChartPLD(dataPLD);
                     displayChartPIE(dataPIE);
                 } else {
                     console.log('Não há dados disponíveis para exibir.');
@@ -97,14 +92,14 @@
             });
         }
 
-        function displayChartTEP(taxa) {
-            const ctx = document.getElementById('chartTEP').getContext('2d');
+        function displayChartPLD(percentual) {
+            const ctx = document.getElementById('chartPLD').getContext('2d');
             const chart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Empréstimos no Prazo', 'Empréstimos fora do Prazo'],
+                    labels: ['Livros Danificados', 'Livros Não Danificados'],
                     datasets: [{
-                        data: [taxa, 100 - taxa],
+                        data: [percentual, 100 - percentual],
                         backgroundColor: [
                             'rgba(0, 0, 0, 0.1)',
                             'rgb(192, 211, 230)',
