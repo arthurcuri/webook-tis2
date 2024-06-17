@@ -153,7 +153,7 @@ Atualizar os links e adicionar novos links para que a estrutura do código estej
 
 ## Apêndice A - Código fonte
 
-[Código do front-end](https://github.com/ICEI-PUC-Minas-PPLES-TI/webook/tree/master/src/back) -- repositório do código do front-end
+[Código do front-end](https://github.com/ICEI-PUC-Minas-PPLES-TI/webook/tree/master/src/front) -- repositório do código do front-end
 
 [Código do back-end](https://github.com/ICEI-PUC-Minas-PPLES-TI/webook/tree/master/src/back)  -- repositório do código do back-end
 
