@@ -30,9 +30,9 @@ _Descrição da tela relativa à atividade 2._
 
 [`Tela da atividade 2`](images/)
 
-## 6.3. Telas do processo 3
+## 6.4. Telas do processo 3
 
-_Tela onde é preenchido o título, autor, isbn, editora, seção e preço do livro que está sendo cadastrado._
+_Tela onde é preenchido o título, autor, ISBN, editora, seção e preço do livro que está sendo cadastrado._
 
 ![Tela da atividade 1](images/AdicionarLivro.png)
 
@@ -40,13 +40,13 @@ _Tela onde é possível visualizar todos os livros já cadastrados com todas as 
 
 ![Tela da atividade 2](images/EditarLivro.png)
 
-## 6.3. Telas do processo 4
+## 6.5. Telas do processo 4
 
-_Descrição da tela relativa à atividade 1._
+_Tela onde é preenchido o nome, CPF e data de nascimento do usuário que está sendo cadastrado._
 
 ![Tela da atividade 1](images/AdicionarUsuario.png)
 
-_Descrição da tela relativa à atividade 2._
+_Tela onde é possível visualizar todos os usuários já cadastrados com todas as devidas informações e 2 botões permitindo a edição ou remoção do usuário selecionado._
 
 ![Tela da atividade 2](images/EditarUsuario.png)
 
