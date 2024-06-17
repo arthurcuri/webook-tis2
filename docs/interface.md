@@ -5,7 +5,7 @@ _Visão geral da interação do usuário por meio das telas do sistema. Apresent
 
 ## 6.1. Tela principal do sistema
 
-_Descrição da tela principal do sistema._
+_Tela Inicial onde o bibliotecário terá 6 botões sendo eles 4 dos processos do projeto e os outros 2 mostrando um histórico de livros emprestados e os indicadores de desempenho._
 
 ![Tela principal do sistema](images/TelaPrincipal.png)
 
