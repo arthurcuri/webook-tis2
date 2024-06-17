@@ -148,8 +148,6 @@ Acesso em: 05 mar. 2024.
 
 # APÊNDICES
 
-Atualizar os links e adicionar novos links para que a estrutura do código esteja corretamente documentada.
-
 
 ## Apêndice A - Código fonte
 
