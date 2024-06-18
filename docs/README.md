@@ -125,8 +125,9 @@ A sessão a seguir apresenta a descrição do produto de software desenvolvido.
 
 Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, onde se verifica as observações pessoais de cada aluno. Poderá também apresentar sugestões de novas linhas de estudo.
 
-**Eduardo Palhares Reale Pereira**
+**Eduardo Palhares Reale Pereira**: 
 Neste trabalho, como um desenvolvedor de front-end, gostei muito do que foi produzido e do produto final. Acho que alem do aprendizado em linguagens de programação, aprendemos principalmente a trabalhar em equipe e como gerir o projeto como um todo.
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 # REFERÊNCIAS
 
