@@ -135,6 +135,9 @@ Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos n
 
 **Pedro Henrique de Almeida Araujo** - "O trabalho em equipe e a organização foram fundamentais para o desenvolvimento do programa. Cada etapa foi extremamente importante para que conseguíssemos alcançar o produto final do projeto. Focalizei a maior parte de meus esforços no front-end, e este aprendizado foi crucial para minha evolução como futuro engenheiro de software. Além disso, a gestão de tempo mostrou-se essencial para obter um ótimo resultado."
 
+**Pedro Henrique Pimenta Vaz**
+- "Ao concluir nosso trabalho percebi que aprendi bastante na minha área, na qual gerenciei os projetos da nossa equipe com excelência e aprendi muito com os integrantes durante nossa trajetória. Além disso, percebi que o nosso projeto foi concluído apenas por conta do nosso trabalho em equipe."
+
 __________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 # REFERÊNCIAS
