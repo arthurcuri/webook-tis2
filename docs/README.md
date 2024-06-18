@@ -129,14 +129,13 @@ Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos n
 "Neste trabalho, como um desenvolvedor de front-end, gostei muito do que foi produzido e do produto final. Acho que alem do aprendizado em linguagens de programação, aprendemos principalmente a trabalhar em equipe e como gerir o projeto como um todo."
 
 **João Pedro Guimarães Ribeiro** - 
-"Neste trabalho foi possível entender na prática a importância do alinhamento de ideias para o desenvolvimento, já que o back-end precisa estar conversando com o front-end a todo momento para o funcionamento do projeto. Além disso, notamos como a documentação auxilia para saber exatamente o que será alterado, adicionado ou adaptado em cada processo com o tempo."
+"Neste trabalho foi possível entender na prática a importância do alinhamento de ideias para o desenvolvimento, já que o back-end precisa estar conversando com o front-end a todo momento para o funcionamento geral do projeto. Além disso, notamos como a documentação auxilia para identificarmos exatamente o que será alterado, adicionado ou adaptado em cada processo com o tempo."
 
 **Hugo Macedo de Carvalho** - "Minha visão sobre o trabalho é muito positiva. Ao assumir a parte de back-end, pude aprender bastante, especialmente sobre o funcionamento do Spring Boot. Além disso, foi possível adquirir conhecimento sobre o planejamento e a construção, mesmo que de forma resumida, do processo de criação de software. Aprendi bastante com os erros e, como equipe, evoluímos juntos, o que nos permitiu concluir o projeto de biblioteca com sucesso."
 
 **Pedro Henrique de Almeida Araujo** - "O trabalho em equipe e a organização foram fundamentais para o desenvolvimento do programa. Cada etapa foi extremamente importante para que conseguíssemos alcançar o produto final do projeto. Focalizei a maior parte de meus esforços no front-end, e este aprendizado foi crucial para minha evolução como futuro engenheiro de software. Além disso, a gestão de tempo mostrou-se essencial para obter um ótimo resultado."
 
-**Pedro Henrique Pimenta Vaz**
-- "Ao concluir nosso trabalho percebi que aprendi bastante na minha área, na qual gerenciei os projetos da nossa equipe com excelência e aprendi muito com os integrantes durante nossa trajetória. Além disso, percebi que o nosso projeto foi concluído apenas por conta do nosso trabalho em equipe."
+**Pedro Henrique Pimenta Vaz** - "Ao concluir nosso trabalho percebi que aprendi bastante na minha área, na qual gerenciei os projetos da nossa equipe com excelência e aprendi muito com os integrantes durante nossa trajetória. Além disso, percebi que o nosso projeto foi concluído apenas por conta do nosso trabalho em equipe."
 
 __________________________________________________________________________________________________________________________________________________________________________________________________________________
 
