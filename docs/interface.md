@@ -13,22 +13,14 @@ _Tela Inicial que apresenta 6 botões, sendo eles 4 dos processos do projeto e o
 
 _Descrição da tela relativa à atividade 1._
 
-[`Tela da atividade 1`](images/)
-
-_Descrição da tela relativa à atividade 2._
-
-[`Tela da atividade 2`](images/)
+![Tela da atividade 1](images/Emprestimo.png)
 
 
 ## 6.3. Telas do processo 2
 
 _Descrição da tela relativa à atividade 1._
 
-[`Tela da atividade 1`](images/)
-
-_Descrição da tela relativa à atividade 2._
-
-[`Tela da atividade 2`](images/)
+![Tela da atividade 1](images/Devolucao.png)
 
 ## 6.4. Telas do processo 3
 
@@ -50,3 +42,10 @@ _Tela onde é possível visualizar todos os usuários já cadastrados com todas 
 
 ![Tela da atividade 2](images/EditarUsuario.png)
 
+## 6.6. Telas do Histórico de Empréstimos
+
+![Tela da atividade 2](images/Historico.png)
+
+## 6.7. Telas dos Indicadores de Desempenho
+
+![Tela da atividade 2](images/IndicadoresDesempenho.png)
