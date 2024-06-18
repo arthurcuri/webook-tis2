@@ -1,7 +1,7 @@
 
 ## 6. Interface do sistema
 
-_Visão geral da interação do usuário por meio das telas do sistema.
+_Visão geral da interação do usuário por meio das telas do sistema._
 
 ## 6.1. Tela principal do sistema
 
