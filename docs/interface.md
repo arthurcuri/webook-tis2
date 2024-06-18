@@ -50,6 +50,6 @@ _Tela onde é possível visualizar todos os empréstimos já realizados anterior
 
 ## 6.7. Telas dos Indicadores de Desempenho
 
-_Tela onde é possível visualizar em forma de gráfico os 3 indicadores de desempenho do projeto, sendo eles: Percentual de Devoluções Atrasadas, Percentual de Livros Danificados e Proporção de Livros Emprestados._
+_Tela onde é possível visualizar em forma de gráfico os 3 indicadores de desempenho do projeto, sendo eles: Percentual de Devoluções Atrasadas, Percentual de Livros Danificados e Taxa de Livros Indisponíveis._
 
 ![Tela da atividade 2](images/IndicadoresDesempenho.png)
