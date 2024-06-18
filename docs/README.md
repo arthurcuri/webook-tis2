@@ -137,6 +137,9 @@ O Webook foi desenvolvido com a finalidade de automatizar processos relacionados
 
 **Pedro Henrique Pimenta Vaz** - "Ao concluir nosso trabalho percebi que aprendi bastante na minha área, na qual gerenciei os projetos da nossa equipe com excelência e aprendi muito com os integrantes durante nossa trajetória. Além disso, percebi que o nosso projeto foi concluído apenas por conta do nosso trabalho em equipe."
 
+**Arthur Curi Kramberger** -
+"Ao concluirmos o trabalho, percebi que aprimorei bastante minhas habilidades em linguagem JavaScript e no backend no geral, minha função foi de um gerente de assitência, ajudei os desenvolvedores do back e do front e linkei as telas com o Banco de Dados. Aprendemos a trabalhar em equipe também."
+
 __________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 # REFERÊNCIAS
