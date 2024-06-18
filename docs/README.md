@@ -126,7 +126,7 @@ A sessão a seguir apresenta a descrição do produto de software desenvolvido.
 O Webook foi desenvolvido com a finalidade de automatizar processos relacionados à biblioteca. Ao final do trabalho, nota-se que o produto final foi realizado com sucesso, graças ao trabalho em equipe dos integrantes e à obediência a cada etapa do projeto.
 
 **Eduardo Palhares Reale Pereira** - 
-"Neste trabalho, como um desenvolvedor de front-end, gostei muito do que foi produzido e do produto final. Acho que alem do aprendizado em linguagens de programação, aprendemos principalmente a trabalhar em equipe e como gerir o projeto como um todo."
+"Neste trabalho, como um desenvolvedor de front-end, gostei muito do que foi produzido e do produto final. Acho que alem do aprendizado em linguagens de programação, aprendemos principalmente a trabalhar em equipe e como gerir o projeto como um grupo. Sendo assim, o projeto como um todo foi de grande aprendizado no geral na nossa área e nos preparou muito bem pra uma experiência de desenvolvimento de projetos em empresas reais."
 
 **João Pedro Guimarães Ribeiro** - 
 "Neste trabalho foi possível entender na prática a importância do alinhamento de ideias para o desenvolvimento, já que o back-end precisa estar conversando com o front-end a todo momento para o funcionamento geral do projeto. Além disso, notamos como a documentação auxilia para identificarmos exatamente o que será alterado, adicionado ou adaptado em cada processo com o tempo."
